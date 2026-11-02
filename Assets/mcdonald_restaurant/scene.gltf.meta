@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 8ee41df82a160f040be0bddf327e0984
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\mcdonald_restaurant\scene.bin
+    assetPath: Assets\mcdonald_restaurant\scene.bin
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_specularf0.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_specularf0.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\material_1_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\material_1_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_1_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_1_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_3_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_3_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_3_specularf0.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_3_specularf0.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_4_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_4_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_6_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_6_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_6_specularf0.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_6_specularf0.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_7_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_7_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_8_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_8_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_21_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_21_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_12_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_12_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_15_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_15_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_18_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_18_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_24_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_24_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_26_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_26_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_27_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_27_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_28_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_28_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_30_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_30_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_33_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_33_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_36_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_36_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_44_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_44_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_52_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_52_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_54_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_54_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_60_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_60_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_64_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_64_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_66_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_66_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_69_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_69_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_74_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_74_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_76_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_76_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_83_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_83_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_84_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_84_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_87_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_87_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_90_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_90_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_90_specularf0.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_90_specularf0.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_93_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_93_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_98_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_98_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_117_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_117_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_120_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_120_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_125_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_125_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_130_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_130_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_132_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_132_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_135_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_135_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_136_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_136_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_137_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_137_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_146_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_146_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_152_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_152_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_163_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_163_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_168_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_168_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_170_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_170_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_171_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_171_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_180_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_180_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_185_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_185_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_195_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_195_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_198_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_198_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_202_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_202_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_217_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_217_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_223_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_223_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_237_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_237_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_238_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_238_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_240_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_240_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_243_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_243_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_242_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_242_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_244_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_244_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_250_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_250_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_175_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_175_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_263_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_263_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_268_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_268_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_270_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_270_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_274_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_274_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_283_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_283_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_286_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_286_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_288_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_288_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_303_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_303_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_317_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_317_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_335_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_335_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_348_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_348_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_350_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_350_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_361_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_361_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_381_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_381_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_402_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_402_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_416_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_416_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_419_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_419_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_429_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_429_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_435_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_435_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_442_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_442_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_469_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_469_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_473_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_473_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_484_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_484_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_485_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_485_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_486_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_486_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_487_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_487_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_490_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_490_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_503_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_503_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_504_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_504_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_510_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_510_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_517_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_517_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_521_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_521_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_528_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_528_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_533_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_533_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_540_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_540_baseColor.png
+  - type: 1
+    originalUri: Assets\mcdonald_restaurant\textures\auto_538_baseColor.png
+    assetPath: Assets\mcdonald_restaurant\textures\auto_538_baseColor.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
