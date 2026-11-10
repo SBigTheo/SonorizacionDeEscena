@@ -31,10 +31,10 @@ namespace Sketchfab
 			MY_STORE_PURCHASES=2
 		}
 
-		// Sketchfab elements
-		public SketchfabBrowserManager _browserManager;
-		public SketchfabLogger _logger;
-		public SketchfabUI _ui;
+        // Sketchfab elements
+        [System.NonSerialized] public SketchfabBrowserManager _browserManager;
+        [System.NonSerialized] public SketchfabLogger _logger;
+        [System.NonSerialized] public SketchfabUI _ui;
 		SketchfabModelWindow _skfbWin;
 
 		int _thumbnailSize = 128;

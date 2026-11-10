@@ -14,13 +14,13 @@ public class Crouch : MonoBehaviour
     [Tooltip("Head to lower when crouched.")]
     public Transform headToLower;
     [HideInInspector]
-    public float? defaultHeadYLocalPosition;
+    [System.NonSerialized] float? defaultHeadYLocalPosition;
     public float crouchYHeadPosition = 1;
     
     [Tooltip("Collider to lower when crouched.")]
     public CapsuleCollider colliderToLower;
     [HideInInspector]
-    public float? defaultColliderHeight;
+    [System.NonSerialized] public float? defaultColliderHeight;
 
     public bool IsCrouched { get; private set; }
     public event System.Action CrouchStart, CrouchEnd;
