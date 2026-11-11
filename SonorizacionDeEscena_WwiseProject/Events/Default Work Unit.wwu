@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4296E020-D882-4A15-BD19-AEF5808B2591}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{4296E020-D882-4A15-BD19-AEF5808B2591}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_DialogoRecepcion" ID="{75484E60-491E-4B52-BDA8-A0099F7960EB}">
+					<ChildrenList>
+						<Action Name="" ID="{2CC3A455-605D-401C-972B-26849BCDCF1E}" ShortID="684775455">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DialogoRecepcion" ID="{B100B945-D238-4AEE-8898-28707AA02763}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_DialogoPapas" ID="{9470CF51-7CEB-4CD2-B64F-0A4D8E0F53F4}">
+					<ChildrenList>
+						<Action Name="" ID="{ED8A8E55-D491-4F49-80ED-B22EC1FD3C56}" ShortID="547837001">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DialogoPapas" ID="{F9C53297-878D-4026-A6A9-665BB1E0BBB8}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_DialogoRadio" ID="{9F5AD75F-4141-46A3-B518-848851CF4687}">
+					<ChildrenList>
+						<Action Name="" ID="{057DEF1F-0274-4DBF-B373-4CB655A50C55}" ShortID="745902971">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DialogoRadio" ID="{85A8263C-101D-4A42-B144-A435E5712B7A}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_DialogoTelevision" ID="{47BB3E1D-4C1B-4881-9B7E-DDA3D35C6C9F}">
+					<ChildrenList>
+						<Action Name="" ID="{6965B824-9915-4ACB-8DFA-7B96E519361C}" ShortID="641354941">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DialogoTelevision" ID="{24BE9B2F-CB1C-4AA7-9E5D-E04A1AD9E845}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_DialogoBano" ID="{478CAFCF-CC32-4EBA-AC51-1BE47E6A9D20}">
+					<ChildrenList>
+						<Action Name="" ID="{6E15ED9D-2F38-4BE7-ADD7-9418D1ACC45B}" ShortID="470928276">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DialogoBano" ID="{02B8F1E2-6166-494C-86C6-496DC6C70CF8}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_DialogoLadron" ID="{8BA93493-AE0F-4C68-9880-ADF4B564FC40}">
+					<ChildrenList>
+						<Action Name="" ID="{0CAF8024-F227-4AE6-8C3F-962DCF92EC81}" ShortID="965170763">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DialogoLadron" ID="{C1C37993-0ACF-4E9F-957C-F4153CB4A14D}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CorteCapas" ID="{671A9E6C-1D5A-43A6-A6E8-BA34E87AD7CE}">
+					<ChildrenList>
+						<Action Name="" ID="{F8CFDECC-2505-411F-900A-661E0BB5CE98}" ShortID="189036243">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CorteCapas" ID="{4324D8AB-8D85-4A61-B9AE-71FBB519963B}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_FrituraCapas" ID="{C6DF1270-2ED5-4AC5-8DA4-47A302BE5428}">
+					<ChildrenList>
+						<Action Name="" ID="{C4FA48E5-9BE4-4D2B-88C6-CD18D835F972}" ShortID="601438001">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FrituraCapas" ID="{56A04409-1614-44F6-B4BD-3F0877DCB29C}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AmbienteDriveThru" ID="{F24039C0-0675-4987-BCD9-5DFDDB867049}">
+					<ChildrenList>
+						<Action Name="" ID="{88811970-4438-42D6-9742-6FF29655F0BB}" ShortID="236010664">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbienteDriveThru" ID="{AEB993B6-81B0-4A45-8E8E-E261FE7912EE}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AmbienteRestaurante" ID="{0EBA0BCC-378D-430F-AC7F-A66A33DF6DC8}">
+					<ChildrenList>
+						<Action Name="" ID="{707B6A65-B36C-4B97-836B-8C10C69D4DF9}" ShortID="693812056">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbienteRestaurante" ID="{60C84435-0BC6-4C56-992C-18FE4139A713}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AmbienteCocina" ID="{CA4B1299-3B74-4F50-8D81-528210D45C98}">
+					<ChildrenList>
+						<Action Name="" ID="{E0488551-477B-4950-8DD1-020F37BEA4C8}" ShortID="570091746">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AmbienteCocina" ID="{69E3CA33-E4C9-4BDA-9303-5D242AD30E78}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AutoPasando" ID="{08F571B1-6D4A-4AE0-872A-BEB585686D63}">
+					<ChildrenList>
+						<Action Name="" ID="{8C323154-EFB3-4F29-96CB-E3D6EB6AE5B3}" ShortID="46884814">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AutoPasando" ID="{4BB1CA42-C739-4E81-9837-F6DB7D80C8E8}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AutoBocina" ID="{3AC1DF71-510E-4841-A4F2-F4EF544E2A28}">
+					<ChildrenList>
+						<Action Name="" ID="{39F7F26E-8721-499A-9236-ED29BBB2DED0}" ShortID="342951274">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AutoBocina" ID="{6B327E74-FDD1-42F5-BB2F-B1C0208392BE}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BotonFisico" ID="{C17418D9-418F-41D6-8A23-39DC938C5B43}">
+					<ChildrenList>
+						<Action Name="" ID="{23A60A3F-C7DE-4072-A39F-54F9120ABCE9}" ShortID="698160976">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BotonFisico" ID="{B9EF26E5-CA7E-43AA-9B6B-3F7ADACAEB3F}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SwitchFisico" ID="{702A13E4-4B71-4DF0-9311-316E0315CD2C}">
+					<ChildrenList>
+						<Action Name="" ID="{580FD286-9441-4B67-9735-3A1A862BEA7A}" ShortID="214094946">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SwitchFisico" ID="{6D0CD921-2B7C-47A2-86F7-EB59E1D3F24E}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CorteVegetales" ID="{7528B9BA-357F-46EB-AAF0-DB764D83FEE4}">
+					<ChildrenList>
+						<Action Name="" ID="{26C20497-58AF-42EE-A863-B3467FE72A60}" ShortID="1051575231">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CorteVegetales" ID="{C4CB0387-44CD-49E4-B398-FABB8C367E75}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Cronometro" ID="{BCEC7152-60B0-4AE4-8226-8AAE3B13D895}">
+					<ChildrenList>
+						<Action Name="" ID="{9D128F7E-C9CC-4F84-A51A-5EC928499757}" ShortID="567313540">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cronometro" ID="{16CFA84E-9948-4EA3-AB8F-50E316B5EB31}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_LavadoManos" ID="{C105025A-CECC-4C9D-A575-351BB46DD283}">
+					<ChildrenList>
+						<Action Name="" ID="{51F04280-E792-48FF-A4D5-D9BAFDE9A51C}" ShortID="579061996">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LavadoManos" ID="{2F04B747-0EAD-4BF4-A40F-C1DDA4D8A868}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_AguaLavabo" ID="{FF4DC083-E8E8-471B-845A-4822EDEA3497}">
+					<ChildrenList>
+						<Action Name="" ID="{7CDE877B-A108-413C-8809-3337646ED0E3}" ShortID="188638584">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AguaLavabo" ID="{43215C5D-C18E-495F-A302-C5055D0812BF}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NotificacionPedido" ID="{6B136249-201F-47F3-B175-6A1ABAFDA059}">
+					<ChildrenList>
+						<Action Name="" ID="{19ABEE58-9679-4608-9E1D-F1F9588C9535}" ShortID="998078561">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NotificacionPedido" ID="{EA221A02-13DE-40CE-9F17-AB04F491209A}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_NotificacionDriveThru" ID="{648C65A8-339C-4B15-83FA-AD8AB7FE7212}">
+					<ChildrenList>
+						<Action Name="" ID="{BA7AB12C-D5EB-49D9-AF40-1A49C8E66E68}" ShortID="514214423">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="NotificacionDriveThru" ID="{08BFB2A6-829E-492C-BDB7-6E318ECFA153}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PuertaAbrir" ID="{35DD52AC-759E-4039-88DD-9EA1F496FE0B}">
+					<ChildrenList>
+						<Action Name="" ID="{AC954F43-3670-45BB-B209-8B887A0BCF8C}" ShortID="302533071">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PuertaAbrir" ID="{A3196AC7-E2A7-474B-A14A-D4307AA250C6}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PuertaCerrar" ID="{18EFC487-9260-4268-AB01-5F2F4123BB1F}">
+					<ChildrenList>
+						<Action Name="" ID="{A979418E-DDCA-4822-86A4-8502CAD6C08A}" ShortID="367046019">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PuertaCerrar" ID="{E4602E73-0C38-47AE-8269-1469472F4308}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Fritura" ID="{1CD0A50D-BDE4-423B-88D6-4187A53EAE36}">
+					<ChildrenList>
+						<Action Name="" ID="{3D01EB9D-CA5F-421B-BE73-609EF5630015}" ShortID="212548958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Fritura" ID="{6897AC12-73F4-49F9-8022-E98FA6B72ACA}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CadenaBano" ID="{4A93424C-2EBE-4B85-A2C4-20B4D5537C1F}">
+					<ChildrenList>
+						<Action Name="" ID="{F7EC3FE8-CC34-4B52-9B79-AEB75E954C72}" ShortID="730834043">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CadenaBano" ID="{34AC00A9-0776-48D2-9590-F4EE28EA7984}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{65E0085C-7188-46DE-AB44-7EAE25E28CE7}" SchemaVersion="133">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{65E0085C-7188-46DE-AB44-7EAE25E28CE7}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Sonorizacion" ID="{BA3057EC-A5A9-4D86-8A69-044F9661C582}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_PuertaAbrir" ID="{35DD52AC-759E-4039-88DD-9EA1F496FE0B}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BotonFisico" ID="{C17418D9-418F-41D6-8A23-39DC938C5B43}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Fritura" ID="{1CD0A50D-BDE4-423B-88D6-4187A53EAE36}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PuertaCerrar" ID="{18EFC487-9260-4268-AB01-5F2F4123BB1F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AmbienteRestaurante" ID="{0EBA0BCC-378D-430F-AC7F-A66A33DF6DC8}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CorteCapas" ID="{671A9E6C-1D5A-43A6-A6E8-BA34E87AD7CE}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DialogoRadio" ID="{9F5AD75F-4141-46A3-B518-848851CF4687}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CorteVegetales" ID="{7528B9BA-357F-46EB-AAF0-DB764D83FEE4}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AguaLavabo" ID="{FF4DC083-E8E8-471B-845A-4822EDEA3497}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_NotificacionPedido" ID="{6B136249-201F-47F3-B175-6A1ABAFDA059}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AutoBocina" ID="{3AC1DF71-510E-4841-A4F2-F4EF544E2A28}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DialogoTelevision" ID="{47BB3E1D-4C1B-4881-9B7E-DDA3D35C6C9F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AmbienteDriveThru" ID="{F24039C0-0675-4987-BCD9-5DFDDB867049}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_FrituraCapas" ID="{C6DF1270-2ED5-4AC5-8DA4-47A302BE5428}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AutoPasando" ID="{08F571B1-6D4A-4AE0-872A-BEB585686D63}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Cronometro" ID="{BCEC7152-60B0-4AE4-8226-8AAE3B13D895}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_NotificacionDriveThru" ID="{648C65A8-339C-4B15-83FA-AD8AB7FE7212}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DialogoRecepcion" ID="{75484E60-491E-4B52-BDA8-A0099F7960EB}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_CadenaBano" ID="{4A93424C-2EBE-4B85-A2C4-20B4D5537C1F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DialogoLadron" ID="{8BA93493-AE0F-4C68-9880-ADF4B564FC40}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_LavadoManos" ID="{C105025A-CECC-4C9D-A575-351BB46DD283}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DialogoPapas" ID="{9470CF51-7CEB-4CD2-B64F-0A4D8E0F53F4}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SwitchFisico" ID="{702A13E4-4B71-4DF0-9311-316E0315CD2C}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_DialogoBano" ID="{478CAFCF-CC32-4EBA-AC51-1BE47E6A9D20}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_AmbienteCocina" ID="{CA4B1299-3B74-4F50-8D81-528210D45C98}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

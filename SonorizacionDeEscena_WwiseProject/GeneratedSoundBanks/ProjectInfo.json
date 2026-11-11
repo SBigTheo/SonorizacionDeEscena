@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "SonorizacionDeEscena_WwiseProject",
+   "GUID": "{D891D561-0836-49CC-A173-F427A178CE33}",
+   "Generator": "2025.1.12.9287"
+  },
+  "CacheRoot": "../.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{E797E0F4-662D-4B1D-BFF7-744CA45B7106}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{9BB8A5EB-BC09-484C-B677-69C47C6C3CDB}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{F3C5A316-8CDE-4F37-A112-83F3DA7E77FC}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{EBB2F498-2F4C-B90A-3575-FC3984BB489B}"
+ }
+}

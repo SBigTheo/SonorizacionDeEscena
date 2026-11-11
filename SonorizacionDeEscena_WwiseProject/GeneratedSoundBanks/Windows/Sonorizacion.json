@@ -1,0 +1,565 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "552214725",
+    "Type": "User",
+    "GUID": "{BA3057EC-A5A9-4D86-8A69-044F9661C582}",
+    "Language": "SFX",
+    "Hash": "{9F03035C-30A4-0862-7792-6A6C45BDFB87}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Sonorizacion",
+    "ShortName": "Sonorizacion",
+    "Path": "Sonorizacion.bnk",
+    "Media": [
+     {
+      "Id": "5762237",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "tirada de cadena-baño.wav",
+      "CachePath": "A8/{A8A0BAFC-1B7D-E993-AEE2-AA7255E7E4C9}.wem"
+     },
+     {
+      "Id": "60318592",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ambiente drive thru.wav",
+      "CachePath": "B3/{B3D1D4C1-D8C0-BB07-2A8B-1B37825A76CF}.wem"
+     },
+     {
+      "Id": "88532487",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ambiente restaurante.wav",
+      "CachePath": "CE/{CE70004B-DA0A-D58A-3F1D-5FF20AF42812}.wem"
+     },
+     {
+      "Id": "116009970",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "boton fisico.wav",
+      "CachePath": "9D/{9D42F046-8904-7A99-E577-33967884399E}.wem"
+     },
+     {
+      "Id": "129529766",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "dialogo orden de papas.wav",
+      "CachePath": "6A/{6A497882-2844-BBBE-E708-027566617898}.wem"
+     },
+     {
+      "Id": "131308609",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "puerta abriendose.wav",
+      "CachePath": "0B/{0B56E288-B3B2-E167-A9A2-1C1955EE95E1}.wem"
+     },
+     {
+      "Id": "183777913",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "auto bocina.wav",
+      "CachePath": "CA/{CA4ACF26-4E07-18B2-8C03-37C19DF2B0BB}.wem"
+     },
+     {
+      "Id": "227409544",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "cronometro de cocina.wav",
+      "CachePath": "9F/{9FF4DA9F-3AD2-CA4D-ACCE-AA84CC5A203F}.wem"
+     },
+     {
+      "Id": "261140818",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "auto pasando.wav",
+      "CachePath": "24/{2437771B-0B64-F16E-8F91-4C63DDB6D917}.wem"
+     },
+     {
+      "Id": "264390407",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "dialogo recepcion.wav",
+      "CachePath": "77/{77D0C6C7-D6C7-EFED-3062-84B477F1BF94}.wem"
+     },
+     {
+      "Id": "270821923",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx en capas (cocina fritura).wav",
+      "CachePath": "B8/{B87B3E9E-D9E6-392B-7C3B-92B8A668D3EE}.wem"
+     },
+     {
+      "Id": "349264939",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "lavabo-agua corriendo.wav",
+      "CachePath": "44/{4425B7F3-A2B2-3173-6DC0-48EC09FC0094}.wem"
+     },
+     {
+      "Id": "350126996",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sfx en capas (cortado de verduras-carne).wav",
+      "CachePath": "A3/{A37C93AC-F865-74EE-DFA5-E61EF35272B8}.wem"
+     },
+     {
+      "Id": "398923845",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "lavado de manos.wav",
+      "CachePath": "90/{9043D05A-C9A6-2D62-2071-330EF95AC707}.wem"
+     },
+     {
+      "Id": "474729625",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "notificacion drive thru.wav",
+      "CachePath": "17/{178E1AF4-05DB-3800-F2CF-84055A6A7DA7}.wem"
+     },
+     {
+      "Id": "518145163",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ambiente cocina.wav",
+      "CachePath": "4F/{4FD844E2-9008-42E2-A2A9-B79795790BD2}.wem"
+     },
+     {
+      "Id": "518671127",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "dialogo baño.wav",
+      "CachePath": "62/{622E723E-CBA5-6A01-1EAD-4DAB45482CEB}.wem"
+     },
+     {
+      "Id": "534936738",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "dialogo ladron.wav",
+      "CachePath": "6D/{6DB24B36-5967-EAAA-F240-8E7E092609B3}.wem"
+     },
+     {
+      "Id": "557087385",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "puerta cerrandose.wav",
+      "CachePath": "FF/{FF8016D3-6981-32BD-5762-83E65096EAE0}.wem"
+     },
+     {
+      "Id": "758221955",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "corte de vegetales o carne.wav",
+      "CachePath": "26/{26A3A688-09F8-3BEA-1F30-96AC7526DADD}.wem"
+     },
+     {
+      "Id": "818503075",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "sonido fritura.wav",
+      "CachePath": "F4/{F4AC1ABE-7E81-7C8C-2BF8-998F45CB2708}.wem"
+     },
+     {
+      "Id": "823890113",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "dialogo television.wav",
+      "CachePath": "FB/{FB103EAF-00FC-8A01-53C4-6E73649C5260}.wem"
+     },
+     {
+      "Id": "896192712",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "dialogo radio + musica.wav",
+      "CachePath": "73/{73E6FABF-2951-468E-A0EE-5956CFF2CA75}.wem"
+     },
+     {
+      "Id": "958342161",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "notificacion nuevo pedido.wav",
+      "CachePath": "7E/{7E927D49-44E1-D0D0-65CE-E48DAB4F6BE4}.wem"
+     },
+     {
+      "Id": "999563677",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "switch fisico.wav",
+      "CachePath": "B4/{B4CEB27C-6530-2ACE-283D-AB2241EE2CAD}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3095900275",
+      "Name": "Play_AguaLavabo",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AguaLavabo",
+      "GUID": "{FF4DC083-E8E8-471B-845A-4822EDEA3497}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "349264939"
+       }
+      ]
+     },
+     {
+      "Id": "81872250",
+      "Name": "Play_AmbienteCocina",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AmbienteCocina",
+      "GUID": "{CA4B1299-3B74-4F50-8D81-528210D45C98}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "518145163"
+       }
+      ]
+     },
+     {
+      "Id": "885145518",
+      "Name": "Play_AmbienteDriveThru",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AmbienteDriveThru",
+      "GUID": "{F24039C0-0675-4987-BCD9-5DFDDB867049}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "60318592"
+       }
+      ]
+     },
+     {
+      "Id": "2472953755",
+      "Name": "Play_AmbienteRestaurante",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AmbienteRestaurante",
+      "GUID": "{0EBA0BCC-378D-430F-AC7F-A66A33DF6DC8}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "88532487"
+       }
+      ]
+     },
+     {
+      "Id": "3617737833",
+      "Name": "Play_AutoBocina",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AutoBocina",
+      "GUID": "{3AC1DF71-510E-4841-A4F2-F4EF544E2A28}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0971428",
+      "DurationMax": "1.0971428",
+      "MediaRefs": [
+       {
+        "Id": "183777913"
+       }
+      ]
+     },
+     {
+      "Id": "1297007679",
+      "Name": "Play_AutoPasando",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AutoPasando",
+      "GUID": "{08F571B1-6D4A-4AE0-872A-BEB585686D63}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.4220407",
+      "DurationMax": "3.4220407",
+      "MediaRefs": [
+       {
+        "Id": "261140818"
+       }
+      ]
+     },
+     {
+      "Id": "3857983155",
+      "Name": "Play_BotonFisico",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_BotonFisico",
+      "GUID": "{C17418D9-418F-41D6-8A23-39DC938C5B43}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.28",
+      "DurationMax": "1.28",
+      "MediaRefs": [
+       {
+        "Id": "116009970"
+       }
+      ]
+     },
+     {
+      "Id": "3197448774",
+      "Name": "Play_CadenaBano",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CadenaBano",
+      "GUID": "{4A93424C-2EBE-4B85-A2C4-20B4D5537C1F}",
+      "DurationType": "OneShot",
+      "DurationMin": "9.984",
+      "DurationMax": "9.984",
+      "MediaRefs": [
+       {
+        "Id": "5762237"
+       }
+      ]
+     },
+     {
+      "Id": "599861905",
+      "Name": "Play_CorteCapas",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CorteCapas",
+      "GUID": "{671A9E6C-1D5A-43A6-A6E8-BA34E87AD7CE}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.3792744",
+      "DurationMax": "4.3792744",
+      "MediaRefs": [
+       {
+        "Id": "350126996"
+       }
+      ]
+     },
+     {
+      "Id": "2259311815",
+      "Name": "Play_CorteVegetales",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CorteVegetales",
+      "GUID": "{7528B9BA-357F-46EB-AAF0-DB764D83FEE4}",
+      "DurationType": "OneShot",
+      "DurationMin": "6.936",
+      "DurationMax": "6.936",
+      "MediaRefs": [
+       {
+        "Id": "758221955"
+       }
+      ]
+     },
+     {
+      "Id": "2499318168",
+      "Name": "Play_Cronometro",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Cronometro",
+      "GUID": "{BCEC7152-60B0-4AE4-8226-8AAE3B13D895}",
+      "DurationType": "OneShot",
+      "DurationMin": "12.696",
+      "DurationMax": "12.696",
+      "MediaRefs": [
+       {
+        "Id": "227409544"
+       }
+      ]
+     },
+     {
+      "Id": "2794022575",
+      "Name": "Play_DialogoBano",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoBano",
+      "GUID": "{478CAFCF-CC32-4EBA-AC51-1BE47E6A9D20}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.993424",
+      "DurationMax": "4.993424",
+      "MediaRefs": [
+       {
+        "Id": "518671127"
+       }
+      ]
+     },
+     {
+      "Id": "3246503421",
+      "Name": "Play_DialogoLadron",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoLadron",
+      "GUID": "{8BA93493-AE0F-4C68-9880-ADF4B564FC40}",
+      "DurationType": "OneShot",
+      "DurationMin": "9.16009",
+      "DurationMax": "9.16009",
+      "MediaRefs": [
+       {
+        "Id": "534936738"
+       }
+      ]
+     },
+     {
+      "Id": "2610937024",
+      "Name": "Play_DialogoPapas",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoPapas",
+      "GUID": "{9470CF51-7CEB-4CD2-B64F-0A4D8E0F53F4}",
+      "DurationType": "OneShot",
+      "DurationMin": "10.34",
+      "DurationMax": "10.34",
+      "MediaRefs": [
+       {
+        "Id": "129529766"
+       }
+      ]
+     },
+     {
+      "Id": "1974440458",
+      "Name": "Play_DialogoRadio",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoRadio",
+      "GUID": "{9F5AD75F-4141-46A3-B518-848851CF4687}",
+      "DurationType": "OneShot",
+      "DurationMin": "158.14346",
+      "DurationMax": "158.14346",
+      "MediaRefs": [
+       {
+        "Id": "896192712"
+       }
+      ]
+     },
+     {
+      "Id": "1150218369",
+      "Name": "Play_DialogoRecepcion",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoRecepcion",
+      "GUID": "{75484E60-491E-4B52-BDA8-A0099F7960EB}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.153515",
+      "DurationMax": "8.153515",
+      "MediaRefs": [
+       {
+        "Id": "264390407"
+       }
+      ]
+     },
+     {
+      "Id": "333743509",
+      "Name": "Play_DialogoTelevision",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoTelevision",
+      "GUID": "{47BB3E1D-4C1B-4881-9B7E-DDA3D35C6C9F}",
+      "DurationType": "OneShot",
+      "DurationMin": "31.091497",
+      "DurationMax": "31.091497",
+      "MediaRefs": [
+       {
+        "Id": "823890113"
+       }
+      ]
+     },
+     {
+      "Id": "105982041",
+      "Name": "Play_Fritura",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Fritura",
+      "GUID": "{1CD0A50D-BDE4-423B-88D6-4187A53EAE36}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "818503075"
+       }
+      ]
+     },
+     {
+      "Id": "3254684307",
+      "Name": "Play_FrituraCapas",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_FrituraCapas",
+      "GUID": "{C6DF1270-2ED5-4AC5-8DA4-47A302BE5428}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.244535",
+      "DurationMax": "4.244535",
+      "MediaRefs": [
+       {
+        "Id": "270821923"
+       }
+      ]
+     },
+     {
+      "Id": "4072083471",
+      "Name": "Play_LavadoManos",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_LavadoManos",
+      "GUID": "{C105025A-CECC-4C9D-A575-351BB46DD283}",
+      "DurationType": "OneShot",
+      "DurationMin": "23.664",
+      "DurationMax": "23.664",
+      "MediaRefs": [
+       {
+        "Id": "398923845"
+       }
+      ]
+     },
+     {
+      "Id": "2690675305",
+      "Name": "Play_NotificacionDriveThru",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_NotificacionDriveThru",
+      "GUID": "{648C65A8-339C-4B15-83FA-AD8AB7FE7212}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.744",
+      "DurationMax": "0.744",
+      "MediaRefs": [
+       {
+        "Id": "474729625"
+       }
+      ]
+     },
+     {
+      "Id": "3010603025",
+      "Name": "Play_NotificacionPedido",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_NotificacionPedido",
+      "GUID": "{6B136249-201F-47F3-B175-6A1ABAFDA059}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.1159184",
+      "DurationMax": "2.1159184",
+      "MediaRefs": [
+       {
+        "Id": "958342161"
+       }
+      ]
+     },
+     {
+      "Id": "1177537281",
+      "Name": "Play_PuertaAbrir",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PuertaAbrir",
+      "GUID": "{35DD52AC-759E-4039-88DD-9EA1F496FE0B}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.92",
+      "DurationMax": "1.92",
+      "MediaRefs": [
+       {
+        "Id": "131308609"
+       }
+      ]
+     },
+     {
+      "Id": "173892078",
+      "Name": "Play_PuertaCerrar",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PuertaCerrar",
+      "GUID": "{18EFC487-9260-4268-AB01-5F2F4123BB1F}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.4",
+      "DurationMax": "5.4",
+      "MediaRefs": [
+       {
+        "Id": "557087385"
+       }
+      ]
+     },
+     {
+      "Id": "2925829879",
+      "Name": "Play_SwitchFisico",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SwitchFisico",
+      "GUID": "{702A13E4-4B71-4DF0-9311-316E0315CD2C}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.28",
+      "DurationMax": "1.28",
+      "MediaRefs": [
+       {
+        "Id": "999563677"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1BD51713-9D5D-9D20-B6D4-A50C95E99A8A}"
+ }
+}

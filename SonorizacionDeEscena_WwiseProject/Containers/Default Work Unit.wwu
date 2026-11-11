@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Sonorizacion" ID="{BB040B60-6D91-421A-B214-4E2E8EB613D3}" ShortID="603904789">
+					<ChildrenList>
+						<Sound Name="DialogoRecepcion" ID="{B100B945-D238-4AEE-8898-28707AA02763}" ShortID="868249569">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogo recepcion" ID="{9E676BDB-EBB4-46B8-9515-DFD19009C496}">
+									<Language>SFX</Language>
+									<AudioFile>dialogo recepcion.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="264390407"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogo recepcion" ID="{9E676BDB-EBB4-46B8-9515-DFD19009C496}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DialogoPapas" ID="{F9C53297-878D-4026-A6A9-665BB1E0BBB8}" ShortID="629524529">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="3"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogo orden de papas" ID="{B16D6CA3-FA07-4E53-A133-191693981138}">
+									<Language>SFX</Language>
+									<AudioFile>dialogo orden de papas.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="129529766"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogo orden de papas" ID="{B16D6CA3-FA07-4E53-A133-191693981138}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DialogoRadio" ID="{85A8263C-101D-4A42-B144-A435E5712B7A}" ShortID="177936806">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogo radio + musica" ID="{27546D06-1B42-4442-8984-287A421B9E7F}">
+									<Language>SFX</Language>
+									<AudioFile>dialogo radio + musica.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="896192712"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogo radio + musica" ID="{27546D06-1B42-4442-8984-287A421B9E7F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DialogoTelevision" ID="{24BE9B2F-CB1C-4AA7-9E5D-E04A1AD9E845}" ShortID="829743477">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogo television" ID="{F486694A-171F-44E8-9AEC-1E3DC08B2787}">
+									<Language>SFX</Language>
+									<AudioFile>dialogo television.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="823890113"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogo television" ID="{F486694A-171F-44E8-9AEC-1E3DC08B2787}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DialogoBano" ID="{02B8F1E2-6166-494C-86C6-496DC6C70CF8}" ShortID="1029676980">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogo baño" ID="{479B1690-D50F-406C-BC49-9FF422FE575D}">
+									<Language>SFX</Language>
+									<AudioFile>dialogo baño.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="518671127"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogo baño" ID="{479B1690-D50F-406C-BC49-9FF422FE575D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="DialogoLadron" ID="{C1C37993-0ACF-4E9F-957C-F4153CB4A14D}" ShortID="136962477">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="dialogo ladron" ID="{ED8DA1D5-0A64-4719-B56C-554250F7903E}">
+									<Language>SFX</Language>
+									<AudioFile>dialogo ladron.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="534936738"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="dialogo ladron" ID="{ED8DA1D5-0A64-4719-B56C-554250F7903E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CorteCapas" ID="{4324D8AB-8D85-4A61-B9AE-71FBB519963B}" ShortID="668574032">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx en capas (cortado de verduras-carne)" ID="{284ECEF5-67A3-4329-AAB6-871DA15E196E}">
+									<Language>SFX</Language>
+									<AudioFile>sfx en capas (cortado de verduras-carne).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="350126996"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx en capas (cortado de verduras-carne)" ID="{284ECEF5-67A3-4329-AAB6-871DA15E196E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FrituraCapas" ID="{56A04409-1614-44F6-B4BD-3F0877DCB29C}" ShortID="668211460">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sfx en capas (cocina fritura)" ID="{48E91006-B927-4861-AA8E-1A94A2029409}">
+									<Language>SFX</Language>
+									<AudioFile>sfx en capas (cocina fritura).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="270821923"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sfx en capas (cocina fritura)" ID="{48E91006-B927-4861-AA8E-1A94A2029409}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AmbienteDriveThru" ID="{AEB993B6-81B0-4A45-8E8E-E261FE7912EE}" ShortID="19647846">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ambiente drive thru" ID="{E2852A43-489F-406D-BA84-083C61CA262E}">
+									<Language>SFX</Language>
+									<AudioFile>ambiente drive thru.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="60318592"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ambiente drive thru" ID="{E2852A43-489F-406D-BA84-083C61CA262E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AmbienteRestaurante" ID="{60C84435-0BC6-4C56-992C-18FE4139A713}" ShortID="563507805">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ambiente restaurante" ID="{21AAED48-B15C-4117-9D7F-A6FF558868C1}">
+									<Language>SFX</Language>
+									<AudioFile>ambiente restaurante.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="88532487"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ambiente restaurante" ID="{21AAED48-B15C-4117-9D7F-A6FF558868C1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AmbienteCocina" ID="{69E3CA33-E4C9-4BDA-9303-5D242AD30E78}" ShortID="963483415">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ambiente cocina" ID="{543C4FAB-2D91-4CDD-BEB0-2FF4DC63BBE8}">
+									<Language>SFX</Language>
+									<AudioFile>ambiente cocina.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="518145163"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ambiente cocina" ID="{543C4FAB-2D91-4CDD-BEB0-2FF4DC63BBE8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AutoPasando" ID="{4BB1CA42-C739-4E81-9837-F6DB7D80C8E8}" ShortID="332833883">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="auto pasando" ID="{31B5EAE3-E0B8-4FB1-81A6-3FB3704BE9C3}">
+									<Language>SFX</Language>
+									<AudioFile>auto pasando.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="261140818"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="auto pasando" ID="{31B5EAE3-E0B8-4FB1-81A6-3FB3704BE9C3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AutoBocina" ID="{6B327E74-FDD1-42F5-BB2F-B1C0208392BE}" ShortID="454388345">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="auto bocina" ID="{903D1B07-2975-44A6-8550-C3BBA82A10CE}">
+									<Language>SFX</Language>
+									<AudioFile>auto bocina.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="183777913"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="auto bocina" ID="{903D1B07-2975-44A6-8550-C3BBA82A10CE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BotonFisico" ID="{B9EF26E5-CA7E-43AA-9B6B-3F7ADACAEB3F}" ShortID="718583042">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="6"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="boton fisico" ID="{39C56302-D5E3-4F83-AA80-D27C130FC7AA}">
+									<Language>SFX</Language>
+									<AudioFile>boton fisico.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="116009970"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="boton fisico" ID="{39C56302-D5E3-4F83-AA80-D27C130FC7AA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SwitchFisico" ID="{6D0CD921-2B7C-47A2-86F7-EB59E1D3F24E}" ShortID="848221525">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="4"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="switch fisico" ID="{800A9E39-334E-4BBF-9EC3-F23826C192A5}">
+									<Language>SFX</Language>
+									<AudioFile>switch fisico.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="999563677"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="switch fisico" ID="{800A9E39-334E-4BBF-9EC3-F23826C192A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CorteVegetales" ID="{C4CB0387-44CD-49E4-B398-FABB8C367E75}" ShortID="26247566">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="corte de vegetales o carne" ID="{CAC6B60D-BA87-46D2-B28E-EA3D9A855507}">
+									<Language>SFX</Language>
+									<AudioFile>corte de vegetales o carne.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="758221955"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="corte de vegetales o carne" ID="{CAC6B60D-BA87-46D2-B28E-EA3D9A855507}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cronometro" ID="{16CFA84E-9948-4EA3-AB8F-50E316B5EB31}" ShortID="255722515">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="cronometro de cocina" ID="{503A221B-1CAD-4058-B98E-EBE24E948C2F}">
+									<Language>SFX</Language>
+									<AudioFile>cronometro de cocina.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="227409544"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="cronometro de cocina" ID="{503A221B-1CAD-4058-B98E-EBE24E948C2F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="LavadoManos" ID="{2F04B747-0EAD-4BF4-A40F-C1DDA4D8A868}" ShortID="857057975">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="6"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="lavado de manos" ID="{4A9F0C6A-F0DC-480F-872B-98C20798129B}">
+									<Language>SFX</Language>
+									<AudioFile>lavado de manos.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="398923845"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="lavado de manos" ID="{4A9F0C6A-F0DC-480F-872B-98C20798129B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="AguaLavabo" ID="{43215C5D-C18E-495F-A302-C5055D0812BF}" ShortID="557290014">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="4"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="lavabo-agua corriendo" ID="{348C7726-7F6A-46E1-8749-53FB71716A5A}">
+									<Language>SFX</Language>
+									<AudioFile>lavabo-agua corriendo.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="349264939"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="lavabo-agua corriendo" ID="{348C7726-7F6A-46E1-8749-53FB71716A5A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="NotificacionPedido" ID="{EA221A02-13DE-40CE-9F17-AB04F491209A}" ShortID="839542620">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="notificacion nuevo pedido" ID="{F819AA0C-42CE-4C99-A33C-E70B117CE1F8}">
+									<Language>SFX</Language>
+									<AudioFile>notificacion nuevo pedido.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="958342161"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="notificacion nuevo pedido" ID="{F819AA0C-42CE-4C99-A33C-E70B117CE1F8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="NotificacionDriveThru" ID="{08BFB2A6-829E-492C-BDB7-6E318ECFA153}" ShortID="412293324">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="notificacion drive thru" ID="{450D5282-196B-466F-AC7B-94D5ACF7F4DB}">
+									<Language>SFX</Language>
+									<AudioFile>notificacion drive thru.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="474729625"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="notificacion drive thru" ID="{450D5282-196B-466F-AC7B-94D5ACF7F4DB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PuertaAbrir" ID="{A3196AC7-E2A7-474B-A14A-D4307AA250C6}" ShortID="1052285894">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="4"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="puerta abriendose" ID="{FF69E6EE-D66B-4805-B227-80FB31233776}">
+									<Language>SFX</Language>
+									<AudioFile>puerta abriendose.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="131308609"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="puerta abriendose" ID="{FF69E6EE-D66B-4805-B227-80FB31233776}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PuertaCerrar" ID="{E4602E73-0C38-47AE-8269-1469472F4308}" ShortID="981609759">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="puerta cerrandose" ID="{57AC9C41-F1EC-4B98-8962-84993408057E}">
+									<Language>SFX</Language>
+									<AudioFile>puerta cerrandose.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="557087385"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="puerta cerrandose" ID="{57AC9C41-F1EC-4B98-8962-84993408057E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fritura" ID="{6897AC12-73F4-49F9-8022-E98FA6B72ACA}" ShortID="592152037">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="sonido fritura" ID="{8F91D262-9B59-475B-B84E-4CDCF9786F2E}">
+									<Language>SFX</Language>
+									<AudioFile>sonido fritura.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="818503075"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="sonido fritura" ID="{8F91D262-9B59-475B-B84E-4CDCF9786F2E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CadenaBano" ID="{34AC00A9-0776-48D2-9590-F4EE28EA7984}" ShortID="154171974">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64" Value="3"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="tirada de cadena-baño" ID="{6E9E443C-0EDA-4B8D-8DF3-06EE9A0ED8A2}">
+									<Language>SFX</Language>
+									<AudioFile>tirada de cadena-baño.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="5762237"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="tirada de cadena-baño" ID="{6E9E443C-0EDA-4B8D-8DF3-06EE9A0ED8A2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

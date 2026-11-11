@@ -181,6 +181,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -202,9 +204,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &96636802
 MeshFilter:
@@ -260,23 +264,16 @@ GameObject:
   m_Component:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
-  - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585549}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &330585544
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_IsActive: 0
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -379,7 +376,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -387,6 +383,47 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12dad1badd926734ebfddb2df10f88de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkAudioListener
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &330585549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc538f956808874d9a8af400c3386a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,14 +450,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -465,7 +502,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -497,17 +534,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &705655920 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1130725078037024, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
@@ -536,6 +579,80 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0.00000023841858, z: 0}
+--- !u!1001 &754769135
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1569526180}
+    m_Modifications:
+    - target: {fileID: 1000, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_Name
+      value: Televisor de techo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.62002987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.62002987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.62002987
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5463.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 99.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 167.20004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.007946233
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.007946233
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7070622
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7070622
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 178.712
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+--- !u!4 &754769136 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1001, guid: c03f93c4af414247a1f24140676caae4, type: 3}
+  m_PrefabInstance: {fileID: 754769135}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +743,6 @@ MonoBehaviour:
   m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
-  m_Version: 2
   m_TaaSettings:
     m_Quality: 3
     m_FrameInfluence: 0.1
@@ -634,6 +750,47 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!114 &1180211168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180211160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12dad1badd926734ebfddb2df10f88de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkAudioListener
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &1180211169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180211160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc538f956808874d9a8af400c3386a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &1220748121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -688,7 +845,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2774220344278030320, guid: 8ee41df82a160f040be0bddf327e0984, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1802853719}
+    - targetCorrespondingSourceObject: {fileID: 2774220344278030320, guid: 8ee41df82a160f040be0bddf327e0984, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 754769136}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 8ee41df82a160f040be0bddf327e0984, type: 3}
 --- !u!1001 &1313086277
@@ -702,6 +865,10 @@ PrefabInstance:
     - target: {fileID: 1773623360729482, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_Name
       value: First Person Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 23087463268523072, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalScale.x
@@ -717,7 +884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5408
+      value: 5673.3
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -725,7 +892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -167
+      value: -75.8
       objectReference: {fileID: 0}
     - target: {fileID: 4207293392497186, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -774,10 +941,421 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1593727746557118, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1180211167}
+    - targetCorrespondingSourceObject: {fileID: 1593727746557118, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1180211169}
+    - targetCorrespondingSourceObject: {fileID: 1593727746557118, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1180211168}
     - targetCorrespondingSourceObject: {fileID: 1130725078037024, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 705655922}
   m_SourcePrefab: {fileID: 100100000, guid: 11aaea5348574644a9eb4f4504fcce3f, type: 3}
+--- !u!4 &1569526180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2774220344278030320, guid: 8ee41df82a160f040be0bddf327e0984, type: 3}
+  m_PrefabInstance: {fileID: 1220748121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1802853718
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1569526180}
+    m_Modifications:
+    - target: {fileID: 1000, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_Name
+      value: Radio de cocina
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5107.9106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -226.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.028841848
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.028841848
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70651835
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70651835
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -94.675
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+--- !u!4 &1802853719 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1001, guid: eece5aa50e6a46cda03a2ac29b891fdb, type: 3}
+  m_PrefabInstance: {fileID: 1802853718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2021191011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021191013}
+  - component: {fileID: 2021191012}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2021191012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021191011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb77aafb526a0d43b93a4bde50dfd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkInitializer
+  InitializationSettings: {fileID: 11400000, guid: f5668d39e036b5d468a87d83626a4694, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &2021191013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021191011}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2030003100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030003101}
+  - component: {fileID: 2030003102}
+  - component: {fileID: 2030003103}
+  m_Layer: 0
+  m_Name: "Sonorizaci\xF3n del restaurante"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030003101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030003100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030003102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030003100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cc538f956808874d9a8af400c3386a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &2030003103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030003100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31271e917d894a2b91be21e64f1d9d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - label: Drive thru
+    audioEvent: DialogoRecepcion
+    position: {x: 4889.8003, y: 100, z: 430.55762}
+    radius: 100
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: BotonFisico
+    aimRadius: 22
+    sinkNumber: 0
+  - label: Freidora
+    audioEvent: DialogoPapas
+    position: {x: 4935.1787, y: 88.7113, z: 345.00162}
+    radius: 105
+    volumeDb: 0
+    trigger: 0
+    secondaryEvent: Cronometro
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Radio de cocina
+    audioEvent: DialogoRadio
+    position: {x: 5111.0806, y: 82.12134, z: 225.63225}
+    radius: 105
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 25
+    sinkNumber: 0
+  - label: Televisor del comedor
+    audioEvent: DialogoTelevision
+    position: {x: 5462.5596, y: 139.09662, z: -102.65093}
+    radius: 140
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 25
+    sinkNumber: 0
+  - label: "Cub\xEDculo del ba\xF1o"
+    audioEvent: DialogoBano
+    position: {x: 5471.989, y: 105, z: 586.823}
+    radius: 65
+    volumeDb: 0
+    trigger: 0
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Puerta principal
+    audioEvent: DialogoLadron
+    position: {x: 5560, y: 101.96686, z: 21.83996}
+    radius: 120
+    volumeDb: 3
+    trigger: 0
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Freidora
+    audioEvent: Fritura
+    position: {x: 4919.389, y: 74.88777, z: 344.81223}
+    radius: 170
+    volumeDb: 0
+    trigger: 2
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 0
+  - label: "Canilla del ba\xF1o 1"
+    audioEvent: AguaLavabo
+    position: {x: 5440, y: 75.56736, z: 671.9277}
+    radius: 125
+    volumeDb: 0
+    trigger: 5
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 1
+  - label: "Canilla del ba\xF1o 2"
+    audioEvent: AguaLavabo
+    position: {x: 5408.385, y: 73.078835, z: 668.9104}
+    radius: 125
+    volumeDb: 0
+    trigger: 5
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 2
+  - label: Carril del drive thru
+    audioEvent: AutoPasando
+    position: {x: 4840, y: 72, z: 280}
+    radius: 115
+    volumeDb: 0
+    trigger: 3
+    secondaryEvent: AutoBocina
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Inodoro 1
+    audioEvent: CadenaBano
+    position: {x: 5435, y: 55.37002, z: 751.8726}
+    radius: 80
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 20
+    sinkNumber: 0
+  - label: Inodoro 2
+    audioEvent: CadenaBano
+    position: {x: 5381.8096, y: 56.091293, z: 805.1974}
+    radius: 80
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 20
+    sinkNumber: 0
+  - label: Inodoro 3
+    audioEvent: CadenaBano
+    position: {x: 5451.529, y: 58.64852, z: 805.0471}
+    radius: 80
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 20
+    sinkNumber: 0
+  - label: Puerta principal
+    audioEvent: PuertaAbrir
+    position: {x: 5560, y: 82.29236, z: 8.675959}
+    radius: 75
+    volumeDb: 0
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Caja registradora 1
+    audioEvent: SwitchFisico
+    position: {x: 5322.442, y: 79.65666, z: 142.9905}
+    radius: 75
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 12
+    sinkNumber: 0
+  - label: Caja registradora 2
+    audioEvent: SwitchFisico
+    position: {x: 5257.705, y: 79.65666, z: 142.77693}
+    radius: 75
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 12
+    sinkNumber: 0
+  - label: Caja registradora 3
+    audioEvent: SwitchFisico
+    position: {x: 4923.999, y: 76.45609, z: 511.30457}
+    radius: 75
+    volumeDb: 0
+    trigger: 6
+    secondaryEvent: 
+    aimRadius: 12
+    sinkNumber: 0
+  - label: Mesada de cocina
+    audioEvent: CorteCapas
+    position: {x: 5099.2134, y: 84.51978, z: 340.43445}
+    radius: 85
+    volumeDb: 0
+    trigger: 1
+    secondaryEvent: CorteVegetales
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Lavamanos 1
+    audioEvent: LavadoManos
+    position: {x: 5440, y: 67.77946, z: 672.3917}
+    radius: 75
+    volumeDb: 0
+    trigger: 1
+    secondaryEvent: 
+    aimRadius: 18
+    sinkNumber: 1
+  - label: Lavamanos 2
+    audioEvent: LavadoManos
+    position: {x: 5409.885, y: 65.36251, z: 672.51526}
+    radius: 75
+    volumeDb: 0
+    trigger: 1
+    secondaryEvent: 
+    aimRadius: 18
+    sinkNumber: 2
+  - label: "Zona de cocci\xF3n"
+    audioEvent: AmbienteCocina
+    position: {x: 5097.7134, y: 100, z: 337.4236}
+    radius: 150
+    volumeDb: 0
+    trigger: 2
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Exterior drive thru
+    audioEvent: AmbienteDriveThru
+    position: {x: 4850, y: 100, z: 280}
+    radius: 140
+    volumeDb: 0
+    trigger: 2
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 0
+  - label: Ambiente del comedor
+    audioEvent: AmbienteRestaurante
+    position: {x: 5297.5, y: 70, z: -180}
+    radius: 280
+    volumeDb: -6
+    trigger: 2
+    secondaryEvent: 
+    aimRadius: 0
+    sinkNumber: 0
+  restaurantVolumeDb: -6
+  orderVolumeDb: 0
+  driveThruVolumeDb: 0
+  layeredFryingVolumeDb: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -788,3 +1366,5 @@ SceneRoots:
   - {fileID: 1220748121}
   - {fileID: 1313086277}
   - {fileID: 96636803}
+  - {fileID: 2021191013}
+  - {fileID: 2030003101}
