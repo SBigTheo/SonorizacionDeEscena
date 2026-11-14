@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BA3057EC-A5A9-4D86-8A69-044F9661C582}",
     "Language": "SFX",
-    "Hash": "{4D5AEB8D-2C6E-5043-55D5-EE4E5D7DDB04}",
+    "Hash": "{9CC133ED-DDA4-EDBF-E044-E6F798E55293}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Sonorizacion",
     "ShortName": "Sonorizacion",
     "Path": "Sonorizacion.bnk",
@@ -70,6 +70,30 @@
       "Location": "Memory",
       "ShortName": "auto bocina.wav",
       "CachePath": "CA/{CA4ACF26-4E07-18B2-8C03-37C19DF2B0BB}.wem"
+     },
+     {
+      "Id": "193152456",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Burger Time.wav",
+      "CachePath": "E0/{E0BE7CC3-5B73-592D-FB84-3CA843D71776}.wem"
+     },
+     {
+      "Id": "193152457",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Burger Time - Melodia.wav",
+      "CachePath": "19/{193A1EC4-830E-A9A8-3A8B-8729CF94AFBA}.wem"
+     },
+     {
+      "Id": "193152458",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Burger Time - Ritmo.wav",
+      "CachePath": "0E/{0E16FDAD-74D0-9869-82FD-AAFC8DB78217}.wem"
      },
      {
       "Id": "227409544",
@@ -229,7 +253,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "dialogo radio + musica.wav",
-      "CachePath": "73/{73E6FABF-2951-468E-A0EE-5956CFF2CA75}.wem"
+      "CachePath": "44/{44220748-FD95-7398-6E04-6560DCD74642}.wem"
      },
      {
       "Id": "905326751",
@@ -246,14 +270,6 @@
       "Location": "Memory",
       "ShortName": "CaidaCuchillo.wav",
       "CachePath": "3F/{3F2368A1-B41E-7107-ADBB-41DF446B2DEB}.wem"
-     },
-     {
-      "Id": "947363878",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "bloque 1.wav",
-      "CachePath": "B0/{B0E61762-86E6-DF42-DE21-697729C37D82}.wem"
      },
      {
       "Id": "958342161",
@@ -489,8 +505,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoRadio",
       "GUID": "{9F5AD75F-4141-46A3-B518-848851CF4687}",
       "DurationType": "OneShot",
-      "DurationMin": "158.14346",
-      "DurationMax": "158.14346",
+      "DurationMin": "151.34348",
+      "DurationMax": "151.34348",
       "MediaRefs": [
        {
         "Id": "896192712"
@@ -597,7 +613,7 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "947363878"
+        "Id": "193152456"
        }
       ]
      },
@@ -633,6 +649,12 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
+        "Id": "193152457"
+       },
+       {
+        "Id": "193152458"
+       },
+       {
         "Id": "363355216"
        },
        {
@@ -640,9 +662,6 @@
        },
        {
         "Id": "665915096"
-       },
-       {
-        "Id": "947363878"
        }
       ]
      },
@@ -761,6 +780,12 @@
     ],
     "GameParameters": [
      {
+      "Id": "2845212235",
+      "Name": "MezclaRitmoComedor",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MezclaRitmoComedor",
+      "GUID": "{2B2F5045-2A41-455B-B0A3-5417FBDB5E51}"
+     },
+     {
       "Id": "3287201201",
       "Name": "ProximidadBloque1",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque1",
@@ -783,10 +808,16 @@
       "Name": "ProximidadBloque4",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque4",
       "GUID": "{F8553C78-B60A-4FF9-B7AF-3173BB81ADC7}"
+     },
+     {
+      "Id": "3533537083",
+      "Name": "MezclaMelodiaComedor",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MezclaMelodiaComedor",
+      "GUID": "{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}"
      }
     ]
    }
   ],
-  "FileHash": "{249C9EF8-281E-F453-0093-68F383AE0A55}"
+  "FileHash": "{0CF05553-18D8-C017-78C6-15AA82139C08}"
  }
 }

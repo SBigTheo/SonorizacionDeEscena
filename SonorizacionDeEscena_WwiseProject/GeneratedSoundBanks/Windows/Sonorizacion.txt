@@ -36,10 +36,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	4072083471	Play_LavadoManos			\Default Work Unit\Play_LavadoManos	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	2845212235	MezclaRitmoComedor			\Default Work Unit\MezclaRitmoComedor
 	3287201201	ProximidadBloque1			\Default Work Unit\ProximidadBloque1	
 	3287201202	ProximidadBloque2			\Default Work Unit\ProximidadBloque2	
 	3287201203	ProximidadBloque3			\Default Work Unit\ProximidadBloque3	
 	3287201204	ProximidadBloque4			\Default Work Unit\ProximidadBloque4	
+	3533537083	MezclaMelodiaComedor			\Default Work Unit\MezclaMelodiaComedor
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5762237	CadenaBano	.cache\A8\{A8A0BAFC-1B7D-E993-AEE2-AA7255E7E4C9}.wem		\Containers\Default Work Unit\Sonorizacion\CadenaBano		150262
@@ -49,6 +51,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	129529766	DialogoPapas	.cache\6A\{6A497882-2844-BBBE-E708-027566617898}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoPapas		114694
 	131308609	PuertaAbrir	.cache\0B\{0B56E288-B3B2-E167-A9A2-1C1955EE95E1}.wem		\Containers\Default Work Unit\Sonorizacion\PuertaAbrir		14210
 	183777913	AutoBocina	.cache\CA\{CA4ACF26-4E07-18B2-8C03-37C19DF2B0BB}.wem		\Containers\Default Work Unit\Sonorizacion\AutoBocina		13534
+	193152456	MusicaComedor	.cache\E0\{E0BE7CC3-5B73-592D-FB84-3CA843D71776}.wem		\Containers\Default Work Unit\Musica por zonas\MusicaComedor		1667330
+	193152457	Melodia	.cache\19\{193A1EC4-830E-A9A8-3A8B-8729CF94AFBA}.wem		\Containers\Default Work Unit\Bloque1\Seccion\Melodia		1667330
+	193152458	Ritmo	.cache\0E\{0E16FDAD-74D0-9869-82FD-AAFC8DB78217}.wem		\Containers\Default Work Unit\Bloque1\Seccion\Ritmo		1667330
 	227409544	Cronometro	.cache\9F\{9FF4DA9F-3AD2-CA4D-ACCE-AA84CC5A203F}.wem		\Containers\Default Work Unit\Sonorizacion\Cronometro		103416
 	261140818	AutoPasando	.cache\24\{2437771B-0B64-F16E-8F91-4C63DDB6D917}.wem		\Containers\Default Work Unit\Sonorizacion\AutoPasando		34727
 	264390407	DialogoRecepcion	.cache\77\{77D0C6C7-D6C7-EFED-3062-84B477F1BF94}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoRecepcion		89694
@@ -68,10 +73,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	758221955	CorteVegetales	.cache\26\{26A3A688-09F8-3BEA-1F30-96AC7526DADD}.wem		\Containers\Default Work Unit\Sonorizacion\CorteVegetales		76068
 	818503075	Fritura	.cache\F4\{F4AC1ABE-7E81-7C8C-2BF8-998F45CB2708}.wem		\Containers\Default Work Unit\Sonorizacion\Fritura		373004
 	823890113	DialogoTelevision	.cache\FB\{FB103EAF-00FC-8A01-53C4-6E73649C5260}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoTelevision		290556
-	896192712	DialogoRadio	.cache\73\{73E6FABF-2951-468E-A0EE-5956CFF2CA75}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoRadio		1622770
+	896192712	DialogoRadio	.cache\44\{44220748-FD95-7398-6E04-6560DCD74642}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoRadio		1549194
 	905326751	SustoRata	.cache\FB\{FB71C6DB-1007-BA25-A1A6-EDC08A758E1A}.wem		\Containers\Default Work Unit\SustoRata		225006
 	906170386	Caida	.cache\3F\{3F2368A1-B41E-7107-ADBB-41DF446B2DEB}.wem		\Containers\Default Work Unit\Sonorizacion\Caida		19707
-	947363878	Bloque1	.cache\B0\{B0E61762-86E6-DF42-DE21-697729C37D82}.wem		\Containers\Default Work Unit\Bloque1\Seccion\Bloque1		1675732
 	958342161	NotificacionPedido	.cache\7E\{7E927D49-44E1-D0D0-65CE-E48DAB4F6BE4}.wem		\Containers\Default Work Unit\Sonorizacion\NotificacionPedido		20362
 	963390951	SonidosDeRatita	.cache\73\{7309A11E-0885-E872-0E57-3D15EE043FC4}.wem		\Containers\Default Work Unit\Sonorizacion\SonidosDeRatita		67492
 	999563677	SwitchFisico	.cache\B4\{B4CEB27C-6530-2ACE-283D-AB2241EE2CAD}.wem		\Containers\Default Work Unit\Sonorizacion\SwitchFisico		14949

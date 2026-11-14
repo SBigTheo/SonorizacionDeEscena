@@ -79,6 +79,14 @@ public sealed class SonorizacionRestauranteEditor : Editor
         }
         if (!hasDiningPoint)
             EditorGUILayout.PropertyField(serializedObject.FindProperty("restaurantVolumeDb"), new GUIContent("Ambiente restaurante"));
+        else
+        {
+            var zone = serializedObject.FindProperty("zonaAmbienteComedor");
+            EditorGUILayout.PropertyField(zone, new GUIContent("Zona de ambiente del comedor"));
+            if (zone.objectReferenceValue != null)
+                EditorGUILayout.PropertyField(serializedObject.FindProperty("distanciaFundidoAmbienteComedor"),
+                    new GUIContent("Distancia del fundido del ambiente"));
+        }
         EditorGUILayout.PropertyField(serializedObject.FindProperty("orderVolumeDb"), new GUIContent("Aviso de nuevo pedido"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("driveThruVolumeDb"), new GUIContent("Aviso de drive thru"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("layeredFryingVolumeDb"), new GUIContent("Fritura en capas"));
@@ -88,6 +96,10 @@ public sealed class SonorizacionRestauranteEditor : Editor
             new GUIContent("Distancia del fundido"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("segundosFundidoMusical"),
             new GUIContent("Tiempo de fundido (s)"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("ladoRitmoComedor"),
+            new GUIContent("Lado del ritmo en el comedor"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("ladoMelodiaComedor"),
+            new GUIContent("Lado de la melodía en el comedor"));
         points.DoLayoutList();
         serializedObject.ApplyModifiedProperties();
     }

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{61C5FB9D-4C71-4ED8-BBD6-F7074C0220F3}",
+    "Hash": "{702D3977-E1DC-2EFC-7D32-4620832F7AE2}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -44,6 +44,12 @@
     ],
     "GameParameters": [
      {
+      "Id": "2845212235",
+      "Name": "MezclaRitmoComedor",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MezclaRitmoComedor",
+      "GUID": "{2B2F5045-2A41-455B-B0A3-5417FBDB5E51}"
+     },
+     {
       "Id": "3287201201",
       "Name": "ProximidadBloque1",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque1",
@@ -66,10 +72,16 @@
       "Name": "ProximidadBloque4",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque4",
       "GUID": "{F8553C78-B60A-4FF9-B7AF-3173BB81ADC7}"
+     },
+     {
+      "Id": "3533537083",
+      "Name": "MezclaMelodiaComedor",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\MezclaMelodiaComedor",
+      "GUID": "{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}"
      }
     ]
    }
   ],
-  "FileHash": "{5BFDAAC7-7F34-D866-9C11-D5A4F836D86F}"
+  "FileHash": "{261242A0-9C0C-BDDE-7225-F47B411120D8}"
  }
 }

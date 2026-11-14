@@ -40,6 +40,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
     [SerializeField] private Point[] points;
     [SerializeField, Range(-60f, 12f)] private float restaurantVolumeDb;
+    [SerializeField] private ZonaMusical zonaAmbienteComedor;
+    [SerializeField, Min(1f)] private float distanciaFundidoAmbienteComedor = 120f;
     [SerializeField, Range(-60f, 12f)] private float orderVolumeDb;
     [SerializeField, Range(-60f, 12f)] private float driveThruVolumeDb;
     [SerializeField, Range(-60f, 12f)] private float layeredFryingVolumeDb;
@@ -72,6 +74,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     [SerializeField] private ZonaMusical[] zonasMusicales;
     [SerializeField, Min(1f)] private float distanciaFundidoMusical = 90f;
     [SerializeField, Min(0.1f)] private float segundosFundidoMusical = 2.5f;
+    [SerializeField] private Vector3 ladoRitmoComedor = new(5135f, 70f, -245f);
+    [SerializeField] private Vector3 ladoMelodiaComedor = new(5550f, 70f, -245f);
 
     private static readonly string[] ZonasPorBloque =
     {
@@ -87,6 +91,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private readonly float[] proximidadesEnviadas = { -1f, -1f, -1f, -1f };
     private GameObject emisorMusical;
     private uint musica;
+    private float mezclaLateralEnviada = -1f;
 
     private void Start()
     {
@@ -185,14 +190,15 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         {
             var point = points[index];
             var distance = Distance(playerPosition, point.position);
-            var inside = distance <= point.radius;
+            var targetGain = DistanceGain(point, playerPosition);
+            var usesDiningZone = point == diningPoint && zonaAmbienteComedor != null;
+            var inside = usesDiningZone ? targetGain > 0f : distance <= point.radius;
             var entered = inside && !point.inside;
             var exited = !inside && point.inside;
             point.inside = inside;
 
             var isEntranceDialogue = point.audioEvent == FinalDialogueEvent;
             var startEntranceDialogue = isEntranceDialogue && entered && !entranceDialoguePlayed;
-            var targetGain = DistanceGain(point, playerPosition);
             point.gain = Mathf.MoveTowards(point.gain, targetGain, Time.deltaTime * 2f);
             if (point != diningPoint)
                 SetVolume(point.emitter, point.volumeDb, point.gain);
@@ -244,7 +250,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                 case Trigger.Loop:
                     if (inside && point.loop == 0)
                         point.loop = Post(point.audioEvent, point.emitter);
-                    else if (exited && point.loop != 0)
+                    else if (point.loop != 0 && (usesDiningZone ? point.gain <= 0f : exited))
                     {
                         AkUnitySoundEngine.StopPlayingID(point.loop, 650);
                         point.loop = 0;
@@ -340,6 +346,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         if (emisorMusical == null)
             return;
 
+        ActualizarCapasComedor(posicion);
         Array.Fill(distanciasMusicales, float.PositiveInfinity);
         var menorDistancia = float.PositiveInfinity;
         foreach (var zona in zonasMusicales)
@@ -381,6 +388,25 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             AkUnitySoundEngine.SetRTPCValue(ParametrosMusicales[bloque], proximidad, emisorMusical, duracion);
             proximidadesEnviadas[bloque] = proximidad;
         }
+    }
+
+    private void ActualizarCapasComedor(Vector3 posicion)
+    {
+        var origen = new Vector2(ladoRitmoComedor.x, ladoRitmoComedor.z);
+        var eje = new Vector2(ladoMelodiaComedor.x, ladoMelodiaComedor.z) - origen;
+        var desplazamiento = new Vector2(posicion.x, posicion.z) - origen;
+        var mezcla = eje.sqrMagnitude > 0.01f
+            ? Mathf.Clamp01(Vector2.Dot(desplazamiento, eje) / eje.sqrMagnitude)
+            : 0.5f;
+        if (Mathf.Abs(mezcla - mezclaLateralEnviada) < 0.002f)
+            return;
+
+        var duracion = mezclaLateralEnviada < 0f ? 0 : 200;
+        var melodia = Mathf.SmoothStep(0f, 100f, mezcla / 0.4f);
+        var ritmo = Mathf.SmoothStep(0f, 100f, (1f - mezcla) / 0.4f);
+        AkUnitySoundEngine.SetRTPCValue("MezclaMelodiaComedor", melodia, emisorMusical, duracion);
+        AkUnitySoundEngine.SetRTPCValue("MezclaRitmoComedor", ritmo, emisorMusical, duracion);
+        mezclaLateralEnviada = mezcla;
     }
 
     private void ToggleWater(Point faucet)
@@ -493,8 +519,15 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private static float Distance(Vector3 from, Vector3 to) =>
         Vector2.Distance(new Vector2(from.x, from.z), new Vector2(to.x, to.z));
 
-    private static float DistanceGain(Point point, Vector3 listenerPosition)
+    private float DistanceGain(Point point, Vector3 listenerPosition)
     {
+        if (point.audioEvent == DiningAmbienceEvent && zonaAmbienteComedor != null)
+        {
+            var distanceOutside = Mathf.Max(0f, zonaAmbienteComedor.DistanciaAlBorde(listenerPosition));
+            var progress = distanceOutside / Mathf.Max(1f, distanciaFundidoAmbienteComedor);
+            return Mathf.SmoothStep(1f, 0f, progress);
+        }
+
         var distance = Distance(listenerPosition, point.position);
         if (point.audioEvent == KitchenAmbienceEvent || point.audioEvent == DiningAmbienceEvent)
         {
@@ -646,10 +679,23 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        if (zonaAmbienteComedor != null)
+        {
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawLine(ladoRitmoComedor, ladoMelodiaComedor);
+#if UNITY_EDITOR
+            UnityEditor.Handles.Label(ladoRitmoComedor, "Bajo y percusión");
+            UnityEditor.Handles.Label(ladoMelodiaComedor, "Melodía");
+#endif
+        }
+
         if (points == null)
             return;
         foreach (var point in points)
         {
+            if (point.audioEvent == DiningAmbienceEvent && zonaAmbienteComedor != null)
+                continue;
+
             Gizmos.color = point.aimRadius > 0f ? Color.magenta :
                 point.trigger == Trigger.Loop || point.trigger == Trigger.ManualLoop ? Color.cyan : Color.yellow;
             Gizmos.DrawWireSphere(point.position, point.aimRadius > 0f ? point.aimRadius : 12f);

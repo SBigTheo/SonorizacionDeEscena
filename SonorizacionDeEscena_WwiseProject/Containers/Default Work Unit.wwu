@@ -790,9 +790,9 @@
 							<ChildrenList>
 								<AudioFileSource Name="Comedor" ID="{8013E5C1-EB61-4A46-A5D4-D21B32260C88}">
 									<Language>SFX</Language>
-									<AudioFile>bloque 1.wav</AudioFile>
+									<AudioFile>Burger Time.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="947363878"/>
+										<MediaID ID="193152456"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -945,7 +945,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Seccion" ID="{D8CDA6D3-7844-45DB-ACFA-BEE29F45064C}" ShortID="604572461">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="8727.27083333333"/>
+								<Property Name="EndPosition" Type="Real64" Value="17367.020833333332"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -956,14 +956,14 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Bloque1" ID="{A06CE1C6-36AB-4B5A-932E-483EE316A167}" ShortID="88161410">
+								<MusicTrack Name="Melodia" ID="{C5E4C613-61A7-4864-8593-5948B565E20B}" ShortID="1558265889">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
 										</Reference>
 										<Reference Name="TransitionRoot">
 											<Custom>
-												<MusicTransition Name="Root" ID="{C62712C1-5C6D-4526-9FDA-50ECAC5E6163}">
+												<MusicTransition Name="Root" ID="{AB215409-999D-4DAB-81E1-9C4B07B5F838}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -973,31 +973,181 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="bloque 1" ID="{74200C13-7298-47A8-99BC-09EEF9F86DC4}">
+										<AudioFileSource Name="Burger Time - Melodia" ID="{57A8C928-710F-4D3A-B0C5-8DC15D7B902D}">
 											<Language>SFX</Language>
-											<AudioFile>bloque 1.wav</AudioFile>
+											<AudioFile>Burger Time - Melodia.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="947363878"/>
+												<MediaID ID="193152457"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{9C68D339-A2D8-445A-BDB8-0BCEA8953B50}">
+											<MusicTrackSequence Name="" ID="{77C6AB58-8A1C-4D52-A50F-165D52ECB839}">
 												<ObjectLists>
 													<ObjectList Name="Clips">
-														<MusicClip Name="bloque 1" ID="{D4F6ED00-75A1-4698-AB56-DA309A730E74}">
+														<MusicClip Name="Burger Time - Melodia" ID="{D7C37561-CE76-4A18-AA00-22EB91525F1D}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="8727.27083333333"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17367.020833333332"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="bloque 1" ID="{74200C13-7298-47A8-99BC-09EEF9F86DC4}"/>
+															<AudioSourceRef Name="Burger Time - Melodia" ID="{57A8C928-710F-4D3A-B0C5-8DC15D7B902D}"/>
 														</MusicClip>
 													</ObjectList>
 												</ObjectLists>
 											</MusicTrackSequence>
 										</ObjectList>
+										<ObjectList Name="RTPC">
+												<RTPC Name="" ID="{D608442C-7737-40CE-9953-9697502CC31C}" ShortID="1113240306">
+													<PropertyList>
+														<Property Name="PropertyName" Type="string" Value="Volume"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="MezclaMelodiaComedor" ID="{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+														</Reference>
+														<Reference Name="Curve">
+															<Custom>
+																<Curve Name="" ID="{7DB6B1B6-F38A-4AED-B49D-2B90E7B7559A}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>-24</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>10</XPos>
+																			<YPos>-19</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>25</XPos>
+																			<YPos>-12</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>50</XPos>
+																			<YPos>-6</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>75</XPos>
+																			<YPos>-2.5</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>0</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+												</RTPC>
+											</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Ritmo" ID="{FBBE2085-EC65-4933-924C-8E2F2194B694}" ShortID="2935519441">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{A049F490-D44C-4A1C-9090-7D2B411DE125}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Burger Time - Ritmo" ID="{734C36C7-1448-4E11-B3B2-05883333465E}">
+											<Language>SFX</Language>
+											<AudioFile>Burger Time - Ritmo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="193152458"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{AC6FCCB6-D091-42B8-B18B-247F046F9C98}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Burger Time - Ritmo" ID="{28991799-D26B-42C7-ACA7-421B830D3C30}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17367.020833333332"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Burger Time - Ritmo" ID="{734C36C7-1448-4E11-B3B2-05883333465E}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+										<ObjectList Name="RTPC">
+												<RTPC Name="" ID="{ECF018AD-1686-4568-B7E1-948737793282}" ShortID="1767328876">
+													<PropertyList>
+														<Property Name="PropertyName" Type="string" Value="Volume"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="ControlInput">
+															<ObjectRef Name="MezclaRitmoComedor" ID="{2B2F5045-2A41-455B-B0A3-5417FBDB5E51}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+														</Reference>
+														<Reference Name="Curve">
+															<Custom>
+																<Curve Name="" ID="{A373BAC0-D0D3-4B39-9442-02B8653F2EA0}">
+																	<PropertyList>
+																		<Property Name="Flags" Type="int32" Value="3"/>
+																	</PropertyList>
+																	<PointList>
+																		<Point>
+																			<XPos>0</XPos>
+																			<YPos>-24</YPos>
+																			<Flags>5</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>10</XPos>
+																			<YPos>-19</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>25</XPos>
+																			<YPos>-12</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>50</XPos>
+																			<YPos>-6</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>75</XPos>
+																			<YPos>-2.5</YPos>
+																			<Flags>0</Flags>
+																		</Point>
+																		<Point>
+																			<XPos>100</XPos>
+																			<YPos>0</YPos>
+																			<Flags>37</Flags>
+																		</Point>
+																	</PointList>
+																</Curve>
+															</Custom>
+														</Reference>
+													</ReferenceList>
+												</RTPC>
+											</ObjectList>
 									</ObjectLists>
 								</MusicTrack>
 							</ChildrenList>
@@ -1007,7 +1157,7 @@
 									<MusicCue Name="Exit Cue" ID="{A9A8878F-ECED-46A8-A7C2-A19C0F679EFA}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="8727.27083333333"/>
+											<Property Name="TimeMs" Type="Real64" Value="17367.020833333332"/>
 										</PropertyList>
 									</MusicCue>
 								</ObjectList>

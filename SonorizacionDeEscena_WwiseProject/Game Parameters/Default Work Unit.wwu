@@ -23,6 +23,8 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="MezclaMelodiaComedor" ID="{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}"/>
+				<GameParameter Name="MezclaRitmoComedor" ID="{2B2F5045-2A41-455B-B0A3-5417FBDB5E51}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

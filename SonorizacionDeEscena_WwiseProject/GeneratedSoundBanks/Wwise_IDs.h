@@ -52,6 +52,8 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID MEZCLAMELODIACOMEDOR = 3533537083U;
+        static const AkUniqueID MEZCLARITMOCOMEDOR = 2845212235U;
         static const AkUniqueID PROXIMIDADBLOQUE1 = 3287201201U;
         static const AkUniqueID PROXIMIDADBLOQUE2 = 3287201202U;
         static const AkUniqueID PROXIMIDADBLOQUE3 = 3287201203U;
