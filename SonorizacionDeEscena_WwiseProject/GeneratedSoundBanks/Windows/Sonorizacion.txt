@@ -1,15 +1,23 @@
 Event	ID	Name			Wwise Object Path	Notes
 	81872250	Play_AmbienteCocina			\Default Work Unit\Play_AmbienteCocina	
 	105982041	Play_Fritura			\Default Work Unit\Play_Fritura	
+	113913485	Play_MusicaBanos			\Default Work Unit\Play_MusicaBanos	
 	173892078	Play_PuertaCerrar			\Default Work Unit\Play_PuertaCerrar	
 	333743509	Play_DialogoTelevision			\Default Work Unit\Play_DialogoTelevision	
 	599861905	Play_CorteCapas			\Default Work Unit\Play_CorteCapas	
 	885145518	Play_AmbienteDriveThru			\Default Work Unit\Play_AmbienteDriveThru	
+	1043478341	Play_SonidosDeRatita			\Default Work Unit\Play_SonidosDeRatita	
 	1150218369	Play_DialogoRecepcion			\Default Work Unit\Play_DialogoRecepcion	
 	1177537281	Play_PuertaAbrir			\Default Work Unit\Play_PuertaAbrir	
 	1297007679	Play_AutoPasando			\Default Work Unit\Play_AutoPasando	
+	1418970575	Play_MusicaComedor			\Default Work Unit\Play_MusicaComedor	
+	1651862989	Play_MusicaCocina			\Default Work Unit\Play_MusicaCocina	
+	1701225531	Play_MusicaEstacionamiento			\Default Work Unit\Play_MusicaEstacionamiento	
 	1974440458	Play_DialogoRadio			\Default Work Unit\Play_DialogoRadio	
+	2052657724	Play_MusicaInteractiva			\Default Work Unit\Play_MusicaInteractiva	
+	2123084180	Play_TachoDeBasura			\Default Work Unit\Play_TachoDeBasura	
 	2259311815	Play_CorteVegetales			\Default Work Unit\Play_CorteVegetales	
+	2424542996	Play_SustoRata			\Default Work Unit\Play_SustoRata	
 	2472953755	Play_AmbienteRestaurante			\Default Work Unit\Play_AmbienteRestaurante	
 	2499318168	Play_Cronometro			\Default Work Unit\Play_Cronometro	
 	2610937024	Play_DialogoPapas			\Default Work Unit\Play_DialogoPapas	
@@ -21,9 +29,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	3197448774	Play_CadenaBano			\Default Work Unit\Play_CadenaBano	
 	3246503421	Play_DialogoLadron			\Default Work Unit\Play_DialogoLadron	
 	3254684307	Play_FrituraCapas			\Default Work Unit\Play_FrituraCapas	
+	3386465647	Play_MusicaComedorVacio			\Default Work Unit\Play_MusicaComedorVacio	
+	3559093958	Play_Caida			\Default Work Unit\Play_Caida	
 	3617737833	Play_AutoBocina			\Default Work Unit\Play_AutoBocina	
 	3857983155	Play_BotonFisico			\Default Work Unit\Play_BotonFisico	
 	4072083471	Play_LavadoManos			\Default Work Unit\Play_LavadoManos	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3287201201	ProximidadBloque1			\Default Work Unit\ProximidadBloque1	
+	3287201202	ProximidadBloque2			\Default Work Unit\ProximidadBloque2	
+	3287201203	ProximidadBloque3			\Default Work Unit\ProximidadBloque3	
+	3287201204	ProximidadBloque4			\Default Work Unit\ProximidadBloque4	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5762237	CadenaBano	.cache\A8\{A8A0BAFC-1B7D-E993-AEE2-AA7255E7E4C9}.wem		\Containers\Default Work Unit\Sonorizacion\CadenaBano		150262
@@ -39,16 +55,24 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	270821923	FrituraCapas	.cache\B8\{B87B3E9E-D9E6-392B-7C3B-92B8A668D3EE}.wem		\Containers\Default Work Unit\Sonorizacion\FrituraCapas		54661
 	349264939	AguaLavabo	.cache\44\{4425B7F3-A2B2-3173-6DC0-48EC09FC0094}.wem		\Containers\Default Work Unit\Sonorizacion\AguaLavabo		299524
 	350126996	CorteCapas	.cache\A3\{A37C93AC-F865-74EE-DFA5-E61EF35272B8}.wem		\Containers\Default Work Unit\Sonorizacion\CorteCapas		55021
+	363355216	MusicaEstacionamiento	.cache\C6\{C6252BDF-0584-31B1-03C7-C94B97FFD37F}.wem		\Containers\Default Work Unit\Musica por zonas\MusicaEstacionamiento		1675732
+	364693521	Bloque3	.cache\E8\{E8A0E94C-F80A-4CDE-3693-EE9AD33F1D68}.wem		\Containers\Default Work Unit\Bloque3\Seccion\Bloque3		1675732
 	398923845	LavadoManos	.cache\90\{9043D05A-C9A6-2D62-2071-330EF95AC707}.wem		\Containers\Default Work Unit\Sonorizacion\LavadoManos		240649
 	474729625	NotificacionDriveThru	.cache\17\{178E1AF4-05DB-3800-F2CF-84055A6A7DA7}.wem		\Containers\Default Work Unit\Sonorizacion\NotificacionDriveThru		5747
 	518145163	AmbienteCocina	.cache\4F\{4FD844E2-9008-42E2-A2A9-B79795790BD2}.wem		\Containers\Default Work Unit\Sonorizacion\AmbienteCocina		2730459
 	518671127	DialogoBano	.cache\62\{622E723E-CBA5-6A01-1EAD-4DAB45482CEB}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoBano		49326
 	534936738	DialogoLadron	.cache\6D\{6DB24B36-5967-EAAA-F240-8E7E092609B3}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoLadron		94881
 	557087385	PuertaCerrar	.cache\FF\{FF8016D3-6981-32BD-5762-83E65096EAE0}.wem		\Containers\Default Work Unit\Sonorizacion\PuertaCerrar		33849
+	602796887	TachoDeBasura	.cache\1E\{1E66BFBD-51BA-B194-0C76-E27461198850}.wem		\Containers\Default Work Unit\Sonorizacion\TachoDeBasura		49297
+	665915096	MusicaCocina	.cache\29\{290EBBEE-965A-87CC-2ED4-FB19E1EA95ED}.wem		\Containers\Default Work Unit\Musica por zonas\MusicaCocina		1675732
 	758221955	CorteVegetales	.cache\26\{26A3A688-09F8-3BEA-1F30-96AC7526DADD}.wem		\Containers\Default Work Unit\Sonorizacion\CorteVegetales		76068
 	818503075	Fritura	.cache\F4\{F4AC1ABE-7E81-7C8C-2BF8-998F45CB2708}.wem		\Containers\Default Work Unit\Sonorizacion\Fritura		373004
 	823890113	DialogoTelevision	.cache\FB\{FB103EAF-00FC-8A01-53C4-6E73649C5260}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoTelevision		290556
 	896192712	DialogoRadio	.cache\73\{73E6FABF-2951-468E-A0EE-5956CFF2CA75}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoRadio		1622770
+	905326751	SustoRata	.cache\FB\{FB71C6DB-1007-BA25-A1A6-EDC08A758E1A}.wem		\Containers\Default Work Unit\SustoRata		225006
+	906170386	Caida	.cache\3F\{3F2368A1-B41E-7107-ADBB-41DF446B2DEB}.wem		\Containers\Default Work Unit\Sonorizacion\Caida		19707
+	947363878	Bloque1	.cache\B0\{B0E61762-86E6-DF42-DE21-697729C37D82}.wem		\Containers\Default Work Unit\Bloque1\Seccion\Bloque1		1675732
 	958342161	NotificacionPedido	.cache\7E\{7E927D49-44E1-D0D0-65CE-E48DAB4F6BE4}.wem		\Containers\Default Work Unit\Sonorizacion\NotificacionPedido		20362
+	963390951	SonidosDeRatita	.cache\73\{7309A11E-0885-E872-0E57-3D15EE043FC4}.wem		\Containers\Default Work Unit\Sonorizacion\SonidosDeRatita		67492
 	999563677	SwitchFisico	.cache\B4\{B4CEB27C-6530-2ACE-283D-AB2241EE2CAD}.wem		\Containers\Default Work Unit\Sonorizacion\SwitchFisico		14949
 

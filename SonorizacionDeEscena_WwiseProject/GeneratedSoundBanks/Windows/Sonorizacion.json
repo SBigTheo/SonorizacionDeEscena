@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BA3057EC-A5A9-4D86-8A69-044F9661C582}",
     "Language": "SFX",
-    "Hash": "{9F03035C-30A4-0862-7792-6A6C45BDFB87}",
+    "Hash": "{4D5AEB8D-2C6E-5043-55D5-EE4E5D7DDB04}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Sonorizacion",
     "ShortName": "Sonorizacion",
     "Path": "Sonorizacion.bnk",
@@ -120,6 +120,22 @@
       "CachePath": "A3/{A37C93AC-F865-74EE-DFA5-E61EF35272B8}.wem"
      },
      {
+      "Id": "363355216",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bloque 2.wav",
+      "CachePath": "C6/{C6252BDF-0584-31B1-03C7-C94B97FFD37F}.wem"
+     },
+     {
+      "Id": "364693521",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bloque 3.wav",
+      "CachePath": "E8/{E8A0E94C-F80A-4CDE-3693-EE9AD33F1D68}.wem"
+     },
+     {
       "Id": "398923845",
       "Language": "SFX",
       "Streaming": "false",
@@ -168,6 +184,22 @@
       "CachePath": "FF/{FF8016D3-6981-32BD-5762-83E65096EAE0}.wem"
      },
      {
+      "Id": "602796887",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TachoDeBasura.wav",
+      "CachePath": "1E/{1E66BFBD-51BA-B194-0C76-E27461198850}.wem"
+     },
+     {
+      "Id": "665915096",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bloque 4.wav",
+      "CachePath": "29/{290EBBEE-965A-87CC-2ED4-FB19E1EA95ED}.wem"
+     },
+     {
       "Id": "758221955",
       "Language": "SFX",
       "Streaming": "false",
@@ -200,12 +232,44 @@
       "CachePath": "73/{73E6FABF-2951-468E-A0EE-5956CFF2CA75}.wem"
      },
      {
+      "Id": "905326751",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SustoRata.wav",
+      "CachePath": "FB/{FB71C6DB-1007-BA25-A1A6-EDC08A758E1A}.wem"
+     },
+     {
+      "Id": "906170386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CaidaCuchillo.wav",
+      "CachePath": "3F/{3F2368A1-B41E-7107-ADBB-41DF446B2DEB}.wem"
+     },
+     {
+      "Id": "947363878",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bloque 1.wav",
+      "CachePath": "B0/{B0E61762-86E6-DF42-DE21-697729C37D82}.wem"
+     },
+     {
       "Id": "958342161",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "notificacion nuevo pedido.wav",
       "CachePath": "7E/{7E927D49-44E1-D0D0-65CE-E48DAB4F6BE4}.wem"
+     },
+     {
+      "Id": "963390951",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SonidosDeRatita.wav",
+      "CachePath": "73/{7309A11E-0885-E872-0E57-3D15EE043FC4}.wem"
      },
      {
       "Id": "999563677",
@@ -318,6 +382,20 @@
       "MediaRefs": [
        {
         "Id": "5762237"
+       }
+      ]
+     },
+     {
+      "Id": "3559093958",
+      "Name": "Play_Caida",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Caida",
+      "GUID": "{ED184F18-2372-4F9C-B54A-2EE4CEA74C1B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.98092973",
+      "DurationMax": "0.98092973",
+      "MediaRefs": [
+       {
+        "Id": "906170386"
        }
       ]
      },
@@ -488,6 +566,87 @@
       ]
      },
      {
+      "Id": "113913485",
+      "Name": "Play_MusicaBanos",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaBanos",
+      "GUID": "{59B5F56D-B74B-4555-BC9E-54DE8D594F6B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "364693521"
+       }
+      ]
+     },
+     {
+      "Id": "1651862989",
+      "Name": "Play_MusicaCocina",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaCocina",
+      "GUID": "{C2B30E02-2886-48F7-9CEF-C92D45C43E66}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "665915096"
+       }
+      ]
+     },
+     {
+      "Id": "1418970575",
+      "Name": "Play_MusicaComedor",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaComedor",
+      "GUID": "{FA25D162-A7A7-4498-BE0E-985BE30AA33A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "947363878"
+       }
+      ]
+     },
+     {
+      "Id": "3386465647",
+      "Name": "Play_MusicaComedorVacio",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaComedorVacio",
+      "GUID": "{A2B46493-0975-45AF-99AA-7A1FB356759B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "364693521"
+       }
+      ]
+     },
+     {
+      "Id": "1701225531",
+      "Name": "Play_MusicaEstacionamiento",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaEstacionamiento",
+      "GUID": "{38C1AB47-02C7-4FC1-AC8A-F13B00A8BD6F}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "363355216"
+       }
+      ]
+     },
+     {
+      "Id": "2052657724",
+      "Name": "Play_MusicaInteractiva",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaInteractiva",
+      "GUID": "{550B58B6-FFEC-4DC1-AEEE-420B6535F758}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "363355216"
+       },
+       {
+        "Id": "364693521"
+       },
+       {
+        "Id": "665915096"
+       },
+       {
+        "Id": "947363878"
+       }
+      ]
+     },
+     {
       "Id": "2690675305",
       "Name": "Play_NotificacionDriveThru",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_NotificacionDriveThru",
@@ -544,6 +703,34 @@
       ]
      },
      {
+      "Id": "1043478341",
+      "Name": "Play_SonidosDeRatita",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SonidosDeRatita",
+      "GUID": "{F094D845-B93D-4BC5-ADC9-C03FA3B91573}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.7500226",
+      "DurationMax": "3.7500226",
+      "MediaRefs": [
+       {
+        "Id": "963390951"
+       }
+      ]
+     },
+     {
+      "Id": "2424542996",
+      "Name": "Play_SustoRata",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SustoRata",
+      "GUID": "{744BDB23-CEAC-4C2E-872A-1C081E51AAF4}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.55",
+      "DurationMax": "2.55",
+      "MediaRefs": [
+       {
+        "Id": "905326751"
+       }
+      ]
+     },
+     {
       "Id": "2925829879",
       "Name": "Play_SwitchFisico",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_SwitchFisico",
@@ -556,10 +743,50 @@
         "Id": "999563677"
        }
       ]
+     },
+     {
+      "Id": "2123084180",
+      "Name": "Play_TachoDeBasura",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_TachoDeBasura",
+      "GUID": "{48828322-26B7-4915-A072-B64BF4A5CA8D}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.8761225",
+      "DurationMax": "3.8761225",
+      "MediaRefs": [
+       {
+        "Id": "602796887"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3287201201",
+      "Name": "ProximidadBloque1",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque1",
+      "GUID": "{456C0A46-B682-4253-A03B-BB18CED1F920}"
+     },
+     {
+      "Id": "3287201202",
+      "Name": "ProximidadBloque2",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque2",
+      "GUID": "{BDB3977F-60E0-41C9-88CB-C870780A9AD5}"
+     },
+     {
+      "Id": "3287201203",
+      "Name": "ProximidadBloque3",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque3",
+      "GUID": "{759E04AE-E260-4641-ADD2-4F8D33A30364}"
+     },
+     {
+      "Id": "3287201204",
+      "Name": "ProximidadBloque4",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\ProximidadBloque4",
+      "GUID": "{F8553C78-B60A-4FF9-B7AF-3173BB81ADC7}"
      }
     ]
    }
   ],
-  "FileHash": "{1BD51713-9D5D-9D20-B6D4-A50C95E99A8A}"
+  "FileHash": "{249C9EF8-281E-F453-0093-68F383AE0A55}"
  }
 }

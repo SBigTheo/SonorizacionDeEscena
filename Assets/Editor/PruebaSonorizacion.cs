@@ -13,6 +13,9 @@ public sealed class PruebaSonorizacion : EditorWindow
         "DialogoTelevision",
         "DialogoBano",
         "DialogoLadron",
+        "Caida",
+        "SonidosDeRatita",
+        "TachoDeBasura",
         "CorteCapas",
         "FrituraCapas",
         "AmbienteDriveThru",
@@ -71,7 +74,7 @@ public sealed class PruebaSonorizacion : EditorWindow
                 Play(selection, false);
             if (GUILayout.Button("Reproducir los seis diálogos en orden"))
                 Play(0, true);
-            if (GUILayout.Button("Verificar los 25 eventos"))
+            if (GUILayout.Button($"Verificar los {Events.Length} eventos"))
                 VerifyEvents();
             if (GUILayout.Button("Detener"))
                 Stop();

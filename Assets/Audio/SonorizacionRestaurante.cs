@@ -5,7 +5,8 @@ using UnityEngine;
 public sealed class SonorizacionRestaurante : MonoBehaviour
 {
     private const string Bank = "Sonorizacion";
-    private const int DialogueCount = 5;
+    private const int DialogueCount = 4;
+    private const string BathroomDialogueEvent = "DialogoBano";
     private const float WaterStopDelay = 1.5f;
     private const string KitchenAmbienceEvent = "AmbienteCocina";
     private const string DiningAmbienceEvent = "AmbienteRestaurante";
@@ -43,6 +44,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     [SerializeField, Range(-60f, 12f)] private float driveThruVolumeDb;
     [SerializeField, Range(-60f, 12f)] private float layeredFryingVolumeDb;
     private Camera player;
+    private AccionesDeCocina accionesDeCocina;
 #if UNITY_EDITOR
     private GameObject previewEmitter;
     private uint previewPlayingId;
@@ -59,6 +61,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private uint dialogue;
     private uint entranceDialogue;
     private bool entranceDialoguePlayed;
+    private bool bathroomDialoguePlayed;
     private int nextDialogue;
     private string interaction;
     private GUIStyle instructionStyle;
@@ -66,12 +69,30 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private float carStarted;
     private float kitchenMix;
     private Point diningPoint;
+    [SerializeField] private ZonaMusical[] zonasMusicales;
+    [SerializeField, Min(1f)] private float distanciaFundidoMusical = 90f;
+    [SerializeField, Min(0.1f)] private float segundosFundidoMusical = 2.5f;
+
+    private static readonly string[] ZonasPorBloque =
+    {
+        "MusicaComedor", "MusicaEstacionamiento", "MusicaComedorVacio", "MusicaCocina"
+    };
+
+    private static readonly string[] ParametrosMusicales =
+    {
+        "ProximidadBloque1", "ProximidadBloque2", "ProximidadBloque3", "ProximidadBloque4"
+    };
+
+    private readonly float[] distanciasMusicales = new float[ZonasPorBloque.Length];
+    private readonly float[] proximidadesEnviadas = { -1f, -1f, -1f, -1f };
+    private GameObject emisorMusical;
+    private uint musica;
 
     private void Start()
     {
         if (points == null || points.Length < DialogueCount)
         {
-            Debug.LogError("La sonorización necesita los cinco puntos de la secuencia de diálogo.", this);
+            Debug.LogError("La sonorización necesita los cuatro puntos de la secuencia de diálogo.", this);
             enabled = false;
             return;
         }
@@ -94,6 +115,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
         ownsBank = result == AKRESULT.AK_Success;
         listenerId = AkUnitySoundEngine.GetAkGameObjectID(player.gameObject);
+        accionesDeCocina = GetComponent<AccionesDeCocina>();
         diningPoint = Array.Find(points, point => point.audioEvent == DiningAmbienceEvent);
         var playerBody = player.GetComponentInParent<Rigidbody>();
         playerRoot = playerBody != null ? playerBody.transform : player.transform;
@@ -107,6 +129,12 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         orderEmitter = CreateEmitter("Aviso de nuevo pedido", transform.position);
         driveThruEmitter = CreateEmitter("Aviso de drive thru", transform.position);
         layeredFryingEmitter = CreateEmitter("Fritura en capas", points[1].position);
+        if (zonasMusicales != null && zonasMusicales.Length > 0)
+        {
+            emisorMusical = CreateEmitter("Musica interactiva", transform.position);
+            ActualizarMusica(player.transform.position);
+            musica = Post("MusicaInteractiva", emisorMusical);
+        }
         UpdateExtraVolumes();
         if (diningPoint == null)
             ambience = Post(DiningAmbienceEvent, gameObject);
@@ -146,6 +174,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private void Update()
     {
         var playerPosition = player.transform.position;
+        ActualizarMusica(playerPosition);
         Point selected = null;
         var nearest = float.PositiveInfinity;
         interaction = null;
@@ -174,6 +203,16 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             {
                 if (startEntranceDialogue)
                     StartEntranceDialogue(point);
+                continue;
+            }
+
+            if (point.audioEvent == BathroomDialogueEvent)
+            {
+                if (inside && !bathroomDialoguePlayed)
+                {
+                    SetVolume(player.gameObject, point.volumeDb);
+                    bathroomDialoguePlayed = Post(point.audioEvent, player.gameObject) != 0;
+                }
                 continue;
             }
 
@@ -261,7 +300,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         if (previewPoint != null)
             SetVolume(previewEmitter, previewPoint.volumeDb, DistanceGain(previewPoint, playerPosition));
 #endif
-        if (selected == null)
+        interaction = accionesDeCocina?.ActualizarInteraccion(player, aim);
+        if (interaction != null || selected == null)
             return;
 
         if (selected.sinkNumber > 0)
@@ -293,6 +333,54 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             return;
 
         Interact(selected);
+    }
+
+    private void ActualizarMusica(Vector3 posicion)
+    {
+        if (emisorMusical == null)
+            return;
+
+        Array.Fill(distanciasMusicales, float.PositiveInfinity);
+        var menorDistancia = float.PositiveInfinity;
+        foreach (var zona in zonasMusicales)
+        {
+            if (zona == null)
+                continue;
+
+            var bloque = Array.IndexOf(ZonasPorBloque, zona.Evento);
+            if (bloque < 0)
+                continue;
+
+            var distancia = zona.DistanciaAlBorde(posicion);
+            distanciasMusicales[bloque] = Mathf.Min(distanciasMusicales[bloque], distancia);
+            menorDistancia = Mathf.Min(menorDistancia, distancia);
+        }
+
+        var alcance = Mathf.Max(1f, distanciaFundidoMusical);
+        var rampa = Mathf.RoundToInt(segundosFundidoMusical * 1000f);
+        var sumaCercanias = 0f;
+        for (var bloque = 0; bloque < distanciasMusicales.Length; bloque++)
+        {
+            var distancia = distanciasMusicales[bloque];
+            var cercania = float.IsPositiveInfinity(distancia) ? 0f :
+                Mathf.Clamp01(1f - (distancia - menorDistancia) / alcance);
+            distanciasMusicales[bloque] = cercania;
+            sumaCercanias += cercania;
+        }
+
+        var cobertura = Mathf.Clamp01(1f - Mathf.Max(0f, menorDistancia) / (2f * alcance));
+        var escalaProximidad = 100f * cobertura / Mathf.Max(1f, sumaCercanias);
+        for (var bloque = 0; bloque < distanciasMusicales.Length; bloque++)
+        {
+            var proximidad = distanciasMusicales[bloque] * escalaProximidad;
+
+            if (Mathf.Abs(proximidadesEnviadas[bloque] - proximidad) < 0.05f)
+                continue;
+
+            var duracion = proximidadesEnviadas[bloque] < 0f ? 0 : rampa;
+            AkUnitySoundEngine.SetRTPCValue(ParametrosMusicales[bloque], proximidad, emisorMusical, duracion);
+            proximidadesEnviadas[bloque] = proximidad;
+        }
     }
 
     private void ToggleWater(Point faucet)
@@ -587,6 +675,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
         if (ambience != 0)
             AkUnitySoundEngine.StopPlayingID(ambience);
+        if (musica != 0)
+            AkUnitySoundEngine.StopPlayingID(musica);
         if (dialogue != 0)
             AkUnitySoundEngine.StopPlayingID(dialogue);
         if (entranceDialogue != 0)

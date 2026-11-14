@@ -21,6 +21,7 @@ namespace AK
         static const AkUniqueID PLAY_AUTOPASANDO = 1297007679U;
         static const AkUniqueID PLAY_BOTONFISICO = 3857983155U;
         static const AkUniqueID PLAY_CADENABANO = 3197448774U;
+        static const AkUniqueID PLAY_CAIDA = 3559093958U;
         static const AkUniqueID PLAY_CORTECAPAS = 599861905U;
         static const AkUniqueID PLAY_CORTEVEGETALES = 2259311815U;
         static const AkUniqueID PLAY_CRONOMETRO = 2499318168U;
@@ -33,12 +34,29 @@ namespace AK
         static const AkUniqueID PLAY_FRITURA = 105982041U;
         static const AkUniqueID PLAY_FRITURACAPAS = 3254684307U;
         static const AkUniqueID PLAY_LAVADOMANOS = 4072083471U;
+        static const AkUniqueID PLAY_MUSICABANOS = 113913485U;
+        static const AkUniqueID PLAY_MUSICACOCINA = 1651862989U;
+        static const AkUniqueID PLAY_MUSICACOMEDOR = 1418970575U;
+        static const AkUniqueID PLAY_MUSICACOMEDORVACIO = 3386465647U;
+        static const AkUniqueID PLAY_MUSICAESTACIONAMIENTO = 1701225531U;
+        static const AkUniqueID PLAY_MUSICAINTERACTIVA = 2052657724U;
         static const AkUniqueID PLAY_NOTIFICACIONDRIVETHRU = 2690675305U;
         static const AkUniqueID PLAY_NOTIFICACIONPEDIDO = 3010603025U;
         static const AkUniqueID PLAY_PUERTAABRIR = 1177537281U;
         static const AkUniqueID PLAY_PUERTACERRAR = 173892078U;
+        static const AkUniqueID PLAY_SONIDOSDERATITA = 1043478341U;
+        static const AkUniqueID PLAY_SUSTORATA = 2424542996U;
         static const AkUniqueID PLAY_SWITCHFISICO = 2925829879U;
+        static const AkUniqueID PLAY_TACHODEBASURA = 2123084180U;
     } // namespace EVENTS
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID PROXIMIDADBLOQUE1 = 3287201201U;
+        static const AkUniqueID PROXIMIDADBLOQUE2 = 3287201202U;
+        static const AkUniqueID PROXIMIDADBLOQUE3 = 3287201203U;
+        static const AkUniqueID PROXIMIDADBLOQUE4 = 3287201204U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

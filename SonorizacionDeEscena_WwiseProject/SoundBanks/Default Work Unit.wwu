@@ -11,12 +11,17 @@
 						<ObjectRef Name="Play_PuertaCerrar" ID="{18EFC487-9260-4268-AB01-5F2F4123BB1F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienteRestaurante" ID="{0EBA0BCC-378D-430F-AC7F-A66A33DF6DC8}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CorteCapas" ID="{671A9E6C-1D5A-43A6-A6E8-BA34E87AD7CE}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicaComedor" ID="{FA25D162-A7A7-4498-BE0E-985BE30AA33A}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicaBanos" ID="{59B5F56D-B74B-4555-BC9E-54DE8D594F6B}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicaComedorVacio" ID="{A2B46493-0975-45AF-99AA-7A1FB356759B}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoRadio" ID="{9F5AD75F-4141-46A3-B518-848851CF4687}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CorteVegetales" ID="{7528B9BA-357F-46EB-AAF0-DB764D83FEE4}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AguaLavabo" ID="{FF4DC083-E8E8-471B-845A-4822EDEA3497}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_NotificacionPedido" ID="{6B136249-201F-47F3-B175-6A1ABAFDA059}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AutoBocina" ID="{3AC1DF71-510E-4841-A4F2-F4EF544E2A28}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoTelevision" ID="{47BB3E1D-4C1B-4881-9B7E-DDA3D35C6C9F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicaCocina" ID="{C2B30E02-2886-48F7-9CEF-C92D45C43E66}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TachoDeBasura" ID="{48828322-26B7-4915-A072-B64BF4A5CA8D}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienteDriveThru" ID="{F24039C0-0675-4987-BCD9-5DFDDB867049}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_FrituraCapas" ID="{C6DF1270-2ED5-4AC5-8DA4-47A302BE5428}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AutoPasando" ID="{08F571B1-6D4A-4AE0-872A-BEB585686D63}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
@@ -24,12 +29,17 @@
 						<ObjectRef Name="Play_NotificacionDriveThru" ID="{648C65A8-339C-4B15-83FA-AD8AB7FE7212}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoRecepcion" ID="{75484E60-491E-4B52-BDA8-A0099F7960EB}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CadenaBano" ID="{4A93424C-2EBE-4B85-A2C4-20B4D5537C1F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SonidosDeRatita" ID="{F094D845-B93D-4BC5-ADC9-C03FA3B91573}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SustoRata" ID="{744BDB23-CEAC-4C2E-872A-1C081E51AAF4}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoLadron" ID="{8BA93493-AE0F-4C68-9880-ADF4B564FC40}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LavadoManos" ID="{C105025A-CECC-4C9D-A575-351BB46DD283}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoPapas" ID="{9470CF51-7CEB-4CD2-B64F-0A4D8E0F53F4}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicaInteractiva" ID="{550B58B6-FFEC-4DC1-AEEE-420B6535F758}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SwitchFisico" ID="{702A13E4-4B71-4DF0-9311-316E0315CD2C}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoBano" ID="{478CAFCF-CC32-4EBA-AC51-1BE47E6A9D20}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienteCocina" ID="{CA4B1299-3B74-4F50-8D81-528210D45C98}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Caida" ID="{ED184F18-2372-4F9C-B54A-2EE4CEA74C1B}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicaEstacionamiento" ID="{38C1AB47-02C7-4FC1-AC8A-F13B00A8BD6F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

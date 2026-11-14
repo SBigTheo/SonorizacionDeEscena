@@ -278,6 +278,137 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Caida" ID="{ED184F18-2372-4F9C-B54A-2EE4CEA74C1B}">
+					<ChildrenList>
+						<Action Name="" ID="{0974A94A-2FA9-4363-AFA3-F363EFDEA187}" ShortID="975687227">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Caida" ID="{8947BA17-3241-4129-9804-3BFCF8E9E1B7}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SonidosDeRatita" ID="{F094D845-B93D-4BC5-ADC9-C03FA3B91573}">
+					<ChildrenList>
+						<Action Name="" ID="{FA6E0F5F-4354-477A-9EBC-0D0CC6DCD014}" ShortID="754706973">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SonidosDeRatita" ID="{35536972-8469-496F-9434-51C261A81F81}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_TachoDeBasura" ID="{48828322-26B7-4915-A072-B64BF4A5CA8D}">
+					<ChildrenList>
+						<Action Name="" ID="{B3986941-795B-4A9E-B929-AE86C75956B3}" ShortID="217968382">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TachoDeBasura" ID="{74591AA9-CDB3-4ACA-B6D6-11648CF5D37C}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicaCocina" ID="{C2B30E02-2886-48F7-9CEF-C92D45C43E66}">
+					<ChildrenList>
+						<Action Name="" ID="{1D2BA2CE-4127-4E0F-9842-537EA60D3F52}" ShortID="785224337">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicaCocina" ID="{685AFC56-52EE-43D3-AEC1-7C9AF12B8483}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicaComedor" ID="{FA25D162-A7A7-4498-BE0E-985BE30AA33A}">
+					<ChildrenList>
+						<Action Name="" ID="{C02DA5D0-76B9-4F0F-94E0-AE3893862D6D}" ShortID="84834079">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicaComedor" ID="{1E77A041-C495-4D89-A78A-42C0C61421BB}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicaComedorVacio" ID="{A2B46493-0975-45AF-99AA-7A1FB356759B}">
+					<ChildrenList>
+						<Action Name="" ID="{D4B14491-62EC-474B-9E29-BF15046C4F10}" ShortID="794314272">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicaComedorVacio" ID="{BDC2F691-A4F6-489C-B23E-8D8C964788DE}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicaBanos" ID="{59B5F56D-B74B-4555-BC9E-54DE8D594F6B}">
+					<ChildrenList>
+						<Action Name="" ID="{B1CA0651-364B-4A84-A979-C9115249C726}" ShortID="539168020">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicaBanos" ID="{F3E1D48F-1ED4-4055-9BD6-5B0A01634382}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicaEstacionamiento" ID="{38C1AB47-02C7-4FC1-AC8A-F13B00A8BD6F}">
+					<ChildrenList>
+						<Action Name="" ID="{EDE75623-A193-4DE6-A1F9-7915620BFE4B}" ShortID="1020539606">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicaEstacionamiento" ID="{6A036716-8F42-45AE-9166-9F09A986DA28}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicaInteractiva" ID="{550B58B6-FFEC-4DC1-AEEE-420B6535F758}">
+					<ChildrenList>
+						<Action Name="Bloque1" ID="{281A5857-FDA5-460B-B0DA-7DD44279BAAE}" ShortID="996178328">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque1" ID="{A91DFB95-16D8-4702-B784-304C807598AD}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="Bloque2" ID="{1EE0A495-8FCC-495E-894B-FCA533E04442}" ShortID="635508860">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque2" ID="{32397706-1586-4A34-80AA-54C8776EFBD8}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="Bloque3" ID="{259AF80C-5921-4021-8CB3-62AA333B6B38}" ShortID="149669356">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque3" ID="{69B26B6B-65B0-4596-9842-A55FC1B9488C}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="Bloque4" ID="{66757E57-7E10-46A1-BB39-6F77BB6BE9BD}" ShortID="304504334">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque4" ID="{8AA0355D-51A7-4B06-BA98-320CF68E1ECB}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SustoRata" ID="{744BDB23-CEAC-4C2E-872A-1C081E51AAF4}">
+					<ChildrenList>
+						<Action Name="" ID="{2B69D72E-24CC-45B7-AA5B-F5A1278681E4}" ShortID="913511459">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SustoRata" ID="{D496ACF2-6B0C-472A-AFAE-54458798F712}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

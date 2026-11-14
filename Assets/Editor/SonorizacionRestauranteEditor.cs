@@ -82,6 +82,12 @@ public sealed class SonorizacionRestauranteEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("orderVolumeDb"), new GUIContent("Aviso de nuevo pedido"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("driveThruVolumeDb"), new GUIContent("Aviso de drive thru"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("layeredFryingVolumeDb"), new GUIContent("Fritura en capas"));
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Transición de música", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("distanciaFundidoMusical"),
+            new GUIContent("Distancia del fundido"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("segundosFundidoMusical"),
+            new GUIContent("Tiempo de fundido (s)"));
         points.DoLayoutList();
         serializedObject.ApplyModifiedProperties();
     }

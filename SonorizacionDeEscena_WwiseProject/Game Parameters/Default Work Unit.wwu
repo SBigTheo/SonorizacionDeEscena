@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{08B12C74-96AD-4ECD-B953-F938B16C622F}" SchemaVersion="133">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{08B12C74-96AD-4ECD-B953-F938B16C622F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{08B12C74-96AD-4ECD-B953-F938B16C622F}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="ProximidadBloque1" ID="{456C0A46-B682-4253-A03B-BB18CED1F920}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="ProximidadBloque2" ID="{BDB3977F-60E0-41C9-88CB-C870780A9AD5}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="ProximidadBloque3" ID="{759E04AE-E260-4641-ADD2-4F8D33A30364}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="ProximidadBloque4" ID="{F8553C78-B60A-4FF9-B7AF-3173BB81ADC7}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
