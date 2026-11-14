@@ -212,6 +212,7 @@ public sealed class AccionesDeCocina : MonoBehaviour
 
     private IEnumerator Aparicion(Vector3 jugador)
     {
+        var inicioAudio = Time.unscaledTime;
         Publicar("Play_TachoDeBasura", emisorTacho);
         yield return new WaitForSeconds(0.07f);
         var direccion = Vector3.ProjectOnPlane(jugador - tacho, Vector3.up).normalized;
@@ -221,8 +222,7 @@ public sealed class AccionesDeCocina : MonoBehaviour
         var frente = tacho + direccion * Mathf.Clamp(Vector3.ProjectOnPlane(
             jugador - tacho, Vector3.up).magnitude * 0.65f, 19f, 37f);
         var inicio = tacho + Vector3.up * 31f;
-        tapa.position += Vector3.up * 10f - direccion * 9f;
-        tapa.rotation = Quaternion.AngleAxis(55f, Vector3.Cross(Vector3.up, direccion));
+        StartCoroutine(CaidaDeTapa(inicioAudio, direccion));
         rata.transform.SetPositionAndRotation(inicio, Quaternion.LookRotation(direccion));
         rata.SetActive(true);
         Publicar("Play_SonidosDeRatita", rata);
@@ -251,6 +251,49 @@ public sealed class AccionesDeCocina : MonoBehaviour
         rata.transform.position = destino;
         foreach (var renderer in rata.GetComponentsInChildren<Renderer>())
             renderer.enabled = false;
+    }
+
+    private IEnumerator CaidaDeTapa(float inicioAudio, Vector3 direccionJugador)
+    {
+        // El WAV del tacho tiene dos transitorios al final, separados por unos 320 ms.
+        const float primerGolpe = 3.32f;
+        const float ultimoGolpe = 3.64f;
+        const float duracionCaida = 0.48f;
+        var lateral = Vector3.Cross(Vector3.up, direccionJugador);
+        if (Vector3.Dot(lateral, salidaRata - tacho) > 0f)
+            lateral = -lateral;
+
+        var abierta = tacho + Vector3.up * 39f + lateral * 13f;
+        var giroAbierta = Quaternion.AngleAxis(55f, direccionJugador);
+        var reposo = tacho + lateral * 27f;
+        if (Physics.Raycast(reposo + Vector3.up * 15f, Vector3.down, out var piso, 35f,
+                Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore) && piso.normal.y > 0.8f)
+            reposo = piso.point;
+        reposo += Vector3.up * (Mathf.Abs(tapa.lossyScale.y) + 0.05f);
+        tapa.SetPositionAndRotation(abierta, giroAbierta);
+
+        while (Time.unscaledTime - inicioAudio < primerGolpe - duracionCaida)
+            yield return null;
+
+        while (Time.unscaledTime - inicioAudio < ultimoGolpe)
+        {
+            var tiempo = Time.unscaledTime - inicioAudio;
+            if (tiempo < primerGolpe)
+            {
+                var progreso = Mathf.Clamp01((tiempo - primerGolpe + duracionCaida) / duracionCaida);
+                tapa.SetPositionAndRotation(Vector3.Lerp(abierta, reposo, progreso * progreso),
+                    Quaternion.Slerp(giroAbierta, Quaternion.identity, progreso));
+            }
+            else
+            {
+                var rebote = (tiempo - primerGolpe) / (ultimoGolpe - primerGolpe);
+                tapa.SetPositionAndRotation(reposo + Vector3.up * (Mathf.Sin(rebote * Mathf.PI) * 4f),
+                    Quaternion.identity);
+            }
+            yield return null;
+        }
+
+        tapa.SetPositionAndRotation(reposo, Quaternion.identity);
     }
 
     private void SonarCaida(GameObject objeto) => Publicar("Play_Caida", objeto);
