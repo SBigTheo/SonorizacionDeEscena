@@ -7,12 +7,15 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private const string Bank = "Sonorizacion";
     private const int DialogueCount = 4;
     private const string BathroomDialogueEvent = "DialogoBano";
+    private const float HandWashRadius = 18f;
     private const float WaterStopDelay = 1.5f;
     private const string KitchenAmbienceEvent = "AmbienteCocina";
     private const string DiningAmbienceEvent = "AmbienteRestaurante";
     private const string FinalDialogueEvent = "DialogoLadron";
     private const string PassingCarEvent = "AutoPasando";
     private const string DriveThruDialogueEvent = "DialogoRecepcion";
+    private const string FryerDialogueEvent = "DialogoPapas";
+    private const string FryerAmbienceEvent = "Fritura";
     private const float CarPassDuration = 1.8f;
     private const float CarSoundDuration = 3.422f;
     private const float CarHalfRoute = 230f;
@@ -32,6 +35,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         public float volumeDb;
         public Trigger trigger;
         public string secondaryEvent;
+        public int secondaryEventEvery;
         [InspectorName("Radio de puntería"), Min(0f)]
         public float aimRadius;
         [InspectorName("Número de lavamanos"), Min(0)]
@@ -40,16 +44,20 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         [NonSerialized] public GameObject emitter;
         [NonSerialized] public bool inside;
         [NonSerialized] public uint loop;
+        [NonSerialized] public uint fadingSinkSound;
         [NonSerialized] public float stopWaterAt;
+        [NonSerialized] public Point handWashPoint;
+        [NonSerialized] public bool nearHandWash;
+        [NonSerialized] public bool faucetManuallyClosed;
         [NonSerialized] public float gain;
         [NonSerialized] public bool useAlternative;
+        [NonSerialized] public int interactionCount;
     }
 
     [SerializeField] private Point[] points;
     [SerializeField, Range(-60f, 12f)] private float restaurantVolumeDb;
     [SerializeField] private ZonaMusical zonaAmbienteComedor;
     [SerializeField, Min(1f)] private float distanciaFundidoAmbienteComedor = 120f;
-    [SerializeField, Range(-60f, 12f)] private float orderVolumeDb;
     [SerializeField, Range(-60f, 12f)] private float driveThruVolumeDb;
     [SerializeField] private GameObject autoDriveThruPrefab;
     [SerializeField, Range(-60f, 12f)] private float layeredFryingVolumeDb;
@@ -63,12 +71,13 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 #endif
     private Transform playerRoot;
     private ulong listenerId;
-    private GameObject orderEmitter;
     private GameObject driveThruEmitter;
     private GameObject layeredFryingEmitter;
     private bool ownsBank;
     private uint ambience;
     private uint dialogue;
+    private bool fryerDialoguePlaying;
+    private float fryerEffectsGain = 1f;
     private uint driveThruReplay;
     private uint entranceDialogue;
     private bool entranceDialoguePlayed;
@@ -145,9 +154,11 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             }
             point.gain = DistanceGain(point, player.transform.position);
             SetVolume(point.emitter, point.volumeDb, point.gain);
+            if (point.trigger == Trigger.ManualLoop && point.sinkNumber > 0)
+                point.handWashPoint = Array.Find(points, candidate =>
+                    candidate.sinkNumber == point.sinkNumber && candidate.audioEvent == "LavadoManos");
         }
 
-        orderEmitter = CreateEmitter("Aviso de nuevo pedido", transform.position);
         driveThruEmitter = CreateEmitter("Aviso de drive thru", transform.position);
         layeredFryingEmitter = CreateEmitter("Fritura en capas", points[1].position);
         if (zonasMusicales != null && zonasMusicales.Length > 0)
@@ -187,9 +198,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             SetVolume(gameObject, restaurantVolumeDb, diningDuck);
         else
             SetVolume(diningPoint.emitter, diningPoint.volumeDb, diningPoint.gain * diningDuck);
-        SetVolume(orderEmitter, orderVolumeDb);
         SetVolume(driveThruEmitter, driveThruVolumeDb);
-        SetVolume(layeredFryingEmitter, layeredFryingVolumeDb, points[1].gain);
+        SetVolume(layeredFryingEmitter, layeredFryingVolumeDb, points[1].gain * fryerEffectsGain);
     }
 
     private void Update()
@@ -201,6 +211,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         interaction = null;
         var aim = player.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         var targetKitchenMix = 0f;
+        fryerEffectsGain = Mathf.MoveTowards(fryerEffectsGain,
+            fryerDialoguePlaying ? 0.25f : 1f, Time.deltaTime * 4f);
 
         for (var index = 0; index < points.Length; index++)
         {
@@ -217,7 +229,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             var startEntranceDialogue = isEntranceDialogue && entered && !entranceDialoguePlayed;
             point.gain = Mathf.MoveTowards(point.gain, targetGain, Time.deltaTime * 2f);
             if (point != diningPoint)
-                SetVolume(point.emitter, point.volumeDb, point.gain);
+                SetVolume(point.emitter, point.volumeDb, point.gain *
+                    (point.audioEvent == FryerAmbienceEvent ? fryerEffectsGain : 1f));
             if (point.audioEvent == KitchenAmbienceEvent)
                 targetKitchenMix = Mathf.Max(targetKitchenMix, point.gain);
 
@@ -258,10 +271,10 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             switch (point.trigger)
             {
                 case Trigger.ManualLoop:
+                    UpdateHandWash(point, playerPosition);
                     if (point.stopWaterAt > 0f && Time.time >= point.stopWaterAt)
                     {
-                        AkUnitySoundEngine.StopPlayingID(point.loop);
-                        point.loop = 0;
+                        StopSinkSound(point, 250);
                         point.stopWaterAt = 0f;
                     }
                     break;
@@ -344,12 +357,10 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                 point => point.trigger == Trigger.ManualLoop && point.sinkNumber == selected.sinkNumber);
             var action = faucet == null ? "Sin canilla vinculada" :
                 faucet.stopWaterAt > 0f ? "Cancelar cierre del agua" :
-                faucet.loop == 0 ? "Abrir agua" : "Cerrar agua";
+                faucet.loop == 0 && selected.loop == 0 ? "Lavar manos" : "Cerrar agua";
             interaction = "E o clic derecho · " + action + " · " + selected.label;
             if (faucet != null && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(1)))
                 ToggleWater(faucet);
-            if (Input.GetMouseButtonDown(0))
-                Interact(selected);
             return;
         }
 
@@ -440,11 +451,66 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private void ToggleWater(Point faucet)
     {
         if (faucet.stopWaterAt > 0f)
+        {
             faucet.stopWaterAt = 0f;
-        else if (faucet.loop != 0)
-            faucet.stopWaterAt = Time.time + WaterStopDelay;
+            faucet.faucetManuallyClosed = false;
+            faucet.nearHandWash = false;
+        }
+        else if (faucet.loop != 0 || (faucet.handWashPoint?.loop ?? 0) != 0)
+        {
+            faucet.faucetManuallyClosed = true;
+            if (faucet.handWashPoint != null)
+                StopSinkSound(faucet.handWashPoint, 0);
+            if (faucet.loop != 0)
+                faucet.stopWaterAt = Time.time + WaterStopDelay;
+        }
+        else if (faucet.handWashPoint != null)
+        {
+            faucet.faucetManuallyClosed = false;
+            faucet.nearHandWash = true;
+            faucet.handWashPoint.loop = Post(faucet.handWashPoint.audioEvent, faucet.handWashPoint.emitter);
+        }
         else
             faucet.loop = Post(faucet.audioEvent, faucet.emitter);
+    }
+
+    private void UpdateHandWash(Point faucet, Vector3 playerPosition)
+    {
+        var wash = faucet.handWashPoint;
+        if (wash == null || faucet.faucetManuallyClosed)
+            return;
+
+        var nearby = Distance(playerPosition, wash.position) <= HandWashRadius;
+        if (nearby == faucet.nearHandWash)
+            return;
+
+        faucet.nearHandWash = nearby;
+        if (nearby)
+        {
+            StopSinkSound(faucet, 250);
+            wash.loop = Post(wash.audioEvent, wash.emitter);
+        }
+        else if (!nearby && wash.loop != 0)
+        {
+            StopSinkSound(wash, 250);
+            faucet.loop = Post(faucet.audioEvent, faucet.emitter);
+        }
+    }
+
+    private static void StopSinkSound(Point point, int fadeMilliseconds)
+    {
+        if (point.fadingSinkSound != 0)
+        {
+            AkUnitySoundEngine.StopPlayingID(point.fadingSinkSound);
+            point.fadingSinkSound = 0;
+        }
+        if (point.loop == 0)
+            return;
+
+        AkUnitySoundEngine.StopPlayingID(point.loop, fadeMilliseconds);
+        if (fadeMilliseconds > 0)
+            point.fadingSinkSound = point.loop;
+        point.loop = 0;
     }
 
     private bool CanInteract(Point point, Ray aim, out float hitDistance)
@@ -476,10 +542,11 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
     private void Interact(Point selected)
     {
-        if (nextDialogue < DialogueCount && selected == points[nextDialogue])
+        var advancesSequence = nextDialogue < DialogueCount && selected == points[nextDialogue];
+        if (advancesSequence || selected.audioEvent == FryerDialogueEvent)
         {
-            if (dialogue == 0)
-                StartDialogue(selected);
+            if (dialogue == 0 && driveThruReplay == 0)
+                StartDialogue(selected, advancesSequence);
         }
         else if (selected.audioEvent == DriveThruDialogueEvent)
         {
@@ -496,6 +563,16 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                         driveThruReplay = 0;
                 }, null);
         }
+        else if (selected.secondaryEventEvery > 0 && !string.IsNullOrEmpty(selected.secondaryEvent))
+        {
+            Post(selected.audioEvent, selected.emitter);
+            selected.interactionCount++;
+            if (selected.interactionCount >= selected.secondaryEventEvery)
+            {
+                selected.interactionCount = 0;
+                Post(selected.secondaryEvent, selected.emitter);
+            }
+        }
         else
         {
             var alternate = !string.IsNullOrEmpty(selected.secondaryEvent);
@@ -505,16 +582,11 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         }
     }
 
-    private void StartDialogue(Point point)
+    private void StartDialogue(Point point, bool advancesSequence = true)
     {
+        var isFryerDialogue = point.audioEvent == FryerDialogueEvent;
         if (!string.IsNullOrEmpty(point.secondaryEvent))
             Post(point.secondaryEvent, point.emitter);
-        if (nextDialogue == 1)
-        {
-            UpdateExtraVolumes();
-            Post("NotificacionPedido", orderEmitter);
-            Post("FrituraCapas", layeredFryingEmitter);
-        }
 
         dialogue = AkUnitySoundEngine.PostEvent("Play_" + point.audioEvent,
             AkUnitySoundEngine.GetAkGameObjectID(point.emitter), (uint)AkCallbackType.AK_EndOfEvent,
@@ -525,11 +597,20 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                     return;
 
                 dialogue = 0;
-                nextDialogue++;
+                fryerDialoguePlaying = false;
+                if (advancesSequence)
+                    nextDialogue++;
             }, null);
 
         if (dialogue == 0)
             Debug.LogError($"Wwise no pudo reproducir {point.audioEvent}.", this);
+        else if (isFryerDialogue)
+        {
+            fryerDialoguePlaying = true;
+            fryerEffectsGain = 0.25f;
+            UpdateExtraVolumes();
+            Post("FrituraCapas", layeredFryingEmitter);
+        }
     }
 
     private void StartEntranceDialogue(Point point)
@@ -572,6 +653,9 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         }
 
         var distance = Distance(listenerPosition, point.position);
+        if (point.audioEvent == FryerDialogueEvent)
+            return Mathf.Clamp01(1f - Mathf.Max(0f, distance - point.radius) /
+                Mathf.Max(1f, point.radius * 0.65f));
         if (point.audioEvent == KitchenAmbienceEvent || point.audioEvent == DiningAmbienceEvent)
         {
             var blendWidth = Mathf.Max(1f, point.radius * 0.4f);
