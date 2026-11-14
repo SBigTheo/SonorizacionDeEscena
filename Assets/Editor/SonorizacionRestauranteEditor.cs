@@ -89,6 +89,8 @@ public sealed class SonorizacionRestauranteEditor : Editor
         }
         EditorGUILayout.PropertyField(serializedObject.FindProperty("orderVolumeDb"), new GUIContent("Aviso de nuevo pedido"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("driveThruVolumeDb"), new GUIContent("Aviso de drive thru"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("autoDriveThruPrefab"),
+            new GUIContent("Auto del drive thru"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("layeredFryingVolumeDb"), new GUIContent("Fritura en capas"));
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Transición de música", EditorStyles.boldLabel);

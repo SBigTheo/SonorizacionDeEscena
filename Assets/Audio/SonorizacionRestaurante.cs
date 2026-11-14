@@ -11,6 +11,13 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private const string KitchenAmbienceEvent = "AmbienteCocina";
     private const string DiningAmbienceEvent = "AmbienteRestaurante";
     private const string FinalDialogueEvent = "DialogoLadron";
+    private const string PassingCarEvent = "AutoPasando";
+    private const string DriveThruDialogueEvent = "DialogoRecepcion";
+    private const float CarPassDuration = 1.8f;
+    private const float CarSoundDuration = 3.422f;
+    private const float CarHalfRoute = 230f;
+    private const float CarGroundHeight = 30.3f;
+    private static readonly Vector3 CarLaneOffset = Vector3.left * 55f;
 
     private enum Trigger { Near, Use, Loop, Enter, Door, ManualLoop, UseRightClick }
 
@@ -44,6 +51,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     [SerializeField, Min(1f)] private float distanciaFundidoAmbienteComedor = 120f;
     [SerializeField, Range(-60f, 12f)] private float orderVolumeDb;
     [SerializeField, Range(-60f, 12f)] private float driveThruVolumeDb;
+    [SerializeField] private GameObject autoDriveThruPrefab;
     [SerializeField, Range(-60f, 12f)] private float layeredFryingVolumeDb;
     private Camera player;
     private AccionesDeCocina accionesDeCocina;
@@ -61,6 +69,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private bool ownsBank;
     private uint ambience;
     private uint dialogue;
+    private uint driveThruReplay;
     private uint entranceDialogue;
     private bool entranceDialoguePlayed;
     private bool bathroomDialoguePlayed;
@@ -69,6 +78,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private GUIStyle instructionStyle;
     private Point car;
     private float carStarted;
+    private GameObject carVisual;
     private float kitchenMix;
     private Point diningPoint;
     [SerializeField] private ZonaMusical[] zonasMusicales;
@@ -127,6 +137,12 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         foreach (var point in points)
         {
             point.emitter = CreateEmitter(point.label + " · " + point.audioEvent, point.position);
+            if (point.audioEvent == PassingCarEvent && autoDriveThruPrefab != null)
+            {
+                carVisual = Instantiate(autoDriveThruPrefab, point.emitter.transform);
+                carVisual.transform.localPosition = Vector3.up * (CarGroundHeight - point.position.y);
+                carVisual.SetActive(false);
+            }
             point.gain = DistanceGain(point, player.transform.position);
             SetVolume(point.emitter, point.volumeDb, point.gain);
         }
@@ -222,7 +238,9 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                 continue;
             }
 
-            if (index < DialogueCount && (index == 0 || point.trigger != Trigger.UseRightClick))
+            var repeatableDriveThru = point.audioEvent == DriveThruDialogueEvent && index < nextDialogue;
+            if (!repeatableDriveThru && index < DialogueCount &&
+                (index == 0 || point.trigger != Trigger.UseRightClick))
             {
                 if (index == nextDialogue && dialogue == 0 && inside)
                 {
@@ -257,12 +275,15 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                     }
                     break;
                 case Trigger.Enter:
-                    if (entered)
+                    if (entered && car == null)
                     {
                         car = point;
-                        carStarted = Time.time;
-                        point.emitter.transform.position = point.position - Vector3.forward * 100f;
+                        carStarted = Time.unscaledTime;
+                        point.emitter.transform.position = point.position + CarLaneOffset -
+                            Vector3.forward * CarHalfRoute;
                         AkUnitySoundEngine.SetObjectPosition(point.emitter, point.emitter.transform);
+                        if (point.audioEvent == PassingCarEvent && carVisual != null)
+                            carVisual.SetActive(true);
                         Post(point.audioEvent, point.emitter);
                         Post(point.secondaryEvent, point.emitter);
                         SetVolume(driveThruEmitter, driveThruVolumeDb);
@@ -294,9 +315,16 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
         if (car != null)
         {
-            var progress = Mathf.Clamp01((Time.time - carStarted) / 5f);
-            car.emitter.transform.position = car.position + Vector3.forward * Mathf.Lerp(-100f, 100f, progress);
-            if (progress >= 1f)
+            var elapsed = Time.unscaledTime - carStarted;
+            // Keep the sound receding after the car leaves the visible route.
+            car.emitter.transform.position = car.position + CarLaneOffset +
+                Vector3.forward * Mathf.LerpUnclamped(-CarHalfRoute, CarHalfRoute,
+                    elapsed / CarPassDuration);
+            AkUnitySoundEngine.SetObjectPosition(car.emitter, car.emitter.transform);
+            if (elapsed >= CarPassDuration && car.audioEvent == PassingCarEvent &&
+                carVisual != null && carVisual.activeSelf)
+                carVisual.SetActive(false);
+            if (elapsed >= CarSoundDuration)
                 car = null;
         }
 
@@ -452,6 +480,21 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         {
             if (dialogue == 0)
                 StartDialogue(selected);
+        }
+        else if (selected.audioEvent == DriveThruDialogueEvent)
+        {
+            if (dialogue != 0 || driveThruReplay != 0)
+                return;
+
+            Post(selected.secondaryEvent, selected.emitter);
+            driveThruReplay = AkUnitySoundEngine.PostEvent("Play_" + selected.audioEvent,
+                AkUnitySoundEngine.GetAkGameObjectID(selected.emitter), (uint)AkCallbackType.AK_EndOfEvent,
+                (_, type, info) =>
+                {
+                    if (type == AkCallbackType.AK_EndOfEvent &&
+                        info is AkEventCallbackInfo evt && evt.playingID == driveThruReplay)
+                        driveThruReplay = 0;
+                }, null);
         }
         else
         {
@@ -725,6 +768,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             AkUnitySoundEngine.StopPlayingID(musica);
         if (dialogue != 0)
             AkUnitySoundEngine.StopPlayingID(dialogue);
+        if (driveThruReplay != 0)
+            AkUnitySoundEngine.StopPlayingID(driveThruReplay);
         if (entranceDialogue != 0)
             AkUnitySoundEngine.StopPlayingID(entranceDialogue);
         if (points != null)

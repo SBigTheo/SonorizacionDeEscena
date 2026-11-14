@@ -1149,11 +1149,11 @@ MonoBehaviour:
   - label: Drive thru
     audioEvent: DialogoRecepcion
     position: {x: 4889.8003, y: 100, z: 430.55762}
-    radius: 100
+    radius: 165
     volumeDb: 0
     trigger: 6
     secondaryEvent: BotonFisico
-    aimRadius: 22
+    aimRadius: 0
     sinkNumber: 0
   - label: Freidora
     audioEvent: DialogoPapas
@@ -1358,6 +1358,7 @@ MonoBehaviour:
   distanciaFundidoAmbienteComedor: 120
   orderVolumeDb: 0
   driveThruVolumeDb: 0
+  autoDriveThruPrefab: {fileID: 1000, guid: 0ab91a0f5934497db7ee33fe403db501, type: 3}
   layeredFryingVolumeDb: 0
   zonasMusicales:
   - {fileID: 2030040013}
