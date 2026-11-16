@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BA3057EC-A5A9-4D86-8A69-044F9661C582}",
     "Language": "SFX",
-    "Hash": "{9CC133ED-DDA4-EDBF-E044-E6F798E55293}",
+    "Hash": "{9F437BE6-19C9-493C-94D4-6E5412DA3D68}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Sonorizacion",
     "ShortName": "Sonorizacion",
     "Path": "Sonorizacion.bnk",
@@ -166,6 +166,14 @@
       "Location": "Memory",
       "ShortName": "lavado de manos.wav",
       "CachePath": "90/{9043D05A-C9A6-2D62-2071-330EF95AC707}.wem"
+     },
+     {
+      "Id": "427794326",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "hamburguesaCompleta.wav",
+      "CachePath": "25/{25BF77FF-36A5-FD42-C80A-3339924612FA}.wem"
      },
      {
       "Id": "474729625",
@@ -568,6 +576,20 @@
       ]
      },
      {
+      "Id": "1411864309",
+      "Name": "Play_HamburguesaCompleta",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_HamburguesaCompleta",
+      "GUID": "{061D7039-5912-422B-B8F2-53C9063DFEAB}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4106122",
+      "DurationMax": "1.4106122",
+      "MediaRefs": [
+       {
+        "Id": "427794326"
+       }
+      ]
+     },
+     {
       "Id": "4072083471",
       "Name": "Play_LavadoManos",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_LavadoManos",
@@ -818,6 +840,6 @@
     ]
    }
   ],
-  "FileHash": "{0CF05553-18D8-C017-78C6-15AA82139C08}"
+  "FileHash": "{866F3617-F1DF-BA8D-0327-4B28A62D28D4}"
  }
 }

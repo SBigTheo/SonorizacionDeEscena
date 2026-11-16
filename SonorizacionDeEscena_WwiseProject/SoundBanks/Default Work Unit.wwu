@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_PuertaAbrir" ID="{35DD52AC-759E-4039-88DD-9EA1F496FE0B}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BotonFisico" ID="{C17418D9-418F-41D6-8A23-39DC938C5B43}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_HamburguesaCompleta" ID="{061D7039-5912-422B-B8F2-53C9063DFEAB}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Fritura" ID="{1CD0A50D-BDE4-423B-88D6-4187A53EAE36}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PuertaCerrar" ID="{18EFC487-9260-4268-AB01-5F2F4123BB1F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienteRestaurante" ID="{0EBA0BCC-378D-430F-AC7F-A66A33DF6DC8}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>

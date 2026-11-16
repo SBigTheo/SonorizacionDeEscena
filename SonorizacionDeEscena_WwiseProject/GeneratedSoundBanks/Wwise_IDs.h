@@ -33,6 +33,7 @@ namespace AK
         static const AkUniqueID PLAY_DIALOGOTELEVISION = 333743509U;
         static const AkUniqueID PLAY_FRITURA = 105982041U;
         static const AkUniqueID PLAY_FRITURACAPAS = 3254684307U;
+        static const AkUniqueID PLAY_HAMBURGUESACOMPLETA = 1411864309U;
         static const AkUniqueID PLAY_LAVADOMANOS = 4072083471U;
         static const AkUniqueID PLAY_MUSICABANOS = 113913485U;
         static const AkUniqueID PLAY_MUSICACOCINA = 1651862989U;

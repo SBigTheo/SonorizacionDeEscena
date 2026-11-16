@@ -10,6 +10,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1150218369	Play_DialogoRecepcion			\Default Work Unit\Play_DialogoRecepcion	
 	1177537281	Play_PuertaAbrir			\Default Work Unit\Play_PuertaAbrir	
 	1297007679	Play_AutoPasando			\Default Work Unit\Play_AutoPasando	
+	1411864309	Play_HamburguesaCompleta			\Default Work Unit\Play_HamburguesaCompleta	
 	1418970575	Play_MusicaComedor			\Default Work Unit\Play_MusicaComedor	
 	1651862989	Play_MusicaCocina			\Default Work Unit\Play_MusicaCocina	
 	1701225531	Play_MusicaEstacionamiento			\Default Work Unit\Play_MusicaEstacionamiento	
@@ -36,12 +37,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	4072083471	Play_LavadoManos			\Default Work Unit\Play_LavadoManos	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	2845212235	MezclaRitmoComedor			\Default Work Unit\MezclaRitmoComedor
+	2845212235	MezclaRitmoComedor			\Default Work Unit\MezclaRitmoComedor	
 	3287201201	ProximidadBloque1			\Default Work Unit\ProximidadBloque1	
 	3287201202	ProximidadBloque2			\Default Work Unit\ProximidadBloque2	
 	3287201203	ProximidadBloque3			\Default Work Unit\ProximidadBloque3	
 	3287201204	ProximidadBloque4			\Default Work Unit\ProximidadBloque4	
-	3533537083	MezclaMelodiaComedor			\Default Work Unit\MezclaMelodiaComedor
+	3533537083	MezclaMelodiaComedor			\Default Work Unit\MezclaMelodiaComedor	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	5762237	CadenaBano	.cache\A8\{A8A0BAFC-1B7D-E993-AEE2-AA7255E7E4C9}.wem		\Containers\Default Work Unit\Sonorizacion\CadenaBano		150262
@@ -63,6 +64,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	363355216	MusicaEstacionamiento	.cache\C6\{C6252BDF-0584-31B1-03C7-C94B97FFD37F}.wem		\Containers\Default Work Unit\Musica por zonas\MusicaEstacionamiento		1675732
 	364693521	Bloque3	.cache\E8\{E8A0E94C-F80A-4CDE-3693-EE9AD33F1D68}.wem		\Containers\Default Work Unit\Bloque3\Seccion\Bloque3		1675732
 	398923845	LavadoManos	.cache\90\{9043D05A-C9A6-2D62-2071-330EF95AC707}.wem		\Containers\Default Work Unit\Sonorizacion\LavadoManos		240649
+	427794326	hamburguesaCompleta	.cache\25\{25BF77FF-36A5-FD42-C80A-3339924612FA}.wem		\Containers\Default Work Unit\Sonorizacion\hamburguesaCompleta		248928
 	474729625	NotificacionDriveThru	.cache\17\{178E1AF4-05DB-3800-F2CF-84055A6A7DA7}.wem		\Containers\Default Work Unit\Sonorizacion\NotificacionDriveThru		5747
 	518145163	AmbienteCocina	.cache\4F\{4FD844E2-9008-42E2-A2A9-B79795790BD2}.wem		\Containers\Default Work Unit\Sonorizacion\AmbienteCocina		2730459
 	518671127	DialogoBano	.cache\62\{622E723E-CBA5-6A01-1EAD-4DAB45482CEB}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoBano		49326

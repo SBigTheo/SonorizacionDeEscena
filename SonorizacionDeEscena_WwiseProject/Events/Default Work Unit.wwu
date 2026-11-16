@@ -409,6 +409,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_HamburguesaCompleta" ID="{061D7039-5912-422B-B8F2-53C9063DFEAB}">
+					<ChildrenList>
+						<Action Name="" ID="{B425BF6F-1A42-4D17-94CC-EAC5F24B1D6C}" ShortID="66700670">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="hamburguesaCompleta" ID="{01E967D6-AC00-4C5A-961D-9593570929CE}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
