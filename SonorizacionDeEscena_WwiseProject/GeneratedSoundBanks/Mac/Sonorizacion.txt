@@ -77,7 +77,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	518145163	AmbienteCocina	.cache\4F\{4FD844E2-9008-42E2-A2A9-B79795790BD2}.wem		\Containers\Default Work Unit\Sonorizacion\AmbienteCocina		2730459
 	518671127	DialogoBano	.cache\E3\{E327A0F7-820E-D96A-509B-30129AC09309}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoBano		476980
 	534936738	DialogoLadron	.cache\09\{098749E4-D0A1-CAC9-FE4F-4C81D28C4B92}.wem		\Containers\Default Work Unit\Sonorizacion\DialogoLadron		790384
-	557087385	PuertaCerrar	.cache\FF\{FF8016D3-6981-32BD-5762-83E65096EAE0}.wem		\Containers\Default Work Unit\Sonorizacion\PuertaCerrar		33849
+	557087385	PuertaCerrar	.cache\7F\{7F039C66-9EC0-7A58-55A9-0FCC4F4BF080}.wem		\Containers\Default Work Unit\Sonorizacion\PuertaCerrar		8855
 	602796887	TachoDeBasura	.cache\1E\{1E66BFBD-51BA-B194-0C76-E27461198850}.wem		\Containers\Default Work Unit\Sonorizacion\TachoDeBasura		49297
 	665915096	MusicaCocina	.cache\29\{290EBBEE-965A-87CC-2ED4-FB19E1EA95ED}.wem		\Containers\Default Work Unit\Musica por zonas\MusicaCocina		1675732
 	758221955	CorteVegetales	.cache\26\{26A3A688-09F8-3BEA-1F30-96AC7526DADD}.wem		\Containers\Default Work Unit\Sonorizacion\CorteVegetales		76068

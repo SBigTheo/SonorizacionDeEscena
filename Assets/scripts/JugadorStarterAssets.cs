@@ -2,6 +2,7 @@ using StarterAssets;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ThirdPersonController))]
 // Publica la pose de la cámara antes del LateUpdate de AkInitializer (-100).
@@ -31,6 +32,12 @@ public sealed class JugadorStarterAssets : MonoBehaviour
     {
         Destroy(mallaPies);
         Destroy(emisorPasos);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(gameObject.scene.buildIndex, LoadSceneMode.Single);
     }
 
     private void LateUpdate()

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BA3057EC-A5A9-4D86-8A69-044F9661C582}",
     "Language": "SFX",
-    "Hash": "{D53D4B0D-DD2C-5D73-6629-992C085A4913}",
+    "Hash": "{381BA2FE-0F40-04E7-F2A9-52E6A8AE5658}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Sonorizacion",
     "ShortName": "Sonorizacion",
     "Path": "Sonorizacion.bnk",
@@ -221,7 +221,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "puerta cerrandose.wav",
-      "CachePath": "FF/{FF8016D3-6981-32BD-5762-83E65096EAE0}.wem"
+      "CachePath": "7F/{7F039C66-9EC0-7A58-55A9-0FCC4F4BF080}.wem"
      },
      {
       "Id": "602796887",
@@ -780,8 +780,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PuertaCerrar",
       "GUID": "{18EFC487-9260-4268-AB01-5F2F4123BB1F}",
       "DurationType": "OneShot",
-      "DurationMin": "5.4",
-      "DurationMax": "5.4",
+      "DurationMin": "1.3",
+      "DurationMax": "1.3",
       "MediaRefs": [
        {
         "Id": "557087385"
@@ -939,6 +939,6 @@
     ]
    }
   ],
-  "FileHash": "{1A625E58-EEC4-8191-7D74-C66C7261FC70}"
+  "FileHash": "{86DDB78B-EA87-B982-0AA7-15C07A030633}"
  }
 }

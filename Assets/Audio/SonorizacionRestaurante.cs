@@ -24,9 +24,10 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private const string FryerTimerEvent = "Cronometro";
     private const float CarPassDuration = 1.8f;
     private const float CarSoundDuration = 3.422f;
-    private const float CarHalfRoute = 230f;
+    private const float CarHalfRoute = 330f;
     private const float CarGroundHeight = 30.3f;
-    private static readonly Vector3 CarLaneOffset = Vector3.left * 55f;
+    private static readonly Vector3 CarLaneOffset = new(28f, 0f, -105f);
+    private static readonly Vector3 CarDirection = Vector3.back;
 
     private enum Trigger { Near, Use, Loop, Enter, Door, ManualLoop, UseRightClick }
 
@@ -46,8 +47,21 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         public float aimRadius;
         [InspectorName("Número de lavamanos"), Min(0)]
         public int sinkNumber;
+        public string doorLeaf;
+        public string doorSecondLeaf;
+        public float doorWidth;
+        public bool doorNormalZ;
+        public bool doorOpensPositive;
+        public bool doorHingeAtPositiveEnd;
+        public float doorBottom;
+        public float doorHeight;
 
         [NonSerialized] public GameObject emitter;
+        [NonSerialized] public Transform puertaA;
+        [NonSerialized] public Transform puertaB;
+        [NonSerialized] public float apertura;
+        [NonSerialized] public bool puertaAbierta;
+        [NonSerialized] public BoxCollider pasoPuerta;
         [NonSerialized] public bool inside;
         [NonSerialized] public uint loop;
         [NonSerialized] public uint fadingSinkSound;
@@ -116,10 +130,12 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private Point diningPoint;
     private readonly bool[] lugaresExplorados = new bool[6];
     private static readonly string[] Lugares =
-        { "DRIVE THRU", "FREIDORA", "RADIO", "BAÑO", "TELEVISIÓN", "PUERTA PRINCIPAL" };
+        { "Drive thru", "Cocina", "Radio", "Baño", "Televisión", "Puerta" };
     [System.NonSerialized] private GUIStyle estiloRecorrido;
     [System.NonSerialized] private GUIStyle estiloPuntoRecorrido;
     private GUIStyle estiloAvisoPedido;
+    private Material materialGuiaSuelo;
+    private Mesh mallaGuiaSuelo;
     private const float DuracionAvisoPedido = 1.15f;
     private readonly List<(Vector3 origen, float inicio)> avisosPedido = new();
     [SerializeField] private ZonaMusical[] zonasMusicales;
@@ -128,7 +144,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
     private static readonly string[] ZonasPorBloque =
     {
-        "MusicaComedor", "MusicaEstacionamiento", "MusicaComedorVacio", "MusicaCocina"
+        "MusicaEstacionamiento", "MusicaBano", "MusicaComedor", "MusicaCocina"
     };
 
     private static readonly string[] ParametrosMusicales =
@@ -203,10 +219,13 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         foreach (var point in points)
         {
             point.emitter = CreateEmitter(point.label + " · " + point.audioEvent, point.position);
+            if (point.trigger == Trigger.Door)
+                PrepararPuerta(point);
             if (point.audioEvent == PassingCarEvent && autoDriveThruPrefab != null)
             {
                 carVisual = Instantiate(autoDriveThruPrefab, point.emitter.transform);
                 carVisual.transform.localPosition = Vector3.up * (CarGroundHeight - point.position.y);
+                carVisual.transform.rotation = Quaternion.LookRotation(CarDirection);
                 carVisual.SetActive(false);
             }
             point.gain = DistanceGain(point, player.transform.position);
@@ -244,6 +263,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         UpdateExtraVolumes();
         if (diningPoint == null)
             ambience = Post(DiningAmbienceEvent, gameObject);
+        CrearGuiaRecorrido();
     }
 
     private GameObject CreateEmitter(string emitterName, Vector3 position)
@@ -319,7 +339,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         mezclaPrimerPlano = Mathf.MoveTowards(mezclaPrimerPlano, objetivoPrimerPlano,
             Time.deltaTime * (objetivoPrimerPlano > mezclaPrimerPlano ? 2.5f : 1.35f));
         if (emisorMusical != null)
-            SetVolume(emisorMusical, 0f, coberturaMusical *
+            SetVolume(emisorMusical, 2f, coberturaMusical *
                 Mathf.SmoothStep(1f, 0.1f, mezclaEstacion) * Mathf.Lerp(1f, 0.53f, mezclaPrimerPlano));
         Point selected = null;
         var nearest = float.PositiveInfinity;
@@ -336,12 +356,15 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             var targetGain = DistanceGain(point, playerPosition);
             var zoneAmbience = IsZoneAmbience(point.audioEvent);
             var offset = playerPosition - point.position;
+            var profundidadPuerta = point.doorNormalZ ? offset.z : offset.x;
+            var lateralPuerta = point.doorNormalZ ? offset.x : offset.z;
             var inside = point.trigger == Trigger.Door
-                ? Mathf.Abs(offset.x) <= (point.inside ? 25f : 18f) &&
-                  Mathf.Abs(offset.y) <= 65f && Mathf.Abs(offset.z) <= 36f
+                ? Mathf.Abs(profundidadPuerta) <= 62f &&
+                  Mathf.Abs(offset.y) <= 70f && Mathf.Abs(lateralPuerta) <= point.doorWidth + 12f
                 : zoneAmbience ? targetGain > 0f : distance <= point.radius;
+            if (point.audioEvent == PassingCarEvent)
+                inside &= playerPosition.x < 4890f;
             var entered = inside && !point.inside;
-            var exited = !inside && point.inside;
             point.inside = inside;
 
             var segundosRespuesta = targetGain > point.gain ? 0.45f : 0.75f;
@@ -408,7 +431,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                         car = point;
                         carStarted = Time.unscaledTime;
                         point.emitter.transform.position = point.position + CarLaneOffset -
-                            Vector3.forward * CarHalfRoute;
+                            CarDirection * CarHalfRoute;
                         AkUnitySoundEngine.SetObjectPosition(point.emitter, point.emitter.transform);
                         if (point.audioEvent == PassingCarEvent && carVisual != null)
                             carVisual.SetActive(true);
@@ -417,21 +440,28 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                     }
                     break;
                 case Trigger.Door:
-                    if (entered)
+                {
+                    ActualizarPuerta(point);
+                    var objetivoPuerta = point.position + Vector3.up * 13f - aim.origin;
+                    var distanciaPuerta = objetivoPuerta.magnitude;
+                    if (inside && distanciaPuerta < nearest &&
+                        Vector3.Dot(aim.direction, objetivoPuerta.normalized) >= 0.65f &&
+                        !Physics.Linecast(aim.origin, aim.origin + objetivoPuerta, paredesAcusticas,
+                            QueryTriggerInteraction.Ignore))
                     {
-                        Post(point.audioEvent, point.emitter);
-                        MarcarExplorado(FinalDialogueEvent);
+                        selected = point;
+                        nearest = distanciaPuerta;
                     }
-                    else if (exited)
-                        Post(point.secondaryEvent, point.emitter);
                     break;
+                }
                 case Trigger.Use:
                 case Trigger.UseRightClick:
                     if (!inside || !CanInteract(point, aim, out var aimDistance))
                         break;
 
                     var aimed = point.aimRadius > 0f;
-                    var selectedIsAimed = selected != null && selected.aimRadius > 0f;
+                    var selectedIsAimed = selected != null &&
+                        (selected.aimRadius > 0f || selected.trigger == Trigger.Door);
                     var priority = aimed ? aimDistance : distance;
                     if (aimed != selectedIsAimed ? aimed : priority < nearest)
                     {
@@ -440,6 +470,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                     }
                     break;
             }
+
         }
 
         if (car != null)
@@ -447,7 +478,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             var elapsed = Time.unscaledTime - carStarted;
             // Keep the sound receding after the car leaves the visible route.
             car.emitter.transform.position = car.position + CarLaneOffset +
-                Vector3.forward * Mathf.LerpUnclamped(-CarHalfRoute, CarHalfRoute,
+                CarDirection * Mathf.LerpUnclamped(-CarHalfRoute, CarHalfRoute,
                     elapsed / CarPassDuration);
             AkUnitySoundEngine.SetObjectPosition(car.emitter, car.emitter.transform);
             if (elapsed >= CarPassDuration && car.audioEvent == PassingCarEvent &&
@@ -467,9 +498,20 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         if (interaction != null || selected == null)
             return;
 
+        if (selected.trigger == Trigger.Door)
+        {
+            var bloqueaCierre = selected.puertaAbierta && JugadorEnUmbral(selected);
+            interaction = bloqueaCierre ? "Dejá libre el umbral para cerrar" :
+                (selected.puertaAbierta ? "E · Cerrar · " : "E · Abrir · ") + selected.label;
+            if (!bloqueaCierre && Input.GetKeyDown(KeyCode.E))
+                CambiarPuerta(selected, !selected.puertaAbierta);
+            return;
+        }
+
         if (selected == entrancePoint || selected == puntoVozBano)
         {
-            if (Input.GetKeyDown(KeyCode.E) && Post(selected.audioEvent, selected.emitter, sinSuperponer: true) != 0)
+            if (Input.GetKeyDown(KeyCode.E) && VozAccesible(selected) &&
+                Post(selected.audioEvent, selected.emitter, sinSuperponer: true) != 0)
                 MarcarExplorado(selected.audioEvent);
             return;
         }
@@ -642,6 +684,158 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         }
     }
 
+    private void PrepararPuerta(Point punto)
+    {
+        if (string.IsNullOrEmpty(punto.doorLeaf))
+            return;
+
+        var doble = !string.IsNullOrEmpty(punto.doorSecondLeaf);
+        var eje = punto.doorNormalZ ? Vector3.right : Vector3.forward;
+        var semiancho = punto.doorWidth * (doble ? 1f : 0.5f);
+        var sentidoBisagra = !doble && punto.doorHingeAtPositiveEnd ? 1f : -1f;
+        punto.puertaA = CrearBisagra(punto.doorLeaf, punto.position + eje * (semiancho * sentidoBisagra));
+        if (doble)
+            punto.puertaB = CrearBisagra(punto.doorSecondLeaf, punto.position + eje * semiancho);
+        punto.puertaAbierta = false;
+        punto.apertura = 0f;
+        if (punto.puertaA == null || (doble && punto.puertaB == null))
+            return;
+
+        punto.pasoPuerta = punto.emitter.AddComponent<BoxCollider>();
+        var alto = punto.doorHeight > 0f ? punto.doorHeight : 90f;
+        var basePuerta = punto.doorBottom > 0f ? punto.doorBottom : 38.9f;
+        punto.pasoPuerta.center = Vector3.up * (basePuerta + alto * 0.5f - punto.position.y);
+        punto.pasoPuerta.size = punto.doorNormalZ
+            ? new Vector3(2f * semiancho, alto, 3f)
+            : new Vector3(3f, alto, 2f * semiancho);
+    }
+
+    private Transform CrearBisagra(string nombreHoja, Vector3 posicion)
+    {
+        var hoja = GameObject.Find(nombreHoja);
+        if (hoja == null)
+        {
+            Debug.LogWarning($"No se encontró la hoja de puerta {nombreHoja}.", this);
+            return null;
+        }
+
+        var bisagra = new GameObject("Bisagra · " + nombreHoja).transform;
+        bisagra.SetParent(hoja.transform.parent);
+        bisagra.SetPositionAndRotation(posicion, Quaternion.identity);
+        hoja.transform.SetParent(bisagra, true);
+        foreach (var pieza in FindObjectsByType<Transform>())
+            if (pieza.name.StartsWith(nombreHoja + " ", StringComparison.Ordinal))
+                pieza.SetParent(bisagra, true);
+        return bisagra;
+    }
+
+    private void CrearGuiaRecorrido()
+    {
+        var entradaCocina = Array.Find(points, punto => punto.doorLeaf == "Hoja animada Salida servicio");
+        var shader = Shader.Find("Universal Render Pipeline/Unlit");
+        if (entradaCocina == null || shader == null)
+            return;
+
+        materialGuiaSuelo = new Material(shader) { color = new Color(1f, 0.79f, 0.04f) };
+        var guia = new GameObject("Guía de suelo · recorrido completo").transform;
+        guia.SetParent(transform, false);
+        var vertices = new List<Vector3>();
+        var triangulos = new List<int>();
+        var camino = new[]
+        {
+            // Drive thru y entrada exterior de la cocina.
+            new Vector3(5296f, 74f, 928f), new Vector3(5315f, 74f, 908f),
+            new Vector3(5130f, 74f, 850f), new Vector3(5107f, 74f, 803f),
+            new Vector3(entradaCocina.position.x, 74f, entradaCocina.position.z + 20f),
+            new Vector3(4975f, 74f, 660f),
+            // Freidora y radio, por el hueco entre las mesadas.
+            new Vector3(5075f, 74f, 535f), new Vector3(5075f, 74f, 520f),
+            new Vector3(4970f, 74f, 365f), new Vector3(5120f, 74f, 270f),
+            // Puerta del comedor y pasillo de los baños.
+            new Vector3(5300f, 74f, 260f), new Vector3(5345f, 74f, 210f),
+            new Vector3(5365f, 74f, 210f), new Vector3(5375f, 74f, 225f),
+            new Vector3(5470f, 74f, 580f),
+            // Regreso por el comedor, televisor y puerta principal.
+            new Vector3(5460f, 74f, 510f), new Vector3(5435f, 74f, -55f),
+            new Vector3(5535f, 74f, 20f)
+        };
+        for (var i = 1; i < camino.Length; i++)
+        {
+            var inicio = camino[i - 1];
+            var delta = camino[i] - inicio;
+            var pasos = Mathf.Max(1, Mathf.CeilToInt(delta.magnitude / 24f));
+            var ultimoPaso = i == camino.Length - 1 ? pasos : pasos - 1;
+            for (var j = 0; j <= ultimoPaso; j++)
+            {
+                var posicion = inicio + delta * (j / (float)pasos);
+                const float alturaPavimentoVisible = 38.9f;
+                const float separacionMarcas = 2f;
+                var altura = alturaPavimentoVisible;
+                if (Physics.Raycast(posicion, Vector3.down, out var suelo, 52f,
+                        Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore) && suelo.normal.y >= 0.8f)
+                    altura = Mathf.Max(altura, suelo.point.y);
+                var centro = new Vector3(posicion.x, altura + separacionMarcas, posicion.z);
+                var primerVertice = vertices.Count;
+                vertices.Add(guia.InverseTransformPoint(centro));
+                const int lados = 10;
+                for (var lado = 0; lado < lados; lado++)
+                {
+                    var angulo = lado * (2f * Mathf.PI / lados);
+                    var borde = new Vector3(Mathf.Cos(angulo), 0f, Mathf.Sin(angulo)) * 3.3f;
+                    vertices.Add(guia.InverseTransformPoint(centro + borde));
+                    triangulos.Add(primerVertice);
+                    triangulos.Add(primerVertice + 1 + (lado + 1) % lados);
+                    triangulos.Add(primerVertice + 1 + lado);
+                }
+            }
+        }
+        var malla = new Mesh { name = "Puntos del recorrido completo" };
+        malla.SetVertices(vertices);
+        malla.SetTriangles(triangulos, 0);
+        guia.gameObject.AddComponent<MeshFilter>().sharedMesh = malla;
+        guia.gameObject.AddComponent<MeshRenderer>().sharedMaterial = materialGuiaSuelo;
+        mallaGuiaSuelo = malla;
+    }
+
+    private bool JugadorEnUmbral(Point punto)
+    {
+        var offset = player.transform.position - punto.position;
+        var profundidad = punto.doorNormalZ ? offset.z : offset.x;
+        var lateral = punto.doorNormalZ ? offset.x : offset.z;
+        var semiancho = punto.doorWidth * (punto.puertaB != null ? 1f : 0.5f);
+        return Mathf.Abs(profundidad) < 17f && Mathf.Abs(lateral) < semiancho + 14f &&
+            Mathf.Abs(offset.y) < 72f;
+    }
+
+    private void CambiarPuerta(Point punto, bool abrir)
+    {
+        punto.puertaAbierta = abrir;
+        if (abrir)
+            Post(punto.audioEvent, punto.emitter);
+        if (abrir && !string.IsNullOrEmpty(punto.doorSecondLeaf))
+            MarcarExplorado(FinalDialogueEvent);
+    }
+
+    private void ActualizarPuerta(Point punto)
+    {
+        if (!punto.puertaAbierta && punto.apertura > 0f && JugadorEnUmbral(punto))
+            CambiarPuerta(punto, true);
+
+        var aperturaAnterior = punto.apertura;
+        punto.apertura = Mathf.MoveTowards(punto.apertura, punto.puertaAbierta ? 1f : 0f, Time.deltaTime / 0.52f);
+        var angulo = Mathf.SmoothStep(0f, 88f, punto.apertura) *
+            (punto.doorOpensPositive ? 1f : -1f) * (punto.doorNormalZ ? -1f : 1f) *
+            (punto.doorHingeAtPositiveEnd ? -1f : 1f);
+        if (punto.pasoPuerta != null)
+            punto.pasoPuerta.enabled = !punto.puertaAbierta && punto.apertura <= 0f;
+        if (punto.puertaA != null)
+            punto.puertaA.rotation = Quaternion.Euler(0f, angulo, 0f);
+        if (punto.puertaB != null)
+            punto.puertaB.rotation = Quaternion.Euler(0f, -angulo, 0f);
+        if (aperturaAnterior > 0f && punto.apertura == 0f && !string.IsNullOrEmpty(punto.secondaryEvent))
+            Post(punto.secondaryEvent, punto.emitter);
+    }
+
     private static void StopSinkSound(Point point, int fadeMilliseconds)
     {
         if (point.fadingSinkSound != 0)
@@ -661,6 +855,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private bool CanInteract(Point point, Ray aim, out float hitDistance)
     {
         hitDistance = 0f;
+        if ((point == puntoVozBano || point == entrancePoint) && !VozAccesible(point))
+            return false;
         if (point.audioEvent == DriveThruDialogueEvent && superficiesDriveThru != null &&
             superficiesDriveThru.Length > 0)
         {
@@ -1091,6 +1287,9 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
     private void DibujarRecorrido()
     {
+        if (Event.current.type != EventType.Repaint)
+            return;
+
         if (estiloRecorrido == null)
         {
             estiloRecorrido = CartelesInformativos.CrearTexto();
@@ -1102,19 +1301,33 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             estiloPuntoRecorrido = CartelesInformativos.CrearTexto();
             estiloPuntoRecorrido.fontStyle = FontStyle.Bold;
         }
-        var ancho = Mathf.Min(720f, Screen.width - 24f);
+        var ancho = Mathf.Min(820f, Screen.width - 24f);
         var anchoPunto = ancho / Lugares.Length;
-        var fila = new Rect(12f, 12f, ancho, 59f);
-        CartelesInformativos.DibujarFondo(fila);
-        estiloRecorrido.fontSize = 13;
-        CartelesInformativos.DibujarTexto(new Rect(12f, 14f, ancho, 20f), "PUNTOS QUE EXPLORAR HOY:", estiloRecorrido, Color.white);
+        var izquierda = (Screen.width - ancho) * 0.5f;
+        var rojo = new Color(0.76f, 0.02f, 0.025f, 0.98f);
+        var amarillo = new Color(1f, 0.83f, 0.06f);
+        var colorAnterior = GUI.color;
+        GUI.color = Color.white;
+        Forma(new Rect(izquierda, 12f, ancho, 82f), rojo, 28f);
+        var primerPunto = izquierda + anchoPunto * 0.5f;
+        Forma(new Rect(primerPunto, 53f, ancho - anchoPunto, 2f), amarillo);
+        estiloRecorrido.fontSize = 17;
+        CartelesInformativos.DibujarTexto(new Rect(izquierda, 16f, ancho, 24f),
+            "Sitios que explorar hoy", estiloRecorrido, Color.white);
         estiloPuntoRecorrido.fontSize = Mathf.Clamp(Mathf.FloorToInt(anchoPunto / 11f), 8, 13);
         for (var i = 0; i < Lugares.Length; i++)
         {
-            var color = lugaresExplorados[i] ? new Color(0.62f, 1f, 0.65f) : Color.white;
-            CartelesInformativos.DibujarTexto(new Rect(12f + anchoPunto * i, 34f, anchoPunto, 33f),
-                (lugaresExplorados[i] ? "●" : "○") + "\n" + Lugares[i], estiloPuntoRecorrido, color);
+            var x = primerPunto + anchoPunto * i;
+            Forma(new Rect(x - 9f, 45f, 18f, 18f), amarillo, 9f);
+            if (!lugaresExplorados[i])
+                Forma(new Rect(x - 6.5f, 47.5f, 13f, 13f), rojo, 6.5f);
+            CartelesInformativos.DibujarTexto(new Rect(x - anchoPunto * 0.5f, 65f, anchoPunto, 22f),
+                Lugares[i], estiloPuntoRecorrido, Color.white);
         }
+        GUI.color = colorAnterior;
+
+        static void Forma(Rect rect, Color color, float radio = 0f)
+            => GUI.DrawTexture(rect, Texture2D.whiteTexture, ScaleMode.StretchToFill, true, 0f, color, 0f, radio);
     }
 
     private void OnGUI()
@@ -1145,9 +1358,13 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             panelWidth, panelHeight), interaction, instructionStyle);
     }
 
+    private bool VozAccesible(Point punto) =>
+        !Physics.Linecast(player.transform.position, punto.position, Physics.DefaultRaycastLayers,
+            QueryTriggerInteraction.Ignore);
+
     private void DibujarCartelVoz(Point punto)
     {
-        if (punto == null || !punto.inside)
+        if (punto == null || !punto.inside || !VozAccesible(punto))
             return;
 
         var ancla = punto.position + Vector3.up * 20f;
@@ -1197,6 +1414,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 #if UNITY_EDITOR
         StopPointPreview();
 #endif
+        Destroy(materialGuiaSuelo);
+        Destroy(mallaGuiaSuelo);
         if (!AkUnitySoundEngine.IsInitialized())
             return;
 

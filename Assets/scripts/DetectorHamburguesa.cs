@@ -10,7 +10,6 @@ public sealed class DetectorHamburguesa : MonoBehaviour
     private const int PanSuperior = 3;
     private static readonly string[] Nombres = { "panbajo", "carne", "cheese", "pansuperior" };
     private static readonly float[] Alturas = { -0.9f, 1.5f, 2f, 4.1f };
-    private const float Compas = 2.181816f;
 
     [SerializeField] private GameObject hamburguesaCompleta;
     [SerializeField] private Transform puntoDeAparicion;
@@ -86,7 +85,7 @@ public sealed class DetectorHamburguesa : MonoBehaviour
             if (emisorMusical != null)
             {
                 AkUnitySoundEngine.SetRTPCValue("MezclaRitmoComedor", ingredientes[Carne] != null ? 100f : 0f, emisorMusical, 90);
-                AkUnitySoundEngine.SetRTPCValue("MezclaMelodiaComedor", ingredientes[PanSuperior] != null ? 100f : 0f, emisorMusical, 90);
+                AkUnitySoundEngine.SetRTPCValue("MezclaMelodiaComedor", ingredientes[Queso] != null ? 100f : 0f, emisorMusical, 180);
                 if (etapa == 1)
                     musica = AkUnitySoundEngine.PostEvent("Play_MusicaHamburguesa", emisorMusical);
             }
@@ -99,7 +98,7 @@ public sealed class DetectorHamburguesa : MonoBehaviour
             var completa = Instantiate(hamburguesaCompleta, centro, Quaternion.identity);
             if (emisorMusical != null)
                 emisorMusical.transform.SetParent(completa.transform, true);
-            StartCoroutine(Finalizar());
+            Finalizar();
             Mostrar("Hamburguesa completa");
         }
         else
@@ -108,11 +107,10 @@ public sealed class DetectorHamburguesa : MonoBehaviour
         return true;
     }
 
-    private IEnumerator Finalizar()
+    private void Finalizar()
     {
-        yield return new WaitForSecondsRealtime(Compas);
         if (!AkUnitySoundEngine.IsInitialized())
-            yield break;
+            return;
         victoria = AkUnitySoundEngine.PostEvent("Play_HamburguesaCompleta",
             AkUnitySoundEngine.GetAkGameObjectID(emisorMusical != null ? emisorMusical : gameObject),
             (uint)AkCallbackType.AK_EndOfEvent,
@@ -171,11 +169,11 @@ public sealed class DetectorHamburguesa : MonoBehaviour
         victoria = 0;
     }
 
-    private void DetenerMusica()
+    private void DetenerMusica(int fundidoMs = 150)
     {
         if (musica == 0)
             return;
-        AkUnitySoundEngine.StopPlayingID(musica, 150);
+        AkUnitySoundEngine.StopPlayingID(musica, fundidoMs, AkCurveInterpolation.AkCurveInterpolation_Sine);
         musica = 0;
     }
 }

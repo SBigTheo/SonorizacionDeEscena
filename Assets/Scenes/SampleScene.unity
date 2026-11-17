@@ -3146,7 +3146,7 @@ MonoBehaviour:
     sinkNumber: 2
   - label: Carril del drive thru
     audioEvent: AutoPasando
-    position: {x: 4840, y: 72, z: 280}
+    position: {x: 4825, y: 72, z: 515}
     radius: 115
     volumeDb: 0
     trigger: 3
@@ -3186,7 +3186,7 @@ MonoBehaviour:
     sinkNumber: 0
   - label: Puerta principal
     audioEvent: PuertaAbrir
-    position: {x: 5560, y: 82.29236, z: 8.675959}
+    position: {x: 5566.8, y: 82.29, z: 19.9}
     radius: 75
     volumeDb: 0
     trigger: 4
@@ -3194,6 +3194,10 @@ MonoBehaviour:
     secondaryEventEvery: 0
     aimRadius: 0
     sinkNumber: 0
+    doorLeaf: Hoja animada Entrada sur
+    doorSecondLeaf: Hoja animada Entrada norte
+    doorWidth: 50.2
+    doorOpensPositive: 1
   - label: Caja registradora 1
     audioEvent: SwitchFisico
     position: {x: 5322.442, y: 79.65666, z: 142.9905}
@@ -3278,12 +3282,160 @@ MonoBehaviour:
     audioEvent: AmbienteRestaurante
     position: {x: 5297.5, y: 70, z: -180}
     radius: 280
-    volumeDb: -7
+    volumeDb: -6
     trigger: 2
     secondaryEvent: 
     secondaryEventEvery: 0
     aimRadius: 0
     sinkNumber: 0
+  - label: Puerta del comedor
+    audioEvent: PuertaAbrir
+    position: {x: 5357, y: 82, z: 192}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Comedor
+    doorWidth: 49.2
+    doorNormalZ: 0
+  - label: Puerta de servicio de cocina
+    audioEvent: PuertaAbrir
+    position: {x: 5169.3, y: 86, z: 596.6}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Servicio cocina
+    doorWidth: 49.2
+    doorNormalZ: 0
+  - label: Salida de servicio
+    audioEvent: PuertaAbrir
+    position: {x: 4975.1, y: 86, z: 666.4}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Salida servicio
+    doorWidth: 49.2
+    doorNormalZ: 1
+    doorHingeAtPositiveEnd: 1
+  - label: Puerta izquierda de los baños
+    audioEvent: PuertaAbrir
+    position: {x: 5370.1, y: 86, z: 582.55}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Bano izquierdo
+    doorWidth: 49.2
+    doorNormalZ: 0
+  - label: Puerta derecha de los baños
+    audioEvent: PuertaAbrir
+    position: {x: 5478.5, y: 86, z: 582.55}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Bano derecho
+    doorWidth: 49.2
+    doorNormalZ: 0
+    doorOpensPositive: 1
+  - label: Puerta del paso de cocina
+    audioEvent: PuertaAbrir
+    position: {x: 5036.8, y: 84, z: 102.2}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Paso cocina sur
+    doorWidth: 36.2
+    doorNormalZ: 1
+    doorOpensPositive: 0
+    doorBottom: 38.9
+    doorHeight: 89.4
+  - label: Puerta de la cabina izquierda
+    audioEvent: PuertaAbrir
+    position: {x: 5471.98, y: 90, z: 748.67}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Cabina bano izquierda
+    doorWidth: 48.18
+    doorNormalZ: 0
+    doorOpensPositive: 1
+    doorHingeAtPositiveEnd: 0
+    doorBottom: 56
+    doorHeight: 68.3
+  - label: Puerta del bano individual
+    audioEvent: PuertaAbrir
+    position: {x: 5319.39, y: 90, z: 780.295}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Cabina bano individual
+    doorWidth: 45.19
+    doorNormalZ: 1
+    doorOpensPositive: 0
+    doorHingeAtPositiveEnd: 0
+    doorBottom: 56
+    doorHeight: 68.3
+  - label: Puerta de la cabina derecha
+    audioEvent: PuertaAbrir
+    position: {x: 5489.55, y: 90, z: 780.295}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Cabina bano derecha
+    doorWidth: 36.14
+    doorNormalZ: 1
+    doorOpensPositive: 0
+    doorHingeAtPositiveEnd: 1
+    doorBottom: 56
+    doorHeight: 68.3
+  - label: Entrada opuesta a la principal
+    audioEvent: PuertaAbrir
+    position: {x: 5014.72, y: 86.2, z: 16.855}
+    radius: 75
+    volumeDb: -2
+    trigger: 4
+    secondaryEvent: PuertaCerrar
+    secondaryEventEvery: 0
+    aimRadius: 0
+    sinkNumber: 0
+    doorLeaf: Hoja animada Entrada opuesta
+    doorWidth: 50.19
+    doorBottom: 38.95
+    doorHeight: 99.38
   restaurantVolumeDb: -6
   zonaAmbienteComedor: {fileID: 2030120603}
   distanciaFundidoAmbienteComedor: 52
@@ -3425,8 +3577,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 749, y: 200, z: 645}
-  m_Center: {x: -189.5, y: 0, z: 82.5}
+  m_Size: {x: 632, y: 200, z: 645}
+  m_Center: {x: -248, y: 0, z: 82.5}
 --- !u!114 &2030040013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,8 +3645,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 415, y: 200, z: 556}
-  m_Center: {x: 7.5, y: 0, z: 63}
+  m_Size: {x: 401, y: 200, z: 556}
+  m_Center: {x: 14.5, y: 0, z: 63}
 --- !u!114 &2030040023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3561,8 +3713,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 362, y: 200, z: 342}
-  m_Center: {x: -36, y: 0, z: 13.5}
+  m_Size: {x: 271, y: 200, z: 342}
+  m_Center: {x: -82.5, y: 0, z: 13.5}
 --- !u!114 &2030040033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3575,7 +3727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d9bbce8b564f0f91d74630f4f767bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seccion: ComedorVacio
+  seccion: Comedor
   prioridad: 30
 --- !u!1 &2030040040
 GameObject:
@@ -3629,8 +3781,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 325, y: 200, z: 335}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 296, y: 200, z: 335}
+  m_Center: {x: -14.5, y: 0, z: 0}
 --- !u!114 &2030040043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3643,7 +3795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71d9bbce8b564f0f91d74630f4f767bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seccion: ComedorVacio
+  seccion: Bano
   prioridad: 40
 --- !u!1 &2030040050
 GameObject:
@@ -3672,7 +3824,7 @@ Transform:
   m_GameObject: {fileID: 2030040050}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4830, y: 95, z: 330}
+  m_LocalPosition: {x: 5230, y: 95, z: 330}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3697,8 +3849,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 331, y: 200, z: 1150}
-  m_Center: {x: -100.5, y: 0, z: -174}
+  m_Size: {x: 1750, y: 200, z: 1800}
+  m_Center: {x: 0, y: 0, z: -174}
 --- !u!114 &2030040053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3712,7 +3864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seccion: Estacionamiento
-  prioridad: 10
+  prioridad: -10
 --- !u!1 &2030050000
 GameObject:
   m_ObjectHideFlags: 0
@@ -5614,7 +5766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5670
+      value: 5290
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5622,19 +5774,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.675961
+      value: 934
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710677
+      value: 0.40541372
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70710677
+      value: 0.91413331
       objectReference: {fileID: 0}
     - target: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: 132.1659
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_Name
@@ -7267,6 +7419,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seccion: Comedor
   prioridad: 10
+--- !u!1 &2030120800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2030120801}
+  - component: {fileID: 2030120802}
+  - component: {fileID: 2030120803}
+  m_Layer: 0
+  m_Name: Separador fijo del bano
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2030120801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030120800}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2030120802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030120800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 42.16, y: 68.26, z: 2}
+  m_Center: {x: 5450.39, y: 90.14, z: 779.79}
+--- !u!65 &2030120803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030120800}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 78.30, y: 68.26, z: 2}
+  m_Center: {x: 5382.13, y: 90.14, z: 780.295}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -7299,3 +7526,4 @@ SceneRoots:
   - {fileID: 2030120401}
   - {fileID: 2030120501}
   - {fileID: 2030120601}
+  - {fileID: 2030120801}
