@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{702D3977-E1DC-2EFC-7D32-4620832F7AE2}",
+    "Hash": "{8CA28B6E-2BE5-2028-2941-4971BF234F05}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -78,10 +78,16 @@
       "Name": "MezclaMelodiaComedor",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\MezclaMelodiaComedor",
       "GUID": "{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}"
+     },
+     {
+      "Id": "4169541141",
+      "Name": "OclusionPared",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\OclusionPared",
+      "GUID": "{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}"
      }
     ]
    }
   ],
-  "FileHash": "{261242A0-9C0C-BDDE-7225-F47B411120D8}"
+  "FileHash": "{7CC93C1E-2CA5-210D-FCCE-D6AEE8CBDB1F}"
  }
 }

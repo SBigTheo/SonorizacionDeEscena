@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BA3057EC-A5A9-4D86-8A69-044F9661C582}",
     "Language": "SFX",
-    "Hash": "{9F437BE6-19C9-493C-94D4-6E5412DA3D68}",
+    "Hash": "{D53D4B0D-DD2C-5D73-6629-992C085A4913}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Sonorizacion",
     "ShortName": "Sonorizacion",
     "Path": "Sonorizacion.bnk",
@@ -72,28 +72,36 @@
       "CachePath": "CA/{CA4ACF26-4E07-18B2-8C03-37C19DF2B0BB}.wem"
      },
      {
-      "Id": "193152456",
+      "Id": "193152470",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "Burger Time.wav",
-      "CachePath": "E0/{E0BE7CC3-5B73-592D-FB84-3CA843D71776}.wem"
+      "ShortName": "Hamburguesa - Bateria.wav",
+      "CachePath": "47/{4752D9D5-D943-B3B3-73DF-0F6EFC6816C6}.wem"
      },
      {
-      "Id": "193152457",
+      "Id": "193152471",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "Burger Time - Melodia.wav",
-      "CachePath": "19/{193A1EC4-830E-A9A8-3A8B-8729CF94AFBA}.wem"
-     },
-     {
-      "Id": "193152458",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Burger Time - Ritmo.wav",
+      "ShortName": "Hamburguesa - Bajo.wav",
       "CachePath": "0E/{0E16FDAD-74D0-9869-82FD-AAFC8DB78217}.wem"
+     },
+     {
+      "Id": "193152472",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Hamburguesa - Melodia.wav",
+      "CachePath": "34/{34F712DD-457E-78E9-271F-72B535ECD671}.wem"
+     },
+     {
+      "Id": "193152473",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "paso jugador.wav",
+      "CachePath": "98/{98A772F9-1B77-1789-3DF4-6CE8D4613F48}.wem"
      },
      {
       "Id": "227409544",
@@ -197,7 +205,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "dialogo baño.wav",
-      "CachePath": "62/{622E723E-CBA5-6A01-1EAD-4DAB45482CEB}.wem"
+      "CachePath": "E3/{E327A0F7-820E-D96A-509B-30129AC09309}.wem"
      },
      {
       "Id": "534936738",
@@ -205,7 +213,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "dialogo ladron.wav",
-      "CachePath": "6D/{6DB24B36-5967-EAAA-F240-8E7E092609B3}.wem"
+      "CachePath": "09/{098749E4-D0A1-CAC9-FE4F-4C81D28C4B92}.wem"
      },
      {
       "Id": "557087385",
@@ -278,6 +286,14 @@
       "Location": "Memory",
       "ShortName": "CaidaCuchillo.wav",
       "CachePath": "3F/{3F2368A1-B41E-7107-ADBB-41DF446B2DEB}.wem"
+     },
+     {
+      "Id": "947363878",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bloque 1.wav",
+      "CachePath": "B0/{B0E61762-86E6-DF42-DE21-697729C37D82}.wem"
      },
      {
       "Id": "958342161",
@@ -471,8 +487,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoBano",
       "GUID": "{478CAFCF-CC32-4EBA-AC51-1BE47E6A9D20}",
       "DurationType": "OneShot",
-      "DurationMin": "4.993424",
-      "DurationMax": "4.993424",
+      "DurationMin": "2.703424",
+      "DurationMax": "2.703424",
       "MediaRefs": [
        {
         "Id": "518671127"
@@ -485,8 +501,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_DialogoLadron",
       "GUID": "{8BA93493-AE0F-4C68-9880-ADF4B564FC40}",
       "DurationType": "OneShot",
-      "DurationMin": "9.16009",
-      "DurationMax": "9.16009",
+      "DurationMin": "4.4800906",
+      "DurationMax": "4.4800906",
       "MediaRefs": [
        {
         "Id": "534936738"
@@ -635,7 +651,7 @@
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "193152456"
+        "Id": "947363878"
        }
       ]
      },
@@ -664,18 +680,30 @@
       ]
      },
      {
+      "Id": "4138678178",
+      "Name": "Play_MusicaHamburguesa",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaHamburguesa",
+      "GUID": "{184EABED-84FD-4961-BBA6-82A739FE09EE}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "193152470"
+       },
+       {
+        "Id": "193152471"
+       },
+       {
+        "Id": "193152472"
+       }
+      ]
+     },
+     {
       "Id": "2052657724",
       "Name": "Play_MusicaInteractiva",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_MusicaInteractiva",
       "GUID": "{550B58B6-FFEC-4DC1-AEEE-420B6535F758}",
       "DurationType": "Infinite",
       "MediaRefs": [
-       {
-        "Id": "193152457"
-       },
-       {
-        "Id": "193152458"
-       },
        {
         "Id": "363355216"
        },
@@ -684,6 +712,9 @@
        },
        {
         "Id": "665915096"
+       },
+       {
+        "Id": "947363878"
        }
       ]
      },
@@ -716,6 +747,20 @@
       ]
      },
      {
+      "Id": "2595881077",
+      "Name": "Play_PasoJugador",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_PasoJugador",
+      "GUID": "{D6A2F0FA-74A3-4020-BE3B-92157050A0E9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.23",
+      "DurationMax": "0.23",
+      "MediaRefs": [
+       {
+        "Id": "193152473"
+       }
+      ]
+     },
+     {
       "Id": "1177537281",
       "Name": "Play_PuertaAbrir",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_PuertaAbrir",
@@ -740,6 +785,54 @@
       "MediaRefs": [
        {
         "Id": "557087385"
+       }
+      ]
+     },
+     {
+      "Id": "1506132057",
+      "Name": "Play_SeccionZona1",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SeccionZona1",
+      "GUID": "{6803818C-BA50-4BF6-AC00-35802A19F18A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "947363878"
+       }
+      ]
+     },
+     {
+      "Id": "1506132058",
+      "Name": "Play_SeccionZona2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SeccionZona2",
+      "GUID": "{33C9723D-6B49-4E3E-9B1A-D65B482D3E2D}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "363355216"
+       }
+      ]
+     },
+     {
+      "Id": "1506132059",
+      "Name": "Play_SeccionZona3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SeccionZona3",
+      "GUID": "{2475CB3A-3C52-486E-97BC-CFC584173E38}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "364693521"
+       }
+      ]
+     },
+     {
+      "Id": "1506132060",
+      "Name": "Play_SeccionZona4",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_SeccionZona4",
+      "GUID": "{70C0D394-1C54-4B64-832C-FE983A1F2AF6}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "665915096"
        }
       ]
      },
@@ -836,10 +929,16 @@
       "Name": "MezclaMelodiaComedor",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\MezclaMelodiaComedor",
       "GUID": "{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}"
+     },
+     {
+      "Id": "4169541141",
+      "Name": "OclusionPared",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\OclusionPared",
+      "GUID": "{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}"
      }
     ]
    }
   ],
-  "FileHash": "{9A63F564-23D5-5FCE-9729-900B987F90C4}"
+  "FileHash": "{1A625E58-EEC4-8191-7D74-C66C7261FC70}"
  }
 }

@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
@@ -12,10 +13,10 @@ TagManager:
   - Water
   - UI
   - Ingredientes
-  - 
-  - 
-  - 
-  - 
+  - ParedExterior
+  - ParedInterior
+  - CristalAcustico
+  - ModeloJugador
   - 
   - 
   - 

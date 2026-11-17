@@ -8,6 +8,8 @@
 						<ObjectRef Name="Play_PuertaAbrir" ID="{35DD52AC-759E-4039-88DD-9EA1F496FE0B}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BotonFisico" ID="{C17418D9-418F-41D6-8A23-39DC938C5B43}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_HamburguesaCompleta" ID="{061D7039-5912-422B-B8F2-53C9063DFEAB}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_MusicaHamburguesa" ID="{184EABED-84FD-4961-BBA6-82A739FE09EE}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_PasoJugador" ID="{D6A2F0FA-74A3-4020-BE3B-92157050A0E9}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Fritura" ID="{1CD0A50D-BDE4-423B-88D6-4187A53EAE36}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PuertaCerrar" ID="{18EFC487-9260-4268-AB01-5F2F4123BB1F}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienteRestaurante" ID="{0EBA0BCC-378D-430F-AC7F-A66A33DF6DC8}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
@@ -36,6 +38,10 @@
 						<ObjectRef Name="Play_LavadoManos" ID="{C105025A-CECC-4C9D-A575-351BB46DD283}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoPapas" ID="{9470CF51-7CEB-4CD2-B64F-0A4D8E0F53F4}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusicaInteractiva" ID="{550B58B6-FFEC-4DC1-AEEE-420B6535F758}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SeccionZona4" ID="{70C0D394-1C54-4B64-832C-FE983A1F2AF6}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SeccionZona3" ID="{2475CB3A-3C52-486E-97BC-CFC584173E38}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SeccionZona2" ID="{33C9723D-6B49-4E3E-9B1A-D65B482D3E2D}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SeccionZona1" ID="{6803818C-BA50-4BF6-AC00-35802A19F18A}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SwitchFisico" ID="{702A13E4-4B71-4DF0-9311-316E0315CD2C}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DialogoBano" ID="{478CAFCF-CC32-4EBA-AC51-1BE47E6A9D20}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_AmbienteCocina" ID="{CA4B1299-3B74-4F50-8D81-528210D45C98}" WorkUnitID="{4296E020-D882-4A15-BD19-AEF5808B2591}" Origin="Manual" Filter="7"/>

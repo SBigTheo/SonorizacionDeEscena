@@ -26,6 +26,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{76F3804F-B62E-4027-9DA7-E810B17FCD4A}" ShortID="1973736456">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{221A0E1F-A9E9-456B-8DC8-2DCD41E8D046}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{E4F6DF0B-C92F-4BC8-AC15-11F71239677C}" ShortID="1422106492">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{96BFA9F7-DB23-4362-8247-58883BF3A384}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="dialogo recepcion" ID="{9E676BDB-EBB4-46B8-9515-DFD19009C496}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -56,6 +98,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{D6E5CD74-2204-4C05-97FC-1B57ED910BE1}" ShortID="1178632450">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{CD235028-2DBF-491A-BBFF-FE4E2EA24FB7}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{6B662A5E-4B74-4F36-BE9F-00D61BDA8361}" ShortID="1954788056">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{471134D0-299E-4743-BD04-59C944A4A078}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="dialogo orden de papas" ID="{B16D6CA3-FA07-4E53-A133-191693981138}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -81,6 +165,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{4E5C6A12-1855-4EBA-8F2B-052513781E9E}" ShortID="633659475">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{ED724801-34F3-4B57-9868-7593326B6ED4}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{A0DCDD94-B8D1-4057-8744-1F35F8803CE0}" ShortID="653013285">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{9C696A63-45A0-417E-A172-26E123CAB0ED}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="dialogo radio + musica" ID="{27546D06-1B42-4442-8984-287A421B9E7F}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -106,6 +232,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{C31A6CAD-DC4C-4206-A136-9FFEFF7323F3}" ShortID="404116632">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{3BB547B2-8834-4FB3-8F47-B8BBC817FADB}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{39F2981A-881A-47D5-B923-C1C6FD0CBE13}" ShortID="2128373548">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{FE217CA4-3DB1-487A-920B-5E4C52143528}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="dialogo television" ID="{F486694A-171F-44E8-9AEC-1E3DC08B2787}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -116,7 +284,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+									<ObjectRef Name="PCM As Input" ID="{E712A671-9647-44EF-8B1B-857926D620F0}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
@@ -141,7 +309,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
-									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+									<ObjectRef Name="PCM As Input" ID="{E712A671-9647-44EF-8B1B-857926D620F0}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
@@ -181,6 +349,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{FF8E263A-16CB-4694-B7FE-26B5D12B9823}" ShortID="72193289">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{5EF15D8F-4DCF-4097-8308-96818EE08601}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{FFF2A4B7-1869-4337-890C-5638DBBA9928}" ShortID="644513240">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{4CB7F95B-ABB4-42B9-9CCC-1AF925353E31}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="sfx en capas (cortado de verduras-carne)" ID="{284ECEF5-67A3-4329-AAB6-871DA15E196E}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -211,6 +421,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{CDD19267-B3F5-4ED5-9292-C8912FAED601}" ShortID="1690620177">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{1232182B-11E6-4AAE-8F51-57F642664DAC}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{58AF9664-5761-4865-95FA-8A866287E054}" ShortID="1580222105">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{DE9EAD1C-A739-4742-A328-E3541767EAF4}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="sfx en capas (cocina fritura)" ID="{48E91006-B927-4861-AA8E-1A94A2029409}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -241,6 +493,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{05F63F51-A14B-47AD-901A-5000F6B1D9DB}" ShortID="1012150748">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{815208DD-7989-4531-A072-200545FDBFC7}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{E7D8386C-4F6C-49D4-AEC5-2F2AC74F369E}" ShortID="1977872885">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{EFF6FFFE-BDE9-45DB-B214-B5C351B8FFCD}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ambiente drive thru" ID="{E2852A43-489F-406D-BA84-083C61CA262E}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -271,6 +565,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{2346A40F-6ADE-4E30-8062-12B5C5FDDAC6}" ShortID="590732801">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{3B907985-2E26-4B6A-9AA0-1AF30DB557CC}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{4DF81159-3C11-4065-BCBF-DC18575BB132}" ShortID="1057180750">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{1D0CDCE2-3629-4635-B23D-E29A4A53165B}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ambiente restaurante" ID="{21AAED48-B15C-4117-9D7F-A6FF558868C1}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -301,6 +637,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{D4FE86FA-5B10-419B-BD62-5D4D4097355D}" ShortID="33296335">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{B929A630-F219-441F-86E3-C9D6F396CD1E}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{6EF5F4B7-76F4-4B7E-971D-56ADB346C34D}" ShortID="638958938">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{A4FE9860-59E6-4A2E-B641-8F396D019DCB}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ambiente cocina" ID="{543C4FAB-2D91-4CDD-BEB0-2FF4DC63BBE8}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -331,6 +709,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{D88997CD-380E-430C-B282-6FF892933868}" ShortID="1312689957">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{2F07B611-4728-4078-8B22-062D33280E19}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{A78413CE-C793-4FE4-A948-58C99582FC98}" ShortID="672361982">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{499417C8-64DA-4F66-86F8-03BFED24A35F}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="auto pasando" ID="{31B5EAE3-E0B8-4FB1-81A6-3FB3704BE9C3}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -361,6 +781,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{A5853B2C-B969-40BB-B09C-68D8FF9ECA4C}" ShortID="344978868">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{6C07E358-65E3-4D53-A12C-D41E6A9C92F1}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{D4D58139-1C19-4621-8C30-A4E43A556216}" ShortID="948888824">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{7EA44884-E3B8-47BC-A3B5-D830C1DDB643}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="auto bocina" ID="{903D1B07-2975-44A6-8550-C3BBA82A10CE}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -391,6 +853,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{3023352D-3CAE-4914-B407-1A417B90EB11}" ShortID="378164749">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{A93B34A6-EC60-4F25-A525-8F7E5E6E6F52}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{75B65478-4AFE-4B88-ACD0-9D85DC2678E2}" ShortID="1491283675">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{E25E0294-E716-424B-9DB9-B98C3756D2E1}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="boton fisico" ID="{39C56302-D5E3-4F83-AA80-D27C130FC7AA}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -421,6 +925,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{23843C57-DB88-4C07-83E1-E11B8F9B07D5}" ShortID="250886853">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{8FCAB2EB-B819-489D-89AE-1A8CE4C481ED}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{15580603-30CE-43C1-9D47-8C951DA9BF40}" ShortID="441755846">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{BAF4A05C-1D6B-44B1-AF14-EE0F55F55C07}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="switch fisico" ID="{800A9E39-334E-4BBF-9EC3-F23826C192A5}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -446,8 +992,74 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{3ACBB209-B069-4602-AF82-565C372A7351}" ShortID="1116127464">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{3B9FD2C2-AD44-4513-A86C-36D66DAD47ED}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{35EBE3E4-5125-4997-BCAC-5EA74D1FB037}" ShortID="365092187">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{B16C5D7D-3245-419A-990F-9DB459DE677F}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="corte de vegetales o carne" ID="{CAC6B60D-BA87-46D2-B28E-EA3D9A855507}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="PasoJugador" ID="{8B694FAC-3385-4E2E-87BB-BA4DDD7F94C2}" ShortID="1188037314">
+							<PropertyList>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso jugador" ID="{0A9F6B67-E036-4A65-92D9-C2F5553B69A0}">
+									<Language>SFX</Language>
+									<AudioFile>paso jugador.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="193152473"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="paso jugador" ID="{0A9F6B67-E036-4A65-92D9-C2F5553B69A0}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Cronometro" ID="{16CFA84E-9948-4EA3-AB8F-50E316B5EB31}" ShortID="255722515">
@@ -471,6 +1083,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{041F24AC-39B5-4691-A523-99CCB9DA97D2}" ShortID="332731709">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{2E9EC36B-25F0-462F-B689-A72A0D600C52}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{C30F96CD-5E04-4833-AAAF-B5FDD5322A53}" ShortID="895361154">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{399FE53D-500E-4D01-891F-80F313F53ECB}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="cronometro de cocina" ID="{503A221B-1CAD-4058-B98E-EBE24E948C2F}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -501,6 +1155,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{F7AE828C-B1B6-4173-A034-D9AF91A01A9F}" ShortID="1508715486">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{2641A31F-B048-4C24-82F4-6FD859EA0DBD}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{C51267D4-27B0-492F-A968-5DDC0E811D1B}" ShortID="563855283">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{EC32F58F-2FFA-4168-873A-2FD582BD02E1}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="lavado de manos" ID="{4A9F0C6A-F0DC-480F-872B-98C20798129B}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -532,6 +1228,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{16CAC77C-CA6B-497D-AD1F-CFE8ECBA306E}" ShortID="844539489">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{AE1498F7-5A8B-49B1-AAF0-15DDBA0CE151}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{0AF3B377-F2FC-47BB-AAAD-CBAD4F9DFC94}" ShortID="518709440">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{7E053633-23DE-4449-AE2F-7DCD6850D6D6}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="lavabo-agua corriendo" ID="{348C7726-7F6A-46E1-8749-53FB71716A5A}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -606,6 +1344,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{01249A4B-4300-482C-A2C1-2174A592EAC6}" ShortID="1051065789">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{33DC3D7F-BCF2-47A4-AE00-34FA37171F8C}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{4E72E1F7-D951-46CE-A1CD-2E2CEB1036DB}" ShortID="1673017754">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{E926FF8E-D813-4AA1-8542-7494DE04B966}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="puerta abriendose" ID="{FF69E6EE-D66B-4805-B227-80FB31233776}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -631,6 +1411,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{973A2661-33D2-42D6-86D8-E54D4F5997C7}" ShortID="22413608">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{37570E61-E239-488F-9E41-264CC99DDABE}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{577DEAC9-99C9-4DB0-9E31-1F658369F681}" ShortID="150867716">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{22B6497A-0F4E-4AAC-894A-F87C9B53EA86}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="puerta cerrandose" ID="{57AC9C41-F1EC-4B98-8962-84993408057E}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -662,6 +1484,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{85CD1FEA-24B7-45D3-BD97-09C44E2D4352}" ShortID="195143562">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{D799435D-7C82-478E-8871-E3EC31570265}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{74703052-CE63-46AD-B91E-61580CAF64E5}" ShortID="89675145">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{C2734303-8BE0-49BE-84F4-FE03A7DA65D6}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="sonido fritura" ID="{8F91D262-9B59-475B-B84E-4CDCF9786F2E}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -692,6 +1556,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{10C7AC3A-6B13-40BE-9E8F-AB59455C55D1}" ShortID="1505280437">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{A48FEF40-F2C2-4F5E-8A1F-CE9139A7ACF7}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{D6CBBDDF-49E8-4EF9-975B-F8DA23E1E3C6}" ShortID="230927624">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{C6D6C5EE-5F4D-4049-BCEF-8665BDD07E65}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="tirada de cadena-baño" ID="{6E9E443C-0EDA-4B8D-8DF3-06EE9A0ED8A2}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -717,6 +1623,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{D64BBD6B-1EC3-4B59-B0F7-1D1C686E7046}" ShortID="1518285773">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{0674A475-5A3A-4B01-B492-EE74EF005574}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{BBA17ACA-A10E-490E-ADF4-A15E3D08B804}" ShortID="1197225016">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{8368F499-4B31-463B-B47D-6AA1D3EBE838}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="Caida" ID="{F4D62BB7-BB55-4E2B-ABCA-BE288329CB45}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -742,6 +1690,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{A77E677C-9AAD-4653-BE9A-4CBEB88D3808}" ShortID="427557624">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{6FA43270-47C9-480C-9BE8-E3405973242B}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{4F195C90-75E8-40C9-AF49-6A757808ADD2}" ShortID="883219494">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{845E799D-B143-4D6D-9E55-BE78C0C3E72A}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="SonidosDeRatita" ID="{BA004109-9990-42B5-A7D7-AFFACE253471}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -767,6 +1757,48 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{50209E0E-F1FC-46A9-922C-9195824A575C}" ShortID="1751689507">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{8973C9AE-AED2-4B46-8EC7-2A7BACB1636A}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{E4D524EE-AD83-4373-98D2-D121D1646005}" ShortID="1530974754">
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{2A1C4176-16A1-4002-A3C6-3F4D8FB2E64D}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="TachoDeBasura" ID="{03E04955-33E2-47FE-97D1-46D78C4CD751}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -854,9 +1886,9 @@
 							<ChildrenList>
 								<AudioFileSource Name="Comedor" ID="{8013E5C1-EB61-4A46-A5D4-D21B32260C88}">
 									<Language>SFX</Language>
-									<AudioFile>Burger Time.wav</AudioFile>
+									<AudioFile>bloque 1.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="193152456"/>
+										<MediaID ID="947363878"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -1009,7 +2041,7 @@
 					<ChildrenList>
 						<MusicSegment Name="Seccion" ID="{D8CDA6D3-7844-45DB-ACFA-BEE29F45064C}" ShortID="604572461">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="17367.0208333333"/>
+								<Property Name="EndPosition" Type="Real64" Value="8727.27083333333"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1020,14 +2052,14 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="Melodia" ID="{C5E4C613-61A7-4864-8593-5948B565E20B}" ShortID="1558265889">
+								<MusicTrack Name="Bloque1" ID="{A06CE1C6-36AB-4B5A-932E-483EE316A167}" ShortID="88161410">
 									<ReferenceList>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
 										</Reference>
 										<Reference Name="TransitionRoot">
 											<Custom>
-												<MusicTransition Name="Root" ID="{AB215409-999D-4DAB-81E1-9C4B07B5F838}">
+												<MusicTransition Name="Root" ID="{C62712C1-5C6D-4526-9FDA-50ECAC5E6163}">
 													<PropertyList>
 														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
@@ -1037,176 +2069,26 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Burger Time - Melodia" ID="{57A8C928-710F-4D3A-B0C5-8DC15D7B902D}">
+										<AudioFileSource Name="bloque 1" ID="{74200C13-7298-47A8-99BC-09EEF9F86DC4}">
 											<Language>SFX</Language>
-											<AudioFile>Burger Time - Melodia.wav</AudioFile>
+											<AudioFile>bloque 1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="193152457"/>
+												<MediaID ID="947363878"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{D608442C-7737-40CE-9953-9697502CC31C}" ShortID="1113240306">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="MezclaMelodiaComedor" ID="{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{7DB6B1B6-F38A-4AED-B49D-2B90E7B7559A}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-24</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>-19</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>25</XPos>
-																		<YPos>-12</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>50</XPos>
-																		<YPos>-6</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>75</XPos>
-																		<YPos>-2.5</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
 										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{77C6AB58-8A1C-4D52-A50F-165D52ECB839}">
+											<MusicTrackSequence Name="" ID="{9C68D339-A2D8-445A-BDB8-0BCEA8953B50}">
 												<ObjectLists>
 													<ObjectList Name="Clips">
-														<MusicClip Name="Burger Time - Melodia" ID="{D7C37561-CE76-4A18-AA00-22EB91525F1D}">
+														<MusicClip Name="bloque 1" ID="{D4F6ED00-75A1-4698-AB56-DA309A730E74}">
 															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="17367.0208333333"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8727.27083333333"/>
 																<Property Name="FadeInMode" Type="int16" Value="0"/>
 																<Property Name="FadeOutMode" Type="int16" Value="0"/>
 															</PropertyList>
-															<AudioSourceRef Name="Burger Time - Melodia" ID="{57A8C928-710F-4D3A-B0C5-8DC15D7B902D}"/>
-														</MusicClip>
-													</ObjectList>
-												</ObjectLists>
-											</MusicTrackSequence>
-										</ObjectList>
-									</ObjectLists>
-								</MusicTrack>
-								<MusicTrack Name="Ritmo" ID="{FBBE2085-EC65-4933-924C-8E2F2194B694}" ShortID="788035793">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
-										</Reference>
-										<Reference Name="TransitionRoot">
-											<Custom>
-												<MusicTransition Name="Root" ID="{A049F490-D44C-4A1C-9090-7D2B411DE125}">
-													<PropertyList>
-														<Property Name="IsFolder" Type="bool" Value="True"/>
-													</PropertyList>
-													<TransitionInfo/>
-												</MusicTransition>
-											</Custom>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Burger Time - Ritmo" ID="{734C36C7-1448-4E11-B3B2-05883333465E}">
-											<Language>SFX</Language>
-											<AudioFile>Burger Time - Ritmo.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="193152458"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists>
-										<ObjectList Name="RTPC">
-											<RTPC Name="" ID="{ECF018AD-1686-4568-B7E1-948737793282}" ShortID="1767328876">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="MezclaRitmoComedor" ID="{2B2F5045-2A41-455B-B0A3-5417FBDB5E51}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{A373BAC0-D0D3-4B39-9442-02B8653F2EA0}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-24</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10</XPos>
-																		<YPos>-19</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>25</XPos>
-																		<YPos>-12</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>50</XPos>
-																		<YPos>-6</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>75</XPos>
-																		<YPos>-2.5</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</ObjectList>
-										<ObjectList Name="Sequences">
-											<MusicTrackSequence Name="" ID="{AC6FCCB6-D091-42B8-B18B-247F046F9C98}">
-												<ObjectLists>
-													<ObjectList Name="Clips">
-														<MusicClip Name="Burger Time - Ritmo" ID="{28991799-D26B-42C7-ACA7-421B830D3C30}">
-															<PropertyList>
-																<Property Name="EndTrimOffset" Type="Real64" Value="17367.0208333333"/>
-																<Property Name="FadeInMode" Type="int16" Value="0"/>
-																<Property Name="FadeOutMode" Type="int16" Value="0"/>
-															</PropertyList>
-															<AudioSourceRef Name="Burger Time - Ritmo" ID="{734C36C7-1448-4E11-B3B2-05883333465E}"/>
+															<AudioSourceRef Name="bloque 1" ID="{74200C13-7298-47A8-99BC-09EEF9F86DC4}"/>
 														</MusicClip>
 													</ObjectList>
 												</ObjectLists>
@@ -1221,7 +2103,7 @@
 									<MusicCue Name="Exit Cue" ID="{A9A8878F-ECED-46A8-A7C2-A19C0F679EFA}">
 										<PropertyList>
 											<Property Name="CueType" Type="int16" Value="1"/>
-											<Property Name="TimeMs" Type="Real64" Value="17367.0208333333"/>
+											<Property Name="TimeMs" Type="Real64" Value="8727.27083333333"/>
 										</PropertyList>
 									</MusicCue>
 								</ObjectList>
@@ -1283,6 +2165,325 @@
 							</RTPC>
 						</ObjectList>
 					</ObjectLists>
+				</MusicPlaylistContainer>
+				<MusicPlaylistContainer Name="MusicaHamburguesa" ID="{93853269-F38A-4069-A615-DB604C4B7134}" ShortID="598159087">
+					<PropertyList>
+						<Property Name="OverridePositioning" Type="bool" Value="True"/>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A2C472E0-A151-4674-A932-2754C42631C0}" />
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}" />
+						</Reference>
+						<Reference Name="PlaylistRoot">
+							<Custom>
+								<MusicPlaylistItem Name="" ID="{AAE6510A-CB0C-4EF7-901F-EC271C5B0246}" ShortID="6450125">
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{7F70A150-3EC4-4A05-813E-568D56B0B82D}" ShortID="2065539054">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0" />
+												<Property Name="PlaylistItemType" Type="int16" Value="1" />
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Segment" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Seccion" ID="{3F62F3A3-5A12-4A7E-8A44-BE5D1BFB6E58}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}" />
+												</Reference>
+											</ReferenceList>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Custom>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{99F72AD2-1114-40D5-BF16-0686AE1C7EC7}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True" />
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{406E321D-5060-4C60-976E-DBB2A23F576D}">
+											<TransitionInfo />
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo />
+								</MusicTransition>
+							</Custom>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Seccion" ID="{3F62F3A3-5A12-4A7E-8A44-BE5D1BFB6E58}" ShortID="2116809184">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="17367.0208333333" />
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{A2C472E0-A151-4674-A932-2754C42631C0}" />
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}" />
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Bateria" ID="{07994033-6C1B-4666-9F48-024D7A137A79}" ShortID="2072791943">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}" />
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{3485ECB6-DFCE-4624-9EBA-37FAD77CBDCC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True" />
+													</PropertyList>
+													<TransitionInfo />
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hamburguesa - Bateria" ID="{E9482F61-4164-402F-B5CB-A0E6BA1A2ECD}">
+											<Language>SFX</Language>
+											<AudioFile>Hamburguesa - Bateria.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="193152470" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{06B485D3-9189-4CFD-BC5D-18CFAA758FF3}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Hamburguesa - Bateria" ID="{DF74270F-68E4-45B7-9675-B341BC12B030}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17367.0208333333" />
+																<Property Name="FadeInMode" Type="int16" Value="0" />
+																<Property Name="FadeOutMode" Type="int16" Value="0" />
+															</PropertyList>
+															<AudioSourceRef Name="Hamburguesa - Bateria" ID="{E9482F61-4164-402F-B5CB-A0E6BA1A2ECD}" />
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Melodia" ID="{C368CAF8-169F-4839-BD72-177280CACCA6}" ShortID="1994549733">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}" />
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{B17D808B-6185-442B-B4E2-5101D08E2FEB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True" />
+													</PropertyList>
+													<TransitionInfo />
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hamburguesa - Melodia" ID="{910CA96B-4526-4573-9974-F70A0D1DD4F1}">
+											<Language>SFX</Language>
+											<AudioFile>Hamburguesa - Melodia.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="193152472" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<RTPC Name="" ID="{9E1BC61C-5F25-4AA3-90B9-8E10F2AAB471}" ShortID="1647104108">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume" />
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="MezclaMelodiaComedor" ID="{C24893D4-99C2-44A6-B15B-E1DAFFB042F9}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}" />
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{C243B06C-7A0B-474E-9807-757FAD4A6AA3}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3" />
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-96</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>-19</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>25</XPos>
+																		<YPos>-12</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>-6</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>75</XPos>
+																		<YPos>-2.5</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>4</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</ObjectList>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{35553CD4-CE79-41DD-9E4A-61773AAE94C9}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Hamburguesa - Melodia" ID="{5C783BED-70F9-4009-BF6B-5FF893838ABD}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17367.0208333333" />
+																<Property Name="FadeInMode" Type="int16" Value="0" />
+																<Property Name="FadeOutMode" Type="int16" Value="0" />
+															</PropertyList>
+															<AudioSourceRef Name="Hamburguesa - Melodia" ID="{910CA96B-4526-4573-9974-F70A0D1DD4F1}" />
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Bajo" ID="{E8A80FCF-F363-4F90-91E8-1371FD0C633A}" ShortID="163602810">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}" />
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{E5BCE11E-ED84-4578-B728-7E7F235D3607}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True" />
+													</PropertyList>
+													<TransitionInfo />
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Hamburguesa - Bajo" ID="{51C0D087-2358-45A2-941B-10479346AF3C}">
+											<Language>SFX</Language>
+											<AudioFile>Hamburguesa - Bajo.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="193152471" />
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<RTPC Name="" ID="{09F7CB2B-7AE2-4E4D-9ABB-FDA7C4EF9349}" ShortID="68648204">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume" />
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="MezclaRitmoComedor" ID="{2B2F5045-2A41-455B-B0A3-5417FBDB5E51}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}" />
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{E8EACAD6-E72D-4DA4-A8EA-48158CD37415}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3" />
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-96</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10</XPos>
+																		<YPos>-19</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>25</XPos>
+																		<YPos>-12</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>-6</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>75</XPos>
+																		<YPos>-2.5</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>3</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</ObjectList>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{EA54DC13-C5EA-4524-B1F8-9B8BC6D13555}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Hamburguesa - Bajo" ID="{C01C2EF1-53F5-461F-838C-83F22AF17BA2}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17367.0208333333" />
+																<Property Name="FadeInMode" Type="int16" Value="0" />
+																<Property Name="FadeOutMode" Type="int16" Value="0" />
+															</PropertyList>
+															<AudioSourceRef Name="Hamburguesa - Bajo" ID="{51C0D087-2358-45A2-941B-10479346AF3C}" />
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{00D88D9A-814E-41CA-B363-5A60B08076FD}" />
+									<MusicCue Name="Exit Cue" ID="{C2C80ED0-C4F5-474B-AF45-B8F8D5B6F257}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1" />
+											<Property Name="TimeMs" Type="Real64" Value="17367.0208333333" />
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="Bloque2" ID="{32397706-1586-4A34-80AA-54C8776EFBD8}" ShortID="92682208">
 					<PropertyList>
@@ -1843,6 +3044,48 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<RTPC Name="" ID="{4E92A211-6A53-44AC-9064-EF3C97DF2BEB}" ShortID="1247232344">
+								<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+								<ReferenceList>
+									<Reference Name="ControlInput">
+										<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+									</Reference>
+									<Reference Name="Curve"><Custom>
+										<Curve Name="" ID="{45791C25-CF96-4487-967B-1EC21D12BFC9}">
+											<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+											<PointList>
+												<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+												<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+												<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+												<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+											</PointList>
+										</Curve>
+									</Custom></Reference>
+								</ReferenceList>
+							</RTPC>
+							<RTPC Name="" ID="{F3AA5FC1-1BB5-49C9-BD73-D8E55B2ED00B}" ShortID="1832347708">
+								<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+								<ReferenceList>
+									<Reference Name="ControlInput">
+										<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+									</Reference>
+									<Reference Name="Curve"><Custom>
+										<Curve Name="" ID="{BAB916A4-E706-4CB0-812B-080201C63168}">
+											<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+											<PointList>
+												<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+												<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+												<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+												<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+											</PointList>
+										</Curve>
+									</Custom></Reference>
+								</ReferenceList>
+							</RTPC>
+						</ObjectList>
+					</ObjectLists>
 					<ActiveSourceList>
 						<ActiveSource Name="SustoRata" ID="{44B2DBEA-3B3B-4A7D-BE2B-CDEA6539BF50}" Platform="Linked"/>
 					</ActiveSourceList>

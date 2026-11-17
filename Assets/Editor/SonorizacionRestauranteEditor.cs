@@ -97,10 +97,6 @@ public sealed class SonorizacionRestauranteEditor : Editor
             new GUIContent("Distancia del fundido"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("segundosFundidoMusical"),
             new GUIContent("Tiempo de fundido (s)"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("ladoRitmoComedor"),
-            new GUIContent("Lado del ritmo en el comedor"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("ladoMelodiaComedor"),
-            new GUIContent("Lado de la melodía en el comedor"));
         points.DoLayoutList();
         serializedObject.ApplyModifiedProperties();
     }

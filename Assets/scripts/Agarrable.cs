@@ -5,16 +5,20 @@ public class Agarrable : MonoBehaviour
     [HideInInspector] public bool estaAgarrado = false;
 
     private Rigidbody rb;
-    private Collider col;
+    private Transform origenPadre;
+    private Vector3 origenPosicion;
+    private Quaternion origenRotacion;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<Collider>();
     }
 
     public void Agarrar(Transform puntoMano)
     {
+        origenPadre = transform.parent;
+        origenPosicion = transform.position;
+        origenRotacion = transform.rotation;
         estaAgarrado = true;
 
         // Desactivar física
@@ -23,10 +27,6 @@ public class Agarrable : MonoBehaviour
             rb.isKinematic = true;
             rb.useGravity = false;
         }
-
-        // El collider se queda activo (para poder soltarlo sobre la madera)
-        // pero si molesta, puedes desactivarlo:
-        // if (col != null) col.enabled = false;
 
         // Pegar al punto de la mano
         transform.SetParent(puntoMano);
@@ -39,15 +39,25 @@ public class Agarrable : MonoBehaviour
         estaAgarrado = false;
 
         // Despegar
-        transform.SetParent(null);
+        transform.SetParent(origenPadre, true);
+        transform.SetPositionAndRotation(origenPosicion, origenRotacion);
 
         // Reactivar física
         if (rb != null)
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
+    }
 
-        // if (col != null) col.enabled = true;
+    public void Colocar(Vector3 posicion)
+    {
+        estaAgarrado = false;
+        transform.SetParent(null, true);
+        transform.SetPositionAndRotation(posicion, Quaternion.identity);
+        foreach (var collider in GetComponentsInChildren<Collider>())
+            collider.enabled = false;
     }
 }

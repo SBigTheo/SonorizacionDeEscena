@@ -12,7 +12,8 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
+
+			</ChildrenList>
 				</Event>
 				<Event Name="Play_DialogoPapas" ID="{9470CF51-7CEB-4CD2-B64F-0A4D8E0F53F4}">
 					<ChildrenList>
@@ -174,6 +175,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="CorteVegetales" ID="{C4CB0387-44CD-49E4-B398-FABB8C367E75}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_PasoJugador" ID="{D6A2F0FA-74A3-4020-BE3B-92157050A0E9}">
+					<ChildrenList>
+						<Action Name="" ID="{9D128F7E-C9CC-4F84-A51A-5EC928499757}" ShortID="1924125077">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PasoJugador" ID="{8B694FAC-3385-4E2E-87BB-BA4DDD7F94C2}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -415,6 +427,61 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="hamburguesaCompleta" ID="{01E967D6-AC00-4C5A-961D-9593570929CE}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_MusicaHamburguesa" ID="{184EABED-84FD-4961-BBA6-82A739FE09EE}">
+					<ChildrenList>
+						<Action Name="" ID="{0EF3828B-D194-4943-A81A-72B840C36678}" ShortID="169957100">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicaHamburguesa" ID="{93853269-F38A-4069-A615-DB604C4B7134}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SeccionZona1" ID="{6803818C-BA50-4BF6-AC00-35802A19F18A}">
+					<ChildrenList>
+						<Action Name="Bloque1" ID="{8EE24A81-A5F3-4811-82F2-0106F13BAA09}" ShortID="1377494365">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque1" ID="{A91DFB95-16D8-4702-B784-304C807598AD}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SeccionZona2" ID="{33C9723D-6B49-4E3E-9B1A-D65B482D3E2D}">
+					<ChildrenList>
+						<Action Name="Bloque2" ID="{4948B258-93B5-4FAC-8E99-59A65C566970}" ShortID="1572514156">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque2" ID="{32397706-1586-4A34-80AA-54C8776EFBD8}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SeccionZona3" ID="{2475CB3A-3C52-486E-97BC-CFC584173E38}">
+					<ChildrenList>
+						<Action Name="Bloque3" ID="{BC2D12FC-BB18-4AAD-8C09-6AE3FFE4BEBC}" ShortID="194730125">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque3" ID="{69B26B6B-65B0-4596-9842-A55FC1B9488C}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_SeccionZona4" ID="{70C0D394-1C54-4B64-832C-FE983A1F2AF6}">
+					<ChildrenList>
+						<Action Name="Bloque4" ID="{521B3880-B058-4CD6-B5FA-02F8E724ED49}" ShortID="1361835386">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bloque4" ID="{8AA0355D-51A7-4B06-BA98-320CF68E1ECB}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

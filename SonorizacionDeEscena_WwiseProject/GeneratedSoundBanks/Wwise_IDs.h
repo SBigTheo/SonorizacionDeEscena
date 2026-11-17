@@ -40,11 +40,17 @@ namespace AK
         static const AkUniqueID PLAY_MUSICACOMEDOR = 1418970575U;
         static const AkUniqueID PLAY_MUSICACOMEDORVACIO = 3386465647U;
         static const AkUniqueID PLAY_MUSICAESTACIONAMIENTO = 1701225531U;
+        static const AkUniqueID PLAY_MUSICAHAMBURGUESA = 4138678178U;
         static const AkUniqueID PLAY_MUSICAINTERACTIVA = 2052657724U;
         static const AkUniqueID PLAY_NOTIFICACIONDRIVETHRU = 2690675305U;
         static const AkUniqueID PLAY_NOTIFICACIONPEDIDO = 3010603025U;
+        static const AkUniqueID PLAY_PASOJUGADOR = 2595881077U;
         static const AkUniqueID PLAY_PUERTAABRIR = 1177537281U;
         static const AkUniqueID PLAY_PUERTACERRAR = 173892078U;
+        static const AkUniqueID PLAY_SECCIONZONA1 = 1506132057U;
+        static const AkUniqueID PLAY_SECCIONZONA2 = 1506132058U;
+        static const AkUniqueID PLAY_SECCIONZONA3 = 1506132059U;
+        static const AkUniqueID PLAY_SECCIONZONA4 = 1506132060U;
         static const AkUniqueID PLAY_SONIDOSDERATITA = 1043478341U;
         static const AkUniqueID PLAY_SUSTORATA = 2424542996U;
         static const AkUniqueID PLAY_SWITCHFISICO = 2925829879U;
@@ -55,6 +61,7 @@ namespace AK
     {
         static const AkUniqueID MEZCLAMELODIACOMEDOR = 3533537083U;
         static const AkUniqueID MEZCLARITMOCOMEDOR = 2845212235U;
+        static const AkUniqueID OCLUSIONPARED = 4169541141U;
         static const AkUniqueID PROXIMIDADBLOQUE1 = 3287201201U;
         static const AkUniqueID PROXIMIDADBLOQUE2 = 3287201202U;
         static const AkUniqueID PROXIMIDADBLOQUE3 = 3287201203U;
