@@ -6890,6 +6890,120 @@
       "componentType": 5125,
       "count": 12,
       "type": "SCALAR"
+    },
+    {
+      "bufferView": 127,
+      "componentType": 5125,
+      "count": 84363,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 128,
+      "componentType": 5125,
+      "count": 48,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 129,
+      "componentType": 5125,
+      "count": 5247,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 130,
+      "componentType": 5125,
+      "count": 48,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 131,
+      "componentType": 5125,
+      "count": 133401,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 132,
+      "componentType": 5125,
+      "count": 16,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 133,
+      "componentType": 5125,
+      "count": 84333,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "min": [
+        0
+      ],
+      "max": [
+        64406
+      ]
+    },
+    {
+      "bufferView": 134,
+      "componentType": 5125,
+      "count": 30,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "min": [
+        57142
+      ],
+      "max": [
+        57161
+      ]
+    },
+    {
+      "bufferView": 135,
+      "componentType": 5125,
+      "count": 5217,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "min": [
+        0
+      ],
+      "max": [
+        2787
+      ]
+    },
+    {
+      "bufferView": 136,
+      "componentType": 5125,
+      "count": 30,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "min": [
+        60
+      ],
+      "max": [
+        79
+      ]
+    },
+    {
+      "bufferView": 137,
+      "componentType": 5125,
+      "count": 133383,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "min": [
+        0
+      ],
+      "max": [
+        33613
+      ]
+    },
+    {
+      "bufferView": 138,
+      "componentType": 5125,
+      "count": 18,
+      "type": "SCALAR",
+      "byteOffset": 0,
+      "min": [
+        4699
+      ],
+      "max": [
+        4706
+      ]
     }
   ],
   "asset": {
@@ -7668,11 +7782,83 @@
       "byteOffset": 19968264,
       "byteLength": 48,
       "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 19968312,
+      "byteLength": 337452,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20305764,
+      "byteLength": 192,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20305956,
+      "byteLength": 20988,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20326944,
+      "byteLength": 192,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20327136,
+      "byteLength": 533604,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20860740,
+      "byteLength": 64,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 20860804,
+      "byteLength": 337332,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21198136,
+      "byteLength": 120,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21198256,
+      "byteLength": 20868,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21219124,
+      "byteLength": 120,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21219244,
+      "byteLength": 533532,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 21752776,
+      "byteLength": 72,
+      "target": 34963
     }
   ],
   "buffers": [
     {
-      "byteLength": 19968312,
+      "byteLength": 21752848,
       "uri": "scene.bin"
     }
   ],
@@ -9150,7 +9336,7 @@
             "TEXCOORD_0": 526,
             "TEXCOORD_1": 527
           },
-          "indices": 528,
+          "indices": 558,
           "material": 2,
           "mode": 4
         }
@@ -9598,7 +9784,7 @@
             "POSITION": 534,
             "TEXCOORD_0": 536
           },
-          "indices": 537,
+          "indices": 560,
           "material": 19,
           "mode": 4
         }
@@ -10644,7 +10830,7 @@
           "attributes": {
             "POSITION": 546
           },
-          "indices": 547,
+          "indices": 562,
           "material": 0,
           "mode": 1
         }
@@ -10989,7 +11175,7 @@
       ]
     },
     {
-      "name": "Hoja animada Cabina bano derecha",
+      "name": "Panel fijo marcado con X roja",
       "primitives": [
         {
           "attributes": {
@@ -11001,6 +11187,82 @@
           "indices": 457,
           "material": 2,
           "mode": 4
+        },
+        {
+          "attributes": {
+            "NORMAL": 141,
+            "POSITION": 140,
+            "TEXCOORD_0": 142
+          },
+          "indices": 462,
+          "material": 19,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 418
+          },
+          "indices": 476,
+          "material": 0,
+          "mode": 1
+        },
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TEXCOORD_0": 12,
+            "TEXCOORD_1": 13
+          },
+          "indices": 508,
+          "material": 2,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "NORMAL": 141,
+            "POSITION": 140,
+            "TEXCOORD_0": 142
+          },
+          "indices": 512,
+          "material": 19,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 418
+          },
+          "indices": 516,
+          "material": 0,
+          "mode": 1
+        },
+        {
+          "attributes": {
+            "POSITION": 529,
+            "NORMAL": 530,
+            "TEXCOORD_0": 531,
+            "TEXCOORD_1": 532
+          },
+          "indices": 533,
+          "material": 2,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 538,
+            "NORMAL": 539,
+            "TEXCOORD_0": 540
+          },
+          "indices": 541,
+          "material": 19,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 548
+          },
+          "indices": 549,
+          "material": 0,
+          "mode": 1
         }
       ]
     },
@@ -11171,13 +11433,42 @@
       ]
     },
     {
-      "name": "Panel fijo central del bano",
+      "name": "Hoja del panel verde del bano",
       "primitives": [
         {
           "attributes": {
             "POSITION": 418
           },
           "indices": 475,
+          "material": 0,
+          "mode": 1
+        },
+        {
+          "attributes": {
+            "NORMAL": 525,
+            "POSITION": 524,
+            "TEXCOORD_0": 526,
+            "TEXCOORD_1": 527
+          },
+          "indices": 553,
+          "material": 2,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "NORMAL": 535,
+            "POSITION": 534,
+            "TEXCOORD_0": 536
+          },
+          "indices": 555,
+          "material": 19,
+          "mode": 4
+        },
+        {
+          "attributes": {
+            "POSITION": 546
+          },
+          "indices": 557,
           "material": 0,
           "mode": 1
         }
@@ -11688,6 +11979,239 @@
           "mode": 1
         }
       ]
+    },
+    {
+      "name": "Hoja del panel verde del bano · superficie 1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 418
+          },
+          "indices": 475,
+          "material": 0,
+          "mode": 1
+        }
+      ]
+    },
+    {
+      "name": "Hoja del panel verde del bano · superficie 2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 525,
+            "POSITION": 524,
+            "TEXCOORD_0": 526,
+            "TEXCOORD_1": 527
+          },
+          "indices": 553,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Hoja del panel verde del bano · superficie 3",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 535,
+            "POSITION": 534,
+            "TEXCOORD_0": 536
+          },
+          "indices": 555,
+          "material": 19,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Hoja del panel verde del bano · superficie 4",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 546
+          },
+          "indices": 557,
+          "material": 0,
+          "mode": 1
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TEXCOORD_0": 12,
+            "TEXCOORD_1": 13
+          },
+          "indices": 457,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 141,
+            "POSITION": 140,
+            "TEXCOORD_0": 142
+          },
+          "indices": 462,
+          "material": 19,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 3",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 418
+          },
+          "indices": 476,
+          "material": 0,
+          "mode": 1
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 4",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 11,
+            "POSITION": 10,
+            "TEXCOORD_0": 12,
+            "TEXCOORD_1": 13
+          },
+          "indices": 508,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 5",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 141,
+            "POSITION": 140,
+            "TEXCOORD_0": 142
+          },
+          "indices": 512,
+          "material": 19,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 6",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 418
+          },
+          "indices": 516,
+          "material": 0,
+          "mode": 1
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 7",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 529,
+            "NORMAL": 530,
+            "TEXCOORD_0": 531,
+            "TEXCOORD_1": 532
+          },
+          "indices": 533,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 8",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 538,
+            "NORMAL": 539,
+            "TEXCOORD_0": 540
+          },
+          "indices": 541,
+          "material": 19,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 9",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 548
+          },
+          "indices": 549,
+          "material": 0,
+          "mode": 1
+        }
+      ]
+    },
+    {
+      "name": "Puerta de cabina mujeres superficie 1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 525,
+            "POSITION": 524,
+            "TEXCOORD_0": 526,
+            "TEXCOORD_1": 527
+          },
+          "indices": 559,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Puerta de cabina mujeres superficie 2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 535,
+            "POSITION": 534,
+            "TEXCOORD_0": 536
+          },
+          "indices": 561,
+          "material": 19,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Puerta de cabina mujeres superficie 3",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 546
+          },
+          "indices": 563,
+          "material": 0,
+          "mode": 1
+        }
+      ]
     }
   ],
   "nodes": [
@@ -11845,7 +12369,6 @@
         129,
         130,
         131,
-        132,
         133,
         134,
         135,
@@ -11856,7 +12379,6 @@
         140,
         141,
         142,
-        143,
         144,
         145,
         146,
@@ -11876,20 +12398,15 @@
         160,
         161,
         162,
-        163,
         164,
         165,
-        166,
         167,
         168,
-        169,
         170,
         171,
-        172,
-        173,
         174,
-        175,
-        176
+        176,
+        193
       ],
       "name": "Collada visual scene group"
     },
@@ -12423,8 +12940,18 @@
       "mesh": 123
     },
     {
-      "name": "Hoja animada Cabina bano derecha",
-      "mesh": 124
+      "name": "Panel fijo marcado con X roja",
+      "children": [
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189
+      ]
     },
     {
       "name": "Hoja animada Entrada sur detalle 18",
@@ -12475,8 +13002,13 @@
       "mesh": 136
     },
     {
-      "name": "Panel fijo central del bano",
-      "mesh": 137
+      "name": "Panel fijo detras de los inodoros",
+      "children": [
+        177,
+        178,
+        179,
+        180
+      ]
     },
     {
       "name": "Hoja animada Cabina bano derecha detalle 101",
@@ -12613,6 +13145,78 @@
     {
       "name": "Hoja animada Cabina bano individual panel recortado 101",
       "mesh": 171
+    },
+    {
+      "name": "Panel fijo detras de los inodoros · superficie 1",
+      "mesh": 172
+    },
+    {
+      "name": "Panel fijo detras de los inodoros · superficie 2",
+      "mesh": 173
+    },
+    {
+      "name": "Panel fijo detras de los inodoros · superficie 3",
+      "mesh": 174
+    },
+    {
+      "name": "Panel fijo detras de los inodoros · superficie 4",
+      "mesh": 175
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 1",
+      "mesh": 176
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 2",
+      "mesh": 177
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 3",
+      "mesh": 178
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 4",
+      "mesh": 179
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 5",
+      "mesh": 180
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 6",
+      "mesh": 181
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 7",
+      "mesh": 182
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 8",
+      "mesh": 183
+    },
+    {
+      "name": "Panel fijo marcado con X roja · superficie 9",
+      "mesh": 184
+    },
+    {
+      "name": "Puerta de cabina mujeres superficie 1",
+      "mesh": 185
+    },
+    {
+      "name": "Puerta de cabina mujeres superficie 2",
+      "mesh": 186
+    },
+    {
+      "name": "Puerta de cabina mujeres superficie 3",
+      "mesh": 187
+    },
+    {
+      "name": "Hoja de la cabina del bano de mujeres",
+      "children": [
+        190,
+        191,
+        192
+      ]
     }
   ],
   "samplers": [

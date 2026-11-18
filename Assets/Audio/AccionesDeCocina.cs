@@ -19,6 +19,7 @@ public sealed class AccionesDeCocina : MonoBehaviour
     private GameObject emisorTacho;
     private SonorizacionRestaurante sonorizacion;
     private bool carneSuelta;
+    private bool cortando;
     private bool encuentroActivado;
 
     private void Start()
@@ -36,6 +37,12 @@ public sealed class AccionesDeCocina : MonoBehaviour
             new Vector3(2.6f, 1.5f, 8f), oscuro, true);
         mango.transform.SetParent(hoja.transform, true);
         cuchillo = PrepararCaida(hoja, true);
+        var aceite = MaterialDe(new Color(0.48f, 0.29f, 0.055f));
+        aceite.SetFloat("_Smoothness", 0.91f);
+        Pieza(PrimitiveType.Cube, "Aceite de la freidora · primera cuba",
+            new Vector3(4917.3f, 72.8f, 338.5f), new Vector3(12f, 0.35f, 14f), aceite);
+        Pieza(PrimitiveType.Cube, "Aceite de la freidora · segunda cuba",
+            new Vector3(4917.3f, 72.8f, 355.5f), new Vector3(12f, 0.35f, 14f), aceite);
         hoja.AddComponent<AkGameObj>();
         Pieza(PrimitiveType.Cube, "Pinzas", tabla + new Vector3(-2, 2, 0), new Vector3(2, 1, 15), acero);
 
@@ -138,8 +145,16 @@ public sealed class AccionesDeCocina : MonoBehaviour
                 return null;
         }
 
+        if (cortando)
+            return "Cortando en la tabla…";
+
         if (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(1))
         {
+            if (apuntaTabla && (!apuntaCarne || impactoTabla.distance < impactoCarne.distance))
+            {
+                StartCoroutine(CortarEnTabla());
+                return "Cortando en la tabla…";
+            }
             carneSuelta = true;
             var avance = Vector3.ProjectOnPlane(jugador.transform.position - carne.position, Vector3.up).normalized;
             var lateral = Vector3.Cross(Vector3.up, avance);
@@ -157,7 +172,29 @@ public sealed class AccionesDeCocina : MonoBehaviour
                 cuchillo.angularVelocity = new Vector3(4f, 2f, -3f);
             }
         }
-        return "E o clic derecho · Tirar la carne";
+        return apuntaTabla && (!apuntaCarne || impactoTabla.distance < impactoCarne.distance)
+            ? "E o clic derecho · Cortar en la tabla" : "E o clic derecho · Tirar la carne";
+    }
+
+    private IEnumerator CortarEnTabla()
+    {
+        cortando = true;
+        var inicio = cuchillo.transform.position;
+        var giro = cuchillo.transform.rotation;
+        var corte = tabla + new Vector3(7f, 5.4f, 5f);
+        cuchillo.transform.position = corte + Vector3.up * 7f;
+        Publicar("Play_CorteCapas", cuchillo.gameObject);
+        const float duracion = 1.35f;
+        for (var tiempo = 0f; tiempo < duracion; tiempo += Time.deltaTime)
+        {
+            var fase = Mathf.PingPong(tiempo / 0.17f, 1f);
+            cuchillo.transform.SetPositionAndRotation(
+                corte + new Vector3(-6f * tiempo / duracion, 7f * fase, 0f),
+                Quaternion.Euler(Mathf.Lerp(5f, -25f, fase), 0f, -12f));
+            yield return null;
+        }
+        cuchillo.transform.SetPositionAndRotation(inicio, giro);
+        cortando = false;
     }
 
     private bool BuscarAterrizaje(Vector3 avance, Vector3 lateral, out Vector3 destinoCarne,
@@ -277,7 +314,7 @@ public sealed class AccionesDeCocina : MonoBehaviour
 
     internal void MostrarPersonajeEntrada(Vector3 puerta, GameObject voz)
     {
-        var personaje = CrearRaizPersonaje("Ladrón", puerta + new Vector3(-42f, 0f, -36f),
+        var personaje = CrearRaizPersonaje("Ladrón", puerta + new Vector3(75f, 0f, -24f),
             Vector3.left, 1.24f);
         var ropa = MaterialDe(new Color(0.17f, 0.21f, 0.25f));
         var oscuro = MaterialDe(new Color(0.07f, 0.09f, 0.10f));

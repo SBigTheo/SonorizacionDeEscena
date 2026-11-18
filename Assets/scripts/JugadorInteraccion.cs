@@ -38,8 +38,12 @@ public sealed class JugadorInteraccion : MonoBehaviour
             cartel.padding = new RectOffset(12, 12, 4, 4);
         }
         cartel.fontSize = Mathf.Max(13, Screen.height / 55);
-        var ancho = Mathf.Min(580f, Screen.width - 20f);
-        CartelesInformativos.Dibujar(new Rect((Screen.width - ancho) / 2f, Screen.height * 0.77f, ancho, 82f),
+        cartel.richText = true;
+        var ancho = Mathf.Min(760f, Screen.width - 28f);
+        var alto = Mathf.Max(106f,
+            cartel.CalcHeight(new GUIContent(CartelesInformativos.ResaltarControles(estacion.Instruccion)), ancho) + 14f);
+        var y = Mathf.Min(Screen.height * 0.72f, Screen.height - alto - 20f);
+        CartelesInformativos.Dibujar(new Rect((Screen.width - ancho) / 2f, y, ancho, alto),
             estacion.Instruccion, cartel);
     }
 

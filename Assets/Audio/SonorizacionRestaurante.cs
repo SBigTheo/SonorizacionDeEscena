@@ -22,12 +22,12 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private const string TelevisionEvent = "DialogoTelevision";
     private const string LayeredFryingEvent = "FrituraCapas";
     private const string FryerTimerEvent = "Cronometro";
-    private const float CarPassDuration = 1.8f;
+    private const float CarPassDuration = 3.15f;
     private const float CarSoundDuration = 3.422f;
-    private const float CarHalfRoute = 330f;
-    private const float CarGroundHeight = 30.3f;
-    private static readonly Vector3 CarLaneOffset = new(28f, 0f, -105f);
-    private static readonly Vector3 CarDirection = Vector3.back;
+    private const float CarHalfRoute = 580f;
+    private const float CarGroundHeight = 38.9f;
+    private static readonly Vector3 CarLaneOffset = new(0f, 0f, 82f);
+    private static readonly Vector3 CarDirection = Vector3.left;
 
     private enum Trigger { Near, Use, Loop, Enter, Door, ManualLoop, UseRightClick }
 
@@ -55,6 +55,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         public bool doorHingeAtPositiveEnd;
         public float doorBottom;
         public float doorHeight;
+        public BoxCollider doorInteractionCollider;
 
         [NonSerialized] public GameObject emitter;
         [NonSerialized] public Transform puertaA;
@@ -110,6 +111,9 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private ulong listenerId;
     private Point fryerPoint;
     private Point televisionPoint;
+    [SerializeField] private Renderer pantallaTelevisor;
+    private MaterialPropertyBlock aspectoPantalla;
+    private static readonly int ColorPantalla = Shader.PropertyToID("_BaseColor");
     private GameObject layeredFryingEmitter;
     private Point entrancePoint;
     private bool ownsBank;
@@ -126,6 +130,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     [NonSerialized] private Point car;
     private float carStarted;
     private GameObject carVisual;
+    private bool autoMostrado;
+    private bool ladronAparecio;
     private float kitchenMix;
     private Point diningPoint;
     private readonly bool[] lugaresExplorados = new bool[6];
@@ -204,6 +210,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         diningPoint = Array.Find(points, point => point.audioEvent == DiningAmbienceEvent);
         fryerPoint = Array.Find(points, point => point.audioEvent == FryerAmbienceEvent);
         televisionPoint = Array.Find(points, point => point.audioEvent == TelevisionEvent);
+        ActualizarPantallaTelevisor(false);
         entrancePoint = Array.Find(points, point => point.audioEvent == FinalDialogueEvent);
         jugadorStarter = player.GetComponentInParent<StarterAssets.ThirdPersonController>();
         var playerBody = player.GetComponentInParent<Rigidbody>();
@@ -245,12 +252,6 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         {
             accionesDeCocina.CrearPersonajeFreidora(puntoVozFreidora.emitter);
             puntoVozFreidora.position = puntoVozFreidora.emitter.transform.position;
-        }
-        var puerta = Array.Find(points, point => point.trigger == Trigger.Door);
-        if (entrancePoint != null && puerta != null && accionesDeCocina != null)
-        {
-            accionesDeCocina.MostrarPersonajeEntrada(puerta.position, entrancePoint.emitter);
-            entrancePoint.position = entrancePoint.emitter.transform.position;
         }
 
         if (fryerPoint != null)
@@ -342,6 +343,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             SetVolume(emisorMusical, 2f, coberturaMusical *
                 Mathf.SmoothStep(1f, 0.1f, mezclaEstacion) * Mathf.Lerp(1f, 0.53f, mezclaPrimerPlano));
         Point selected = null;
+        Point puertaMarcada = null;
         var nearest = float.PositiveInfinity;
         interaction = null;
         var aim = player.ViewportPointToRay(new Vector3(0.5f, 0.5f));
@@ -363,7 +365,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                   Mathf.Abs(offset.y) <= 70f && Mathf.Abs(lateralPuerta) <= point.doorWidth + 12f
                 : zoneAmbience ? targetGain > 0f : distance <= point.radius;
             if (point.audioEvent == PassingCarEvent)
-                inside &= playerPosition.x < 4890f;
+                inside = Mathf.Abs(offset.x) <= point.radius && offset.z >= 0f && offset.z <= 70f;
             var entered = inside && !point.inside;
             point.inside = inside;
 
@@ -426,8 +428,9 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                     }
                     break;
                 case Trigger.Enter:
-                    if (entered && car == null)
+                    if (entered && car == null && !autoMostrado)
                     {
+                        autoMostrado = true;
                         car = point;
                         carStarted = Time.unscaledTime;
                         point.emitter.transform.position = point.position + CarLaneOffset -
@@ -442,15 +445,36 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                 case Trigger.Door:
                 {
                     ActualizarPuerta(point);
-                    var objetivoPuerta = point.position + Vector3.up * 13f - aim.origin;
-                    var distanciaPuerta = objetivoPuerta.magnitude;
-                    if (inside && distanciaPuerta < nearest &&
-                        Vector3.Dot(aim.direction, objetivoPuerta.normalized) >= 0.65f &&
-                        !Physics.Linecast(aim.origin, aim.origin + objetivoPuerta, paredesAcusticas,
-                            QueryTriggerInteraction.Ignore))
+                    if (inside && point.puertaAbierta)
+                        MostrarLadronSiCorresponde(point);
+                    if (point.doorInteractionCollider != null)
                     {
-                        selected = point;
-                        nearest = distanciaPuerta;
+                        if (SeleccionarHojaMarcada(point, aim))
+                        {
+                            puertaMarcada = point;
+                            break;
+                        }
+                        if (!point.puertaAbierta)
+                            break;
+                    }
+
+                    var plano = new Plane(point.doorNormalZ ? Vector3.forward : Vector3.right, point.position);
+                    var semiancho = point.doorWidth * (point.puertaB != null ? 1f : 0.5f);
+                    if (inside && plano.Raycast(aim, out var distanciaPuerta) && distanciaPuerta < nearest)
+                    {
+                        var impacto = aim.GetPoint(distanciaPuerta);
+                        var local = impacto - point.position;
+                        var lateral = point.doorNormalZ ? local.x : local.z;
+                        var basePuerta = point.doorBottom > 0f ? point.doorBottom : 38.9f;
+                        var alturaPuerta = point.doorHeight > 0f ? point.doorHeight : 100f;
+                        var golpeEnHoja = Mathf.Abs(lateral) <= semiancho &&
+                            impacto.y >= basePuerta && impacto.y <= basePuerta + alturaPuerta;
+                        if (golpeEnHoja &&
+                            PasoDePuertaVisible(point, aim, distanciaPuerta))
+                        {
+                            selected = point;
+                            nearest = distanciaPuerta;
+                        }
                     }
                     break;
                 }
@@ -472,6 +496,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             }
 
         }
+
 
         if (car != null)
         {
@@ -495,6 +520,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             SetVolume(previewEmitter, previewPoint.volumeDb, DistanceGain(previewPoint, playerPosition));
 #endif
         interaction = accionesDeCocina?.ActualizarInteraccion(player, aim);
+        selected = puertaMarcada ?? selected;
         if (interaction != null || selected == null)
             return;
 
@@ -693,13 +719,17 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         var eje = punto.doorNormalZ ? Vector3.right : Vector3.forward;
         var semiancho = punto.doorWidth * (doble ? 1f : 0.5f);
         var sentidoBisagra = !doble && punto.doorHingeAtPositiveEnd ? 1f : -1f;
-        punto.puertaA = CrearBisagra(punto.doorLeaf, punto.position + eje * (semiancho * sentidoBisagra));
+        punto.puertaA = CrearBisagra(punto.doorLeaf, punto.position + eje * (semiancho * sentidoBisagra),
+            punto.doorInteractionCollider == null);
         if (doble)
             punto.puertaB = CrearBisagra(punto.doorSecondLeaf, punto.position + eje * semiancho);
         punto.puertaAbierta = false;
         punto.apertura = 0f;
         if (punto.puertaA == null || (doble && punto.puertaB == null))
             return;
+
+        if (punto.doorInteractionCollider != null)
+            punto.doorInteractionCollider.transform.SetParent(punto.puertaA, true);
 
         punto.pasoPuerta = punto.emitter.AddComponent<BoxCollider>();
         var alto = punto.doorHeight > 0f ? punto.doorHeight : 90f;
@@ -710,7 +740,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             : new Vector3(3f, alto, 2f * semiancho);
     }
 
-    private Transform CrearBisagra(string nombreHoja, Vector3 posicion)
+    private Transform CrearBisagra(string nombreHoja, Vector3 posicion, bool agruparDetalles = true)
     {
         var hoja = GameObject.Find(nombreHoja);
         if (hoja == null)
@@ -723,9 +753,12 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         bisagra.SetParent(hoja.transform.parent);
         bisagra.SetPositionAndRotation(posicion, Quaternion.identity);
         hoja.transform.SetParent(bisagra, true);
-        foreach (var pieza in FindObjectsByType<Transform>())
-            if (pieza.name.StartsWith(nombreHoja + " ", StringComparison.Ordinal))
-                pieza.SetParent(bisagra, true);
+        if (agruparDetalles)
+        {
+            foreach (var pieza in FindObjectsByType<Transform>())
+                if (pieza.name.StartsWith(nombreHoja + " ", StringComparison.Ordinal))
+                    pieza.SetParent(bisagra, true);
+        }
         return bisagra;
     }
 
@@ -744,7 +777,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         var camino = new[]
         {
             // Drive thru y entrada exterior de la cocina.
-            new Vector3(5296f, 74f, 928f), new Vector3(5315f, 74f, 908f),
+            new Vector3(5296f, 74f, 883f), new Vector3(5315f, 74f, 894f),
             new Vector3(5130f, 74f, 850f), new Vector3(5107f, 74f, 803f),
             new Vector3(entradaCocina.position.x, 74f, entradaCocina.position.z + 20f),
             new Vector3(4975f, 74f, 660f),
@@ -757,7 +790,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
             new Vector3(5470f, 74f, 580f),
             // Regreso por el comedor, televisor y puerta principal.
             new Vector3(5460f, 74f, 510f), new Vector3(5435f, 74f, -55f),
-            new Vector3(5535f, 74f, 20f)
+            new Vector3(5535f, 74f, 20f), new Vector3(5566f, 74f, 20f),
+            new Vector3(5605f, 74f, 20f), new Vector3(5650f, 74f, 20f)
         };
         for (var i = 1; i < camino.Length; i++)
         {
@@ -813,7 +847,40 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         if (abrir)
             Post(punto.audioEvent, punto.emitter);
         if (abrir && !string.IsNullOrEmpty(punto.doorSecondLeaf))
+        {
             MarcarExplorado(FinalDialogueEvent);
+            MostrarLadronSiCorresponde(punto);
+        }
+    }
+
+    private static bool PasoDePuertaVisible(Point puerta, Ray mira, float distancia)
+    {
+        foreach (var impacto in Physics.RaycastAll(mira, distancia, Physics.DefaultRaycastLayers,
+                     QueryTriggerInteraction.Ignore))
+            if (impacto.collider != puerta.pasoPuerta && impacto.collider != puerta.doorInteractionCollider)
+                return false;
+
+        return true;
+    }
+
+    private static bool SeleccionarHojaMarcada(Point puerta, Ray mira)
+    {
+        if (puerta.puertaA == null)
+            return false;
+
+        return puerta.doorInteractionCollider.Raycast(mira, out var impacto, puerta.radius) &&
+            PasoDePuertaVisible(puerta, mira, impacto.distance);
+    }
+
+    private void MostrarLadronSiCorresponde(Point puerta)
+    {
+        if (string.IsNullOrEmpty(puerta.doorSecondLeaf) || ladronAparecio || !lugaresExplorados[4] ||
+            entrancePoint == null || accionesDeCocina == null)
+            return;
+
+        accionesDeCocina.MostrarPersonajeEntrada(puerta.position, entrancePoint.emitter);
+        entrancePoint.position = entrancePoint.emitter.transform.position;
+        ladronAparecio = true;
     }
 
     private void ActualizarPuerta(Point punto)
@@ -855,6 +922,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private bool CanInteract(Point point, Ray aim, out float hitDistance)
     {
         hitDistance = 0f;
+        if (point == entrancePoint && !ladronAparecio)
+            return false;
         if ((point == puntoVozBano || point == entrancePoint) && !VozAccesible(point))
             return false;
         if (point.audioEvent == DriveThruDialogueEvent && superficiesDriveThru != null &&
@@ -903,6 +972,8 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                 var playing = selected.loop;
                 selected.loop = 0;
                 AkUnitySoundEngine.StopPlayingID(playing);
+                if (selected == televisionPoint)
+                    ActualizarPantallaTelevisor(false);
                 return;
             }
 
@@ -914,11 +985,17 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                         !(info is AkEventCallbackInfo evt) || evt.playingID != selected.loop)
                         return;
                     selected.loop = 0;
+                    if (selected == televisionPoint)
+                        ActualizarPantallaTelevisor(false);
                     if (advancesSequence && nextDialogue < DialogueCount && selected == points[nextDialogue])
                         nextDialogue++;
                 }, null);
             if (selected.loop != 0)
+            {
+                if (selected == televisionPoint)
+                    ActualizarPantallaTelevisor(true);
                 MarcarExplorado(selected.audioEvent);
+            }
             return;
         }
         if (advancesSequence || selected.audioEvent == FryerDialogueEvent)
@@ -962,6 +1039,17 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                     selected.emitter, sinSuperponer: true) != 0)
                 selected.useAlternative = !selected.useAlternative;
         }
+    }
+
+    private void ActualizarPantallaTelevisor(bool encendida)
+    {
+        if (pantallaTelevisor == null)
+            return;
+
+        aspectoPantalla ??= new MaterialPropertyBlock();
+        pantallaTelevisor.GetPropertyBlock(aspectoPantalla);
+        aspectoPantalla.SetColor(ColorPantalla, encendida ? Color.white : Color.black);
+        pantallaTelevisor.SetPropertyBlock(aspectoPantalla);
     }
 
     private void StartDialogue(Point point, bool advancesSequence = true)
@@ -1364,7 +1452,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
 
     private void DibujarCartelVoz(Point punto)
     {
-        if (punto == null || !punto.inside || !VozAccesible(punto))
+        if (punto == null || (punto == entrancePoint && !ladronAparecio) || !punto.inside || !VozAccesible(punto))
             return;
 
         var ancla = punto.position + Vector3.up * 20f;
