@@ -56,6 +56,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         public float doorBottom;
         public float doorHeight;
         public BoxCollider doorInteractionCollider;
+        public Collider interactionCollider;
 
         [NonSerialized] public GameObject emitter;
         [NonSerialized] public Transform puertaA;
@@ -162,6 +163,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private const float GananciaBordeMusical = 0.14f;
     private const int FundidoSalidaBloqueMs = 220;
     private readonly HashSet<(string evento, ulong emisor)> efectosDeInteraccion = new();
+    private readonly Dictionary<(string evento, ulong emisor), int> variantesBano = new();
     private float coberturaMusical;
     private GameObject emisorMusical;
     private uint musica;
@@ -922,6 +924,9 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
     private bool CanInteract(Point point, Ray aim, out float hitDistance)
     {
         hitDistance = 0f;
+        // La tabla publica el sonido exclusivamente desde la animación de corte.
+        if (point.audioEvent == "CorteCapas")
+            return false;
         if (point == entrancePoint && !ladronAparecio)
             return false;
         if ((point == puntoVozBano || point == entrancePoint) && !VozAccesible(point))
@@ -935,6 +940,19 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                 return false;
 
             hitDistance = impacto.distance;
+            return true;
+        }
+
+        if (point.interactionCollider != null)
+        {
+            if (!point.interactionCollider.Raycast(aim, out var target, point.radius))
+                return false;
+            hitDistance = target.distance;
+            foreach (var obstacle in Physics.RaycastAll(aim, hitDistance + 0.01f,
+                         Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
+                if (obstacle.collider != point.interactionCollider &&
+                    !obstacle.transform.IsChildOf(playerRoot))
+                    return false;
             return true;
         }
 
@@ -1091,13 +1109,25 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
         if (sinSuperponer && !efectosDeInteraccion.Add(clave))
             return 0;
 
+        var eventoReproducido = eventName;
+        if (eventName is "LavadoManos" or "AguaLavabo" or ToiletFlushEvent)
+        {
+            var claveVariante = (eventName, emitterId);
+            var variante = UnityEngine.Random.Range(0, 3);
+            if (variantesBano.TryGetValue(claveVariante, out var anterior) && variante == anterior)
+                variante = (variante + UnityEngine.Random.Range(1, 3)) % 3;
+            variantesBano[claveVariante] = variante;
+            if (variante > 0)
+                eventoReproducido += "Variante" + (variante + 1);
+        }
+
         var esEfecto = sinSuperponer || (Application.isPlaying && !IsZoneAmbience(eventName) &&
             eventName != "AguaLavabo" && eventName != "Fritura" && eventName != "MusicaInteractiva");
         var atenuaMezcla = esEfecto && eventName != LayeredFryingEvent && eventName != FryerTimerEvent;
         uint id;
         if (esEfecto)
         {
-            id = AkUnitySoundEngine.PostEvent("Play_" + eventName, emitterId,
+            id = AkUnitySoundEngine.PostEvent("Play_" + eventoReproducido, emitterId,
                 (uint)AkCallbackType.AK_EndOfEvent, (_, type, _) =>
                 {
                     if (type == AkCallbackType.AK_EndOfEvent)
@@ -1112,7 +1142,7 @@ public sealed class SonorizacionRestaurante : MonoBehaviour
                 efectosActivos++;
         }
         else
-            id = AkUnitySoundEngine.PostEvent("Play_" + eventName, emitterId);
+            id = AkUnitySoundEngine.PostEvent("Play_" + eventoReproducido, emitterId);
         if (id == 0)
         {
             if (sinSuperponer)

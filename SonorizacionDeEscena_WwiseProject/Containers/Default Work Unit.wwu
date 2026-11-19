@@ -1201,6 +1201,150 @@
 								<ActiveSource Name="lavado de manos" ID="{4A9F0C6A-F0DC-480F-872B-98C20798129B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+<Sound Name="LavadoManosVariante3" ID="{C804A831-BB69-4C42-825F-9C24006702D1}" >
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="LavadoManosVariante3" ID="{4A9BBC13-7A7E-4116-A257-BC223F1CC9EF}">
+									<Language>SFX</Language>
+									<AudioFile>LavadoManosVariante3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1470354570"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{D35B3649-8FBA-4152-9506-FD7D94B81E1E}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{5D083050-4882-4725-9D36-6A4216F08F48}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{D41DF911-9B95-4A92-AB14-21039748C43D}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{49A99002-7E83-4AE5-8CB1-2F48085F2843}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="lavado de manos" ID="{4A9BBC13-7A7E-4116-A257-BC223F1CC9EF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+<Sound Name="LavadoManosVariante2" ID="{2447A84F-C48A-4BA5-A0ED-CEE934448DF9}" >
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="LavadoManosVariante2" ID="{73727D84-E125-46C1-A880-6CC0B42487A5}">
+									<Language>SFX</Language>
+									<AudioFile>LavadoManosVariante2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="134412678"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{F8DEB111-F43A-454A-9F9B-17D24DDDA4BA}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{52003C59-3573-47F6-BCB1-BD050DDF46D5}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{A9A2A10D-1B10-4ACC-933A-C4B01C0D53B3}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{E432087A-C61D-4D15-8600-2B17E0E2FE79}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="lavado de manos" ID="{73727D84-E125-46C1-A880-6CC0B42487A5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 						<Sound Name="AguaLavabo" ID="{43215C5D-C18E-495F-A302-C5055D0812BF}" ShortID="557290014">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
@@ -1272,6 +1416,152 @@
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="lavabo-agua corriendo" ID="{348C7726-7F6A-46E1-8749-53FB71716A5A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+<Sound Name="AguaLavaboVariante3" ID="{092AF461-7859-49C7-BDEC-00BF645CC679}" >
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AguaLavaboVariante3" ID="{734F0F19-D341-4C4B-B00F-99FE1CA08CA2}">
+									<Language>SFX</Language>
+									<AudioFile>AguaLavaboVariante3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="528479524"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{922DD49F-074A-41CB-AD18-4FC2FC336A4A}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{B4850252-56AD-424B-B46D-2ED34F3EEDFE}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{7D654BED-D273-4922-A706-62163B65E6FA}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{5E917F64-7833-4E38-9353-7048D5B3C484}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="lavabo-agua corriendo" ID="{734F0F19-D341-4C4B-B00F-99FE1CA08CA2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+<Sound Name="AguaLavaboVariante2" ID="{F00EE460-4306-4938-A28F-442A1DE36256}" >
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AguaLavaboVariante2" ID="{F8A77A1A-662A-4CDD-BE30-59945B332434}">
+									<Language>SFX</Language>
+									<AudioFile>AguaLavaboVariante2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="157419341"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{66D10D8D-592D-4128-B103-37EDE1274DCF}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{E01E225E-DF02-4D9F-A24A-650693CBA083}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{9FBE697A-CED0-4FA9-8C5C-761FA5485887}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{E374FE52-C678-4392-8A0B-F782C5F50F17}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="lavabo-agua corriendo" ID="{F8A77A1A-662A-4CDD-BE30-59945B332434}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="NotificacionPedido" ID="{EA221A02-13DE-40CE-9F17-AB04F491209A}" ShortID="839542620">
@@ -1600,6 +1890,150 @@
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="tirada de cadena-baño" ID="{6E9E443C-0EDA-4B8D-8DF3-06EE9A0ED8A2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+<Sound Name="CadenaBanoVariante3" ID="{A88922AA-EA8F-49B9-9C54-0047A44B7A83}" >
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CadenaBanoVariante3" ID="{7816C751-5BF8-4EDD-81D3-2D11F5A7D5BE}">
+									<Language>SFX</Language>
+									<AudioFile>CadenaBanoVariante3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1313572519"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{7388F826-A7F1-47AC-A828-E2D75B56990B}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{DDBDAC20-9CEB-4A96-ABB1-543A9A4778EC}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{DFE9E1E6-EF4A-4592-8438-A0497A4652EB}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{A0F83A59-4847-4DE2-826F-A6A3332EADA7}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="tirada de cadena-baño" ID="{7816C751-5BF8-4EDD-81D3-2D11F5A7D5BE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+<Sound Name="CadenaBanoVariante2" ID="{1E6D8B7E-73A7-4C4F-98C5-08246924B105}" >
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Vorbis Quality High" ID="{53A9DE0F-3F4F-4B59-8614-3F9E3C7358FC}" WorkUnitID="{F6B2880C-85E5-47FA-A126-645B5DFD9ACC}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A7735E6C-FD59-4709-A03D-184729FC6807}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CadenaBanoVariante2" ID="{6E9AB19D-6F80-42ED-AAF6-BDF70629D773}">
+									<Language>SFX</Language>
+									<AudioFile>CadenaBanoVariante2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1852726925"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{4D5F36C8-CF86-468A-B366-29D3B2313835}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Volume"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{ADFF1286-7D28-4589-AB45-24563281A694}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>-5</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>-13</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>-25</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+									<RTPC Name="" ID="{0E669DA2-AF9C-403B-B9E6-A2DD9A269FDF}" >
+										<PropertyList><Property Name="PropertyName" Type="string" Value="Lowpass"/></PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="OclusionPared" ID="{9F0731A3-2E9E-4DB5-BA7C-9A3D21E44025}" WorkUnitID="{08B12C74-96AD-4ECD-B953-F938B16C622F}"/>
+											</Reference>
+											<Reference Name="Curve"><Custom>
+												<Curve Name="" ID="{4CE71D80-A7D8-4805-854C-F128E8565174}">
+													<PropertyList><Property Name="Flags" Type="int32" Value="3"/></PropertyList>
+													<PointList>
+														<Point><XPos>0</XPos><YPos>0</YPos><Flags>5</Flags></Point>
+														<Point><XPos>30</XPos><YPos>26</YPos><Flags>0</Flags></Point>
+														<Point><XPos>65</XPos><YPos>59</YPos><Flags>0</Flags></Point>
+														<Point><XPos>100</XPos><YPos>80</YPos><Flags>37</Flags></Point>
+													</PointList>
+												</Curve>
+											</Custom></Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="tirada de cadena-baño" ID="{6E9AB19D-6F80-42ED-AAF6-BDF70629D773}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Caida" ID="{8947BA17-3241-4129-9804-3BFCF8E9E1B7}" ShortID="624080326">

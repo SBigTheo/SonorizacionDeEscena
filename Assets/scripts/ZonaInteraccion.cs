@@ -34,7 +34,7 @@ public class ZonaInteraccion : MonoBehaviour
         yaActivada = true;
         Debug.Log("¡Zona activada! Eliminando ingredientes y creando hamburguesa...");
 
-        GameObject[] todos = FindObjectsOfType<GameObject>();
+        GameObject[] todos = FindObjectsByType<GameObject>();
         foreach (GameObject obj in todos)
         {
             foreach (string nombre in nombresIngredientes)

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BA3057EC-A5A9-4D86-8A69-044F9661C582}",
     "Language": "SFX",
-    "Hash": "{381BA2FE-0F40-04E7-F2A9-52E6A8AE5658}",
+    "Hash": "{5DF3A37B-F2C4-D6D0-A908-3A403A467FBD}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Sonorizacion",
     "ShortName": "Sonorizacion",
     "Path": "Sonorizacion.bnk",
@@ -62,6 +62,22 @@
       "Location": "Memory",
       "ShortName": "puerta abriendose.wav",
       "CachePath": "0B/{0B56E288-B3B2-E167-A9A2-1C1955EE95E1}.wem"
+     },
+     {
+      "Id": "134412678",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "LavadoManosVariante2.wav",
+      "CachePath": "41/{4168A8A2-4B11-59A4-A42B-6F62F3135F12}.wem"
+     },
+     {
+      "Id": "157419341",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AguaLavaboVariante2.wav",
+      "CachePath": "28/{285B5731-DBB5-083E-78DF-E28EE0803E65}.wem"
      },
      {
       "Id": "183777913",
@@ -208,6 +224,14 @@
       "CachePath": "E3/{E327A0F7-820E-D96A-509B-30129AC09309}.wem"
      },
      {
+      "Id": "528479524",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "AguaLavaboVariante3.wav",
+      "CachePath": "B4/{B42C5D87-46BA-596B-B532-961CDDD660F6}.wem"
+     },
+     {
       "Id": "534936738",
       "Language": "SFX",
       "Streaming": "false",
@@ -318,6 +342,30 @@
       "Location": "Memory",
       "ShortName": "switch fisico.wav",
       "CachePath": "B4/{B4CEB27C-6530-2ACE-283D-AB2241EE2CAD}.wem"
+     },
+     {
+      "Id": "1313572519",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CadenaBanoVariante3.wav",
+      "CachePath": "88/{8893CF44-6F82-35F8-BE1F-D3BD44081386}.wem"
+     },
+     {
+      "Id": "1470354570",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "LavadoManosVariante3.wav",
+      "CachePath": "E3/{E3360DB8-32EE-4CE7-2A0B-8D4E45EA1B60}.wem"
+     },
+     {
+      "Id": "1852726925",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "CadenaBanoVariante2.wav",
+      "CachePath": "DE/{DE489612-E0BF-7E13-C67B-42B2DB35B9FA}.wem"
      }
     ],
     "Events": [
@@ -330,6 +378,30 @@
       "MediaRefs": [
        {
         "Id": "349264939"
+       }
+      ]
+     },
+     {
+      "Id": "4154489967",
+      "Name": "Play_AguaLavaboVariante2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AguaLavaboVariante2",
+      "GUID": "{4B47138A-28EC-4A74-9989-92EAB4E4E399}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "157419341"
+       }
+      ]
+     },
+     {
+      "Id": "4154489966",
+      "Name": "Play_AguaLavaboVariante3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_AguaLavaboVariante3",
+      "GUID": "{F309FE6A-007F-4BA0-AAED-5C1F07EA21AC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "528479524"
        }
       ]
      },
@@ -422,6 +494,34 @@
       "MediaRefs": [
        {
         "Id": "5762237"
+       }
+      ]
+     },
+     {
+      "Id": "810176688",
+      "Name": "Play_CadenaBanoVariante2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CadenaBanoVariante2",
+      "GUID": "{1E71E84D-FC15-446E-91DD-9EF97BC5B94F}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.093333",
+      "DurationMax": "11.093333",
+      "MediaRefs": [
+       {
+        "Id": "1852726925"
+       }
+      ]
+     },
+     {
+      "Id": "810176689",
+      "Name": "Play_CadenaBanoVariante3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_CadenaBanoVariante3",
+      "GUID": "{B49CFDD5-77A7-47C7-AA29-4654FAB5E095}",
+      "DurationType": "OneShot",
+      "DurationMin": "8.91427",
+      "DurationMax": "8.91427",
+      "MediaRefs": [
+       {
+        "Id": "1313572519"
        }
       ]
      },
@@ -616,6 +716,34 @@
       "MediaRefs": [
        {
         "Id": "398923845"
+       }
+      ]
+     },
+     {
+      "Id": "967018403",
+      "Name": "Play_LavadoManosVariante2",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_LavadoManosVariante2",
+      "GUID": "{54000FA5-3AB5-4AC1-B496-EDBC3EACD753}",
+      "DurationType": "OneShot",
+      "DurationMin": "26.293333",
+      "DurationMax": "26.293333",
+      "MediaRefs": [
+       {
+        "Id": "134412678"
+       }
+      ]
+     },
+     {
+      "Id": "967018402",
+      "Name": "Play_LavadoManosVariante3",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_LavadoManosVariante3",
+      "GUID": "{69F081E4-C235-4AD9-83AE-1EB1B5EC4575}",
+      "DurationType": "OneShot",
+      "DurationMin": "21.128563",
+      "DurationMax": "21.128563",
+      "MediaRefs": [
+       {
+        "Id": "1470354570"
        }
       ]
      },
@@ -939,6 +1067,6 @@
     ]
    }
   ],
-  "FileHash": "{FBC0D6C1-8A65-3FA0-52D1-482E2F9510A1}"
+  "FileHash": "{E22CC732-D677-5666-5CE1-8BC7A3F8FA2D}"
  }
 }

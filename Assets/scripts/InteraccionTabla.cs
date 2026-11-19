@@ -53,7 +53,7 @@ public class InteraccionTabla : MonoBehaviour
         foreach (string nombre in nombresIngredientes)
         {
             // Busca todos los objetos cuyo nombre empiece por el ingrediente (maneja "carne(Clone)")
-            GameObject[] todos = FindObjectsOfType<GameObject>();
+            GameObject[] todos = FindObjectsByType<GameObject>();
             foreach (GameObject obj in todos)
             {
                 if (obj.name.ToLower().StartsWith(nombre.ToLower()))

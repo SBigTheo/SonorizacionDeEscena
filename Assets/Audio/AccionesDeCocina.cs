@@ -11,6 +11,7 @@ public sealed class AccionesDeCocina : MonoBehaviour
 
     private Rigidbody carne;
     private Rigidbody cuchillo;
+    private Transform cuchilloPapas;
     private Collider objetivoCarne;
     private Collider objetivoTabla;
     private Transform cuerpoTacho;
@@ -20,6 +21,9 @@ public sealed class AccionesDeCocina : MonoBehaviour
     private SonorizacionRestaurante sonorizacion;
     private bool carneSuelta;
     private bool cortando;
+    private bool corteCompletado;
+    private GameObject papaTabla;
+    private readonly System.Collections.Generic.List<GameObject> papasCortadas = new();
     private bool encuentroActivado;
 
     private void Start()
@@ -31,12 +35,19 @@ public sealed class AccionesDeCocina : MonoBehaviour
         var rojo = MaterialDe(new Color(0.53f, 0.11f, 0.12f));
         var gris = MaterialDe(new Color(0.29f, 0.25f, 0.23f));
         objetivoTabla = Pieza(PrimitiveType.Cube, "Tabla de picar", tabla, new Vector3(32, 2, 23), madera, true).GetComponent<Collider>();
-        var hoja = Pieza(PrimitiveType.Cube, "Cuchillo", tabla + new Vector3(-8, 1.8f, 3),
+        var hoja = Pieza(PrimitiveType.Cube, "Cuchillo de la carne", tabla + new Vector3(12, 1.8f, 3),
             new Vector3(3.5f, 0.8f, 12f), acero, true);
-        var mango = Pieza(PrimitiveType.Cube, "Mango del cuchillo", tabla + new Vector3(-8, 2f, -7f),
+        var mango = Pieza(PrimitiveType.Cube, "Mango del cuchillo de la carne", tabla + new Vector3(12, 2f, -7f),
             new Vector3(2.6f, 1.5f, 8f), oscuro, true);
         mango.transform.SetParent(hoja.transform, true);
         cuchillo = PrepararCaida(hoja, true);
+        var hojaPapas = Pieza(PrimitiveType.Cube, "Cuchillo de las papas",
+            tabla + new Vector3(-11, 1.8f, 3), new Vector3(3.5f, 0.8f, 12f), acero);
+        cuchilloPapas = hojaPapas.transform;
+        var mangoPapas = Pieza(PrimitiveType.Cube, "Mango del cuchillo de las papas",
+            tabla + new Vector3(-11, 2f, -7f), new Vector3(2.6f, 1.5f, 8f), oscuro);
+        mangoPapas.transform.SetParent(cuchilloPapas, true);
+        hojaPapas.AddComponent<AkGameObj>();
         var aceite = MaterialDe(new Color(0.48f, 0.29f, 0.055f));
         aceite.SetFloat("_Smoothness", 0.91f);
         Pieza(PrimitiveType.Cube, "Aceite de la freidora · primera cuba",
@@ -63,12 +74,22 @@ public sealed class AccionesDeCocina : MonoBehaviour
         }
         objetivoCarne = trozo.GetComponent<Collider>();
         carne = PrepararCaida(trozo, false);
+        var papa = MaterialDe(new Color(0.82f, 0.65f, 0.32f));
+        papaTabla = Pieza(PrimitiveType.Sphere, "Papa para cortar", tabla + new Vector3(-2f, 3.4f, 1f),
+            new Vector3(9f, 5f, 13f), papa);
+        for (var i = 0; i < 8; i++)
+        {
+            var baston = Pieza(PrimitiveType.Cube, "Papa cortada",
+                tabla + new Vector3(-6f + i * 1.5f, 2.2f, 1f), new Vector3(1.15f, 1.15f, 11f), papa);
+            baston.SetActive(false);
+            papasCortadas.Add(baston);
+        }
 
         emisorTacho = new GameObject("Tacho de basura", typeof(AkGameObj));
         emisorTacho.transform.SetParent(transform);
         emisorTacho.transform.position = tacho;
         cuerpoTacho = Pieza(PrimitiveType.Cylinder, "Cuerpo del tacho", tacho + Vector3.up * 14,
-            new Vector3(23, 14, 23), oscuro).transform;
+            new Vector3(23, 14, 23), oscuro, true).transform;
         tapa = Pieza(PrimitiveType.Cylinder, "Tapa del tacho", tacho + Vector3.up * 29,
             new Vector3(25, 1.5f, 25), acero).transform;
 
@@ -125,12 +146,11 @@ public sealed class AccionesDeCocina : MonoBehaviour
             StartCoroutine(Aparicion(posicion));
         }
 
-        if (carneSuelta)
-            return null;
-
         var alcance = 115f;
-        var apuntaCarne = objetivoCarne.Raycast(mira, out var impactoCarne, alcance);
+        var apuntaCarne = objetivoCarne.Raycast(mira, out var impactoCarne, alcance) && !carneSuelta;
         var apuntaTabla = objetivoTabla.Raycast(mira, out var impactoTabla, alcance);
+        if (corteCompletado)
+            apuntaTabla = false;
         if (!apuntaCarne && !apuntaTabla)
             return null;
 
@@ -141,6 +161,7 @@ public sealed class AccionesDeCocina : MonoBehaviour
                      Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
             if (obstaculo.collider != objetivoCarne && obstaculo.collider != objetivoTabla &&
+                obstaculo.rigidbody != cuchillo &&
                 (cuerpoJugador == null || obstaculo.rigidbody != cuerpoJugador))
                 return null;
         }
@@ -178,22 +199,34 @@ public sealed class AccionesDeCocina : MonoBehaviour
 
     private IEnumerator CortarEnTabla()
     {
+        if (cortando || corteCompletado)
+            yield break;
         cortando = true;
-        var inicio = cuchillo.transform.position;
-        var giro = cuchillo.transform.rotation;
-        var corte = tabla + new Vector3(7f, 5.4f, 5f);
-        cuchillo.transform.position = corte + Vector3.up * 7f;
-        Publicar("Play_CorteCapas", cuchillo.gameObject);
+        var inicio = cuchilloPapas.position;
+        var giro = cuchilloPapas.rotation;
+        papaTabla.SetActive(true);
+        foreach (var baston in papasCortadas)
+            baston.SetActive(false);
+        var corte = tabla + new Vector3(-6f, 4.4f, 1f);
+        cuchilloPapas.position = corte + Vector3.up * 7f;
+        Publicar("Play_CorteCapas", cuchilloPapas.gameObject);
         const float duracion = 1.35f;
         for (var tiempo = 0f; tiempo < duracion; tiempo += Time.deltaTime)
         {
             var fase = Mathf.PingPong(tiempo / 0.17f, 1f);
-            cuchillo.transform.SetPositionAndRotation(
-                corte + new Vector3(-6f * tiempo / duracion, 7f * fase, 0f),
+            cuchilloPapas.SetPositionAndRotation(
+                corte + new Vector3(11f * tiempo / duracion, 7f * fase, 0f),
                 Quaternion.Euler(Mathf.Lerp(5f, -25f, fase), 0f, -12f));
+            var piezas = Mathf.FloorToInt(tiempo / duracion * papasCortadas.Count);
+            for (var i = 0; i < piezas; i++)
+                papasCortadas[i].SetActive(true);
             yield return null;
         }
-        cuchillo.transform.SetPositionAndRotation(inicio, giro);
+        papaTabla.SetActive(false);
+        foreach (var baston in papasCortadas)
+            baston.SetActive(true);
+        cuchilloPapas.SetPositionAndRotation(inicio, giro);
+        corteCompletado = true;
         cortando = false;
     }
 

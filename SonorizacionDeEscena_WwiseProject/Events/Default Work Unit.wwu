@@ -213,12 +213,56 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+<Event Name="Play_LavadoManosVariante3" ID="{69F081E4-C235-4AD9-83AE-1EB1B5EC4575}">
+					<ChildrenList>
+						<Action Name="" ID="{C5780935-D09E-4EBE-A606-BC91E3C20D76}" >
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LavadoManosVariante3" ID="{C804A831-BB69-4C42-825F-9C24006702D1}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+<Event Name="Play_LavadoManosVariante2" ID="{54000FA5-3AB5-4AC1-B496-EDBC3EACD753}">
+					<ChildrenList>
+						<Action Name="" ID="{EB8CB65A-64C8-4027-9EF6-FEC7A0F26E39}" >
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LavadoManosVariante2" ID="{2447A84F-C48A-4BA5-A0ED-CEE934448DF9}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="Play_AguaLavabo" ID="{FF4DC083-E8E8-471B-845A-4822EDEA3497}">
 					<ChildrenList>
 						<Action Name="" ID="{7CDE877B-A108-413C-8809-3337646ED0E3}" ShortID="188638584">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="AguaLavabo" ID="{43215C5D-C18E-495F-A302-C5055D0812BF}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+<Event Name="Play_AguaLavaboVariante3" ID="{F309FE6A-007F-4BA0-AAED-5C1F07EA21AC}">
+					<ChildrenList>
+						<Action Name="" ID="{CAC049F2-311E-44E2-93D6-EDE00958DD18}" >
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AguaLavaboVariante3" ID="{092AF461-7859-49C7-BDEC-00BF645CC679}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+<Event Name="Play_AguaLavaboVariante2" ID="{4B47138A-28EC-4A74-9989-92EAB4E4E399}">
+					<ChildrenList>
+						<Action Name="" ID="{957E0437-4858-4DD0-8BDA-4C56C946F431}" >
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AguaLavaboVariante2" ID="{F00EE460-4306-4938-A28F-442A1DE36256}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -285,6 +329,28 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="CadenaBano" ID="{34AC00A9-0776-48D2-9590-F4EE28EA7984}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+<Event Name="Play_CadenaBanoVariante3" ID="{B49CFDD5-77A7-47C7-AA29-4654FAB5E095}">
+					<ChildrenList>
+						<Action Name="" ID="{B197560B-202C-41EC-ABF7-FA659BCFAF34}" >
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CadenaBanoVariante3" ID="{A88922AA-EA8F-49B9-9C54-0047A44B7A83}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+<Event Name="Play_CadenaBanoVariante2" ID="{1E71E84D-FC15-446E-91DD-9EF97BC5B94F}">
+					<ChildrenList>
+						<Action Name="" ID="{1B76DB4C-D8C9-4AE6-94F6-540B58D94330}" >
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CadenaBanoVariante2" ID="{1E6D8B7E-73A7-4C4F-98C5-08246924B105}" WorkUnitID="{080EDF7B-AFF0-4D38-9EDA-A672D9BA03A2}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
